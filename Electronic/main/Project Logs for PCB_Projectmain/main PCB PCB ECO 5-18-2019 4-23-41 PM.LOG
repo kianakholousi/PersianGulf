@@ -1,0 +1,611 @@
+Added Component: Designator=?(TEENSY_3.5/3.6)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "TEENSY_3.5/3.6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "Teensy356"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TEENSY_3.5/3.6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "TEENSY_3.5/3.6"; VariantName = "[No Variations]"
+Added Component: Designator=BACK(IDC 2X3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=BATTERY(P SK)
+Add component. Clean all parameters for all variants
+Added Component: Designator=BLUETOOTH(HC05)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Buzzer(Buzzer)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C feedback(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C level1(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C level2(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mlb1(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mlb2(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mlb3(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mlb4(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mlb5(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mlb6(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mlf1(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mlf2(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mlf3(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mlf4(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mlf5(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mlf6(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mrb1(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mrb2(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mrb3(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mrb4(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mrb5(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mrb6(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mrf1(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mrf2(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mrf3(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mrf4(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mrf5(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C mrf6(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C reg1(Cap 100uF)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C reg3(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C reg4(Cap 100uF)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C reg_b1(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C reg_b2(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C reg_b3(Cap 100uF)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C reset(Cap SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C shoot(Cap SH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=DIP SWITCH(DIP SW4)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D reg1(Diode)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D reg2(Diode)
+Add component. Clean all parameters for all variants
+Added Component: Designator=FRONT(IDC 2X3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=inductor(Cap 1000uf)
+Add component. Clean all parameters for all variants
+Added Component: Designator=KEY_BLUETOOTH(KEY 2ST)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LEFT(IDC 2X3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LevelShifter(CJMCU)
+Add component. Clean all parameters for all variants
+Added Component: Designator=L VCC(LED SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=L VS(LED SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=MLB(MultiWatt11)
+Add component. Clean all parameters for all variants
+Added Component: Designator=MLF(MultiWatt11)
+Add component. Clean all parameters for all variants
+Added Component: Designator=MRB(MultiWatt11)
+Add component. Clean all parameters for all variants
+Added Component: Designator=MRF(MultiWatt11)
+Add component. Clean all parameters for all variants
+Added Component: Designator=NPN(NPN)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P GPIO MLB(P SK)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P GPIO MLF(P SK)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P GPIO MRB(P SK)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P GPIO MRF(P SK)
+Add component. Clean all parameters for all variants
+Added Component: Designator=PIXY(IDC 2x5)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P PWM MLB(P SK)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P PWM MLF(P SK)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P PWM MRB(P SK)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P PWM MRF(P SK)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P USB_B(HDR1X4)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=R array dip(Res Array 5)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R buzzer(Resistor SMD 1206)
+Add component. Clean all parameters for all variants
+Added Component: Designator=REG_BLUETOOTH(SOT223)
+Add component. Clean all parameters for all variants
+Added Component: Designator=REG(P SK)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Regulator(D2PAK)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Relay(Relay SH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=RESET(SW_2pin)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Switch; 2 Leads"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SPST-2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "24-Mar-1999"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=R feedback1(Resistor SMD 1206)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R feedback2(Resistor SMD 1206)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R idc up1(Resistor SMD 1206)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R idc up2(Resistor SMD 1206)
+Add component. Clean all parameters for all variants
+Added Component: Designator=RIGHT(IDC 2X3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R mlb(Resistor SMD 1206)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R mlf(Resistor SMD 1206)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R mrb(Resistor SMD 1206)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R mrf(Resistor SMD 1206)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R reset(Resistor)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R set(Resistor)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R shoot1(Resistor SMD 1206)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R shoot2(Res SH)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R VCC(Resistor SMD 1206)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R VS(Resistor SMD 1206)
+Add component. Clean all parameters for all variants
+Added Component: Designator=SET(SW_2pin)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Switch; 2 Leads"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SPST-2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "24-Mar-1999"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=Socket1(TSocket)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Socket2(TSocket)
+Add component. Clean all parameters for all variants
+Added Component: Designator=SOLENOID(Selon Con)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TIP41(TIP41)
+Add component. Clean all parameters for all variants
+Added Component: Designator=UP(IDC 2x5)
+Add component. Clean all parameters for all variants
+Added Component: Designator=USB B(USB_B.1)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=VCC(P SK)
+Add component. Clean all parameters for all variants
+Added Component: Designator=VS(P SK)
+Add component. Clean all parameters for all variants
+Added Component: Designator=XL(XL6009)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Z feedback(LED SMD)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=3.3V_B Pin=BLUETOOTH-5
+Added Pin To Net: NetName=3.3V_B Pin=KEY_BLUETOOTH-1
+Added Pin To Net: NetName=3.3V_B Pin=KEY_BLUETOOTH-2
+Added Net: Name=3.3V_B
+Added Pin To Net: NetName=3.3V Pin=C level1-1
+Added Pin To Net: NetName=3.3V Pin=DIP SWITCH-5
+Added Pin To Net: NetName=3.3V Pin=DIP SWITCH-6
+Added Pin To Net: NetName=3.3V Pin=DIP SWITCH-7
+Added Pin To Net: NetName=3.3V Pin=DIP SWITCH-8
+Added Pin To Net: NetName=3.3V Pin=LevelShifter-vA
+Added Pin To Net: NetName=3.3V Pin=MLB-11
+Added Pin To Net: NetName=3.3V Pin=MLF-11
+Added Pin To Net: NetName=3.3V Pin=MRB-11
+Added Pin To Net: NetName=3.3V Pin=MRF-11
+Added Net: Name=3.3V
+Added Pin To Net: NetName=3V3 Pin=R reset-2
+Added Pin To Net: NetName=3V3 Pin=R set-2
+Added Net: Name=3V3
+Added Pin To Net: NetName=BATTERY Pin=BATTERY-1
+Added Pin To Net: NetName=BATTERY Pin=BATTERY-1
+Added Pin To Net: NetName=BATTERY Pin=D reg1-1
+Added Pin To Net: NetName=BATTERY Pin=Socket2-1
+Added Net: Name=BATTERY
+Added Pin To Net: NetName=BI Pin=BACK-6
+Added Net: Name=BI
+Added Pin To Net: NetName=BO Pin=BACK-5
+Added Net: Name=BO
+Added Pin To Net: NetName=BUZZER Pin=R buzzer-2
+Added Net: Name=BUZZER
+Added Pin To Net: NetName=DIP1 Pin=DIP SWITCH-1
+Added Pin To Net: NetName=DIP1 Pin=R array dip-5
+Added Net: Name=DIP1
+Added Pin To Net: NetName=DIP2 Pin=DIP SWITCH-2
+Added Pin To Net: NetName=DIP2 Pin=R array dip-4
+Added Net: Name=DIP2
+Added Pin To Net: NetName=DIP3 Pin=DIP SWITCH-3
+Added Pin To Net: NetName=DIP3 Pin=R array dip-3
+Added Net: Name=DIP3
+Added Pin To Net: NetName=DIP4 Pin=DIP SWITCH-4
+Added Pin To Net: NetName=DIP4 Pin=R array dip-2
+Added Net: Name=DIP4
+Added Pin To Net: NetName=feedback Pin=C feedback-2
+Added Pin To Net: NetName=feedback Pin=R feedback1-2
+Added Pin To Net: NetName=feedback Pin=R feedback2-2
+Added Pin To Net: NetName=feedback Pin=Z feedback-2
+Added Net: Name=feedback
+Added Pin To Net: NetName=FI Pin=FRONT-6
+Added Net: Name=FI
+Added Pin To Net: NetName=FO Pin=FRONT-5
+Added Net: Name=FO
+Added Pin To Net: NetName=GND Pin=BACK-3
+Added Pin To Net: NetName=GND Pin=BACK-4
+Added Pin To Net: NetName=GND Pin=BLUETOOTH-4
+Added Pin To Net: NetName=GND Pin=C feedback-1
+Added Pin To Net: NetName=GND Pin=C level1-2
+Added Pin To Net: NetName=GND Pin=C level2-2
+Added Pin To Net: NetName=GND Pin=C mlb1-1
+Added Pin To Net: NetName=GND Pin=C mlb2-1
+Added Pin To Net: NetName=GND Pin=C mlb3-2
+Added Pin To Net: NetName=GND Pin=C mlf1-1
+Added Pin To Net: NetName=GND Pin=C mlf2-1
+Added Pin To Net: NetName=GND Pin=C mlf3-2
+Added Pin To Net: NetName=GND Pin=C mrb1-1
+Added Pin To Net: NetName=GND Pin=C mrb2-1
+Added Pin To Net: NetName=GND Pin=C mrb3-2
+Added Pin To Net: NetName=GND Pin=C mrf1-1
+Added Pin To Net: NetName=GND Pin=C mrf2-1
+Added Pin To Net: NetName=GND Pin=C mrf3-2
+Added Pin To Net: NetName=GND Pin=C reg1-2
+Added Pin To Net: NetName=GND Pin=C reg3-1
+Added Pin To Net: NetName=GND Pin=C reg4-2
+Added Pin To Net: NetName=GND Pin=C reg_b1-1
+Added Pin To Net: NetName=GND Pin=C reg_b2-1
+Added Pin To Net: NetName=GND Pin=C reg_b3-2
+Added Pin To Net: NetName=GND Pin=C reset-1
+Added Pin To Net: NetName=GND Pin=D reg2-1
+Added Pin To Net: NetName=GND Pin=FRONT-3
+Added Pin To Net: NetName=GND Pin=FRONT-4
+Added Pin To Net: NetName=GND Pin=LEFT-3
+Added Pin To Net: NetName=GND Pin=LEFT-4
+Added Pin To Net: NetName=GND Pin=LevelShifter-GND
+Added Pin To Net: NetName=GND Pin=L VCC-2
+Added Pin To Net: NetName=GND Pin=L VS-2
+Added Pin To Net: NetName=GND Pin=MLB-6
+Added Pin To Net: NetName=GND Pin=MLB-10
+Added Pin To Net: NetName=GND Pin=MLF-6
+Added Pin To Net: NetName=GND Pin=MLF-10
+Added Pin To Net: NetName=GND Pin=MRB-6
+Added Pin To Net: NetName=GND Pin=MRB-10
+Added Pin To Net: NetName=GND Pin=MRF-6
+Added Pin To Net: NetName=GND Pin=MRF-10
+Added Pin To Net: NetName=GND Pin=NPN-3
+Added Pin To Net: NetName=GND Pin=PIXY-6
+Added Pin To Net: NetName=GND Pin=P USB_B-4
+Added Pin To Net: NetName=GND Pin=R array dip-1
+Added Pin To Net: NetName=GND Pin=REG_BLUETOOTH-1
+Added Pin To Net: NetName=GND Pin=Regulator-3
+Added Pin To Net: NetName=GND Pin=Regulator-5
+Added Pin To Net: NetName=GND Pin=Regulator-6
+Added Pin To Net: NetName=GND Pin=RESET-2
+Added Pin To Net: NetName=GND Pin=R feedback2-1
+Added Pin To Net: NetName=GND Pin=RIGHT-3
+Added Pin To Net: NetName=GND Pin=RIGHT-4
+Added Pin To Net: NetName=GND Pin=SET-2
+Added Pin To Net: NetName=GND Pin=Socket1-2
+Added Pin To Net: NetName=GND Pin=TIP41-3
+Added Pin To Net: NetName=GND Pin=UP-7
+Added Pin To Net: NetName=GND Pin=UP-9
+Added Pin To Net: NetName=GND Pin=USB B-4
+Added Pin To Net: NetName=GND Pin=USB B-5
+Added Pin To Net: NetName=GND Pin=USB B-6
+Added Pin To Net: NetName=GND Pin=XL-4
+Added Pin To Net: NetName=GND Pin=Z feedback-1
+Added Net: Name=GND
+Added Pin To Net: NetName=IN GPIO MLB Pin=MLB-7
+Added Net: Name=IN GPIO MLB
+Added Pin To Net: NetName=IN GPIO MLF Pin=MLF-7
+Added Net: Name=IN GPIO MLF
+Added Pin To Net: NetName=IN GPIO MRB Pin=MRB-7
+Added Net: Name=IN GPIO MRB
+Added Pin To Net: NetName=IN GPIO MRF Pin=MRF-7
+Added Net: Name=IN GPIO MRF
+Added Pin To Net: NetName=IN PWM MLB Pin=MLB-5
+Added Net: Name=IN PWM MLB
+Added Pin To Net: NetName=IN PWM MLF Pin=MLF-5
+Added Net: Name=IN PWM MLF
+Added Pin To Net: NetName=IN PWM MRB Pin=MRB-5
+Added Net: Name=IN PWM MRB
+Added Pin To Net: NetName=IN PWM MRF Pin=MRF-5
+Added Net: Name=IN PWM MRF
+Added Pin To Net: NetName=LI Pin=LEFT-6
+Added Net: Name=LI
+Added Pin To Net: NetName=LO Pin=LEFT-5
+Added Net: Name=LO
+Added Pin To Net: NetName=MISO_3.3V Pin=LevelShifter-A4
+Added Net: Name=MISO_3.3V
+Added Pin To Net: NetName=MISO_VCC Pin=LevelShifter-B4
+Added Pin To Net: NetName=MISO_VCC Pin=PIXY-1
+Added Net: Name=MISO_VCC
+Added Pin To Net: NetName=MOSI_3.3V Pin=LevelShifter-A3
+Added Net: Name=MOSI_3.3V
+Added Pin To Net: NetName=MOSI_VCC Pin=LevelShifter-B3
+Added Pin To Net: NetName=MOSI_VCC Pin=PIXY-4
+Added Net: Name=MOSI_VCC
+Added Pin To Net: NetName=NetBuzzer_2 Pin=Buzzer-2
+Added Pin To Net: NetName=NetBuzzer_2 Pin=NPN-1
+Added Net: Name=NetBuzzer_2
+Added Pin To Net: NetName=NetC mlb1_2 Pin=C mlb1-2
+Added Pin To Net: NetName=NetC mlb1_2 Pin=MLB-9
+Added Net: Name=NetC mlb1_2
+Added Pin To Net: NetName=NetC mlb4_1 Pin=C mlb4-1
+Added Pin To Net: NetName=NetC mlb4_1 Pin=MLB-4
+Added Net: Name=NetC mlb4_1
+Added Pin To Net: NetName=NetC mlb4_2 Pin=C mlb4-2
+Added Pin To Net: NetName=NetC mlb4_2 Pin=C mlb6-2
+Added Pin To Net: NetName=NetC mlb4_2 Pin=MLB-3
+Added Pin To Net: NetName=NetC mlb4_2 Pin=P PWM MLB-1
+Added Pin To Net: NetName=NetC mlb4_2 Pin=P PWM MLB-1
+Added Net: Name=NetC mlb4_2
+Added Pin To Net: NetName=NetC mlb5_1 Pin=C mlb5-1
+Added Pin To Net: NetName=NetC mlb5_1 Pin=MLB-8
+Added Net: Name=NetC mlb5_1
+Added Pin To Net: NetName=NetC mlb5_2 Pin=C mlb5-2
+Added Pin To Net: NetName=NetC mlb5_2 Pin=MLB-1
+Added Pin To Net: NetName=NetC mlb5_2 Pin=P GPIO MLB-1
+Added Pin To Net: NetName=NetC mlb5_2 Pin=P GPIO MLB-1
+Added Pin To Net: NetName=NetC mlb5_2 Pin=R mlb-1
+Added Net: Name=NetC mlb5_2
+Added Pin To Net: NetName=NetC mlb6_1 Pin=C mlb6-1
+Added Pin To Net: NetName=NetC mlb6_1 Pin=R mlb-2
+Added Net: Name=NetC mlb6_1
+Added Pin To Net: NetName=NetC mlf1_2 Pin=C mlf1-2
+Added Pin To Net: NetName=NetC mlf1_2 Pin=MLF-9
+Added Net: Name=NetC mlf1_2
+Added Pin To Net: NetName=NetC mlf4_1 Pin=C mlf4-1
+Added Pin To Net: NetName=NetC mlf4_1 Pin=MLF-4
+Added Net: Name=NetC mlf4_1
+Added Pin To Net: NetName=NetC mlf4_2 Pin=C mlf4-2
+Added Pin To Net: NetName=NetC mlf4_2 Pin=C mlf6-2
+Added Pin To Net: NetName=NetC mlf4_2 Pin=MLF-3
+Added Pin To Net: NetName=NetC mlf4_2 Pin=P PWM MLF-1
+Added Pin To Net: NetName=NetC mlf4_2 Pin=P PWM MLF-1
+Added Net: Name=NetC mlf4_2
+Added Pin To Net: NetName=NetC mlf5_1 Pin=C mlf5-1
+Added Pin To Net: NetName=NetC mlf5_1 Pin=MLF-8
+Added Net: Name=NetC mlf5_1
+Added Pin To Net: NetName=NetC mlf5_2 Pin=C mlf5-2
+Added Pin To Net: NetName=NetC mlf5_2 Pin=MLF-1
+Added Pin To Net: NetName=NetC mlf5_2 Pin=P GPIO MLF-1
+Added Pin To Net: NetName=NetC mlf5_2 Pin=P GPIO MLF-1
+Added Pin To Net: NetName=NetC mlf5_2 Pin=R mlf-1
+Added Net: Name=NetC mlf5_2
+Added Pin To Net: NetName=NetC mlf6_1 Pin=C mlf6-1
+Added Pin To Net: NetName=NetC mlf6_1 Pin=R mlf-2
+Added Net: Name=NetC mlf6_1
+Added Pin To Net: NetName=NetC mrb1_2 Pin=C mrb1-2
+Added Pin To Net: NetName=NetC mrb1_2 Pin=MRB-9
+Added Net: Name=NetC mrb1_2
+Added Pin To Net: NetName=NetC mrb4_1 Pin=C mrb4-1
+Added Pin To Net: NetName=NetC mrb4_1 Pin=MRB-4
+Added Net: Name=NetC mrb4_1
+Added Pin To Net: NetName=NetC mrb4_2 Pin=C mrb4-2
+Added Pin To Net: NetName=NetC mrb4_2 Pin=C mrb6-2
+Added Pin To Net: NetName=NetC mrb4_2 Pin=MRB-3
+Added Pin To Net: NetName=NetC mrb4_2 Pin=P PWM MRB-1
+Added Pin To Net: NetName=NetC mrb4_2 Pin=P PWM MRB-1
+Added Net: Name=NetC mrb4_2
+Added Pin To Net: NetName=NetC mrb5_1 Pin=C mrb5-1
+Added Pin To Net: NetName=NetC mrb5_1 Pin=MRB-8
+Added Net: Name=NetC mrb5_1
+Added Pin To Net: NetName=NetC mrb5_2 Pin=C mrb5-2
+Added Pin To Net: NetName=NetC mrb5_2 Pin=MRB-1
+Added Pin To Net: NetName=NetC mrb5_2 Pin=P GPIO MRB-1
+Added Pin To Net: NetName=NetC mrb5_2 Pin=P GPIO MRB-1
+Added Pin To Net: NetName=NetC mrb5_2 Pin=R mrb-1
+Added Net: Name=NetC mrb5_2
+Added Pin To Net: NetName=NetC mrb6_1 Pin=C mrb6-1
+Added Pin To Net: NetName=NetC mrb6_1 Pin=R mrb-2
+Added Net: Name=NetC mrb6_1
+Added Pin To Net: NetName=NetC mrf1_2 Pin=C mrf1-2
+Added Pin To Net: NetName=NetC mrf1_2 Pin=MRF-9
+Added Net: Name=NetC mrf1_2
+Added Pin To Net: NetName=NetC mrf4_1 Pin=C mrf4-1
+Added Pin To Net: NetName=NetC mrf4_1 Pin=MRF-4
+Added Net: Name=NetC mrf4_1
+Added Pin To Net: NetName=NetC mrf4_2 Pin=C mrf4-2
+Added Pin To Net: NetName=NetC mrf4_2 Pin=C mrf6-2
+Added Pin To Net: NetName=NetC mrf4_2 Pin=MRF-3
+Added Pin To Net: NetName=NetC mrf4_2 Pin=P PWM MRF-1
+Added Pin To Net: NetName=NetC mrf4_2 Pin=P PWM MRF-1
+Added Net: Name=NetC mrf4_2
+Added Pin To Net: NetName=NetC mrf5_1 Pin=C mrf5-1
+Added Pin To Net: NetName=NetC mrf5_1 Pin=MRF-8
+Added Net: Name=NetC mrf5_1
+Added Pin To Net: NetName=NetC mrf5_2 Pin=C mrf5-2
+Added Pin To Net: NetName=NetC mrf5_2 Pin=MRF-1
+Added Pin To Net: NetName=NetC mrf5_2 Pin=P GPIO MRF-1
+Added Pin To Net: NetName=NetC mrf5_2 Pin=P GPIO MRF-1
+Added Pin To Net: NetName=NetC mrf5_2 Pin=R mrf-1
+Added Net: Name=NetC mrf5_2
+Added Pin To Net: NetName=NetC mrf6_1 Pin=C mrf6-1
+Added Pin To Net: NetName=NetC mrf6_1 Pin=R mrf-2
+Added Net: Name=NetC mrf6_1
+Added Pin To Net: NetName=NetC reg1_1 Pin=C reg1-1
+Added Pin To Net: NetName=NetC reg1_1 Pin=D reg1-2
+Added Pin To Net: NetName=NetC reg1_1 Pin=Regulator-1
+Added Net: Name=NetC reg1_1
+Added Pin To Net: NetName=NetC shoot_1 Pin=C shoot-1
+Added Pin To Net: NetName=NetC shoot_1 Pin=Relay-2
+Added Net: Name=NetC shoot_1
+Added Pin To Net: NetName=NetC shoot_2 Pin=C shoot-2
+Added Pin To Net: NetName=NetC shoot_2 Pin=Relay-7
+Added Net: Name=NetC shoot_2
+Added Pin To Net: NetName=NetD reg2_2 Pin=D reg2-2
+Added Pin To Net: NetName=NetD reg2_2 Pin=inductor-1
+Added Pin To Net: NetName=NetD reg2_2 Pin=Regulator-2
+Added Net: Name=NetD reg2_2
+Added Pin To Net: NetName=NetL VCC_1 Pin=L VCC-1
+Added Pin To Net: NetName=NetL VCC_1 Pin=R VCC-2
+Added Net: Name=NetL VCC_1
+Added Pin To Net: NetName=NetL VS_1 Pin=L VS-1
+Added Pin To Net: NetName=NetL VS_1 Pin=R VS-2
+Added Net: Name=NetL VS_1
+Added Pin To Net: NetName=NetNPN_2 Pin=NPN-2
+Added Pin To Net: NetName=NetNPN_2 Pin=R buzzer-1
+Added Net: Name=NetNPN_2
+Added Pin To Net: NetName=NetP USB_B_2 Pin=P USB_B-2
+Added Pin To Net: NetName=NetP USB_B_2 Pin=USB B-2
+Added Net: Name=NetP USB_B_2
+Added Pin To Net: NetName=NetP USB_B_3 Pin=P USB_B-3
+Added Pin To Net: NetName=NetP USB_B_3 Pin=USB B-3
+Added Net: Name=NetP USB_B_3
+Added Pin To Net: NetName=NetRelay_1 Pin=Relay-1
+Added Pin To Net: NetName=NetRelay_1 Pin=SOLENOID-2
+Added Net: Name=NetRelay_1
+Added Pin To Net: NetName=NetRelay_3 Pin=Relay-3
+Added Pin To Net: NetName=NetRelay_3 Pin=XL-1
+Added Net: Name=NetRelay_3
+Added Pin To Net: NetName=NetRelay_4 Pin=Relay-4
+Added Pin To Net: NetName=NetRelay_4 Pin=TIP41-2
+Added Net: Name=NetRelay_4
+Added Pin To Net: NetName=NetRelay_6 Pin=Relay-6
+Added Pin To Net: NetName=NetRelay_6 Pin=XL-3
+Added Net: Name=NetRelay_6
+Added Pin To Net: NetName=NetRelay_8 Pin=Relay-8
+Added Pin To Net: NetName=NetRelay_8 Pin=SOLENOID-1
+Added Net: Name=NetRelay_8
+Added Pin To Net: NetName=NetR shoot1_2 Pin=R shoot1-2
+Added Pin To Net: NetName=NetR shoot1_2 Pin=TIP41-1
+Added Net: Name=NetR shoot1_2
+Added Pin To Net: NetName=NetR shoot2_2 Pin=R shoot2-2
+Added Pin To Net: NetName=NetR shoot2_2 Pin=XL-2
+Added Net: Name=NetR shoot2_2
+Added Pin To Net: NetName=NetSocket1_1 Pin=Socket1-1
+Added Pin To Net: NetName=NetSocket1_1 Pin=Socket2-2
+Added Net: Name=NetSocket1_1
+Added Pin To Net: NetName=OUT REG_B Pin=C reg_b2-2
+Added Pin To Net: NetName=OUT REG_B Pin=C reg_b3-1
+Added Pin To Net: NetName=OUT REG_B Pin=KEY_BLUETOOTH-3
+Added Pin To Net: NetName=OUT REG_B Pin=KEY_BLUETOOTH-4
+Added Pin To Net: NetName=OUT REG_B Pin=REG_BLUETOOTH-2
+Added Pin To Net: NetName=OUT REG_B Pin=REG_BLUETOOTH-2
+Added Net: Name=OUT REG_B
+Added Pin To Net: NetName=OUT REG Pin=C reg3-2
+Added Pin To Net: NetName=OUT REG Pin=C reg4-1
+Added Pin To Net: NetName=OUT REG Pin=inductor-2
+Added Pin To Net: NetName=OUT REG Pin=REG-1
+Added Pin To Net: NetName=OUT REG Pin=REG-1
+Added Pin To Net: NetName=OUT REG Pin=Regulator-4
+Added Net: Name=OUT REG
+Added Pin To Net: NetName=RESET_BNO Pin=UP-10
+Added Net: Name=RESET_BNO
+Added Pin To Net: NetName=RESET Pin=C reset-2
+Added Pin To Net: NetName=RESET Pin=RESET-1
+Added Pin To Net: NetName=RESET Pin=R reset-1
+Added Net: Name=RESET
+Added Pin To Net: NetName=RI Pin=RIGHT-6
+Added Net: Name=RI
+Added Pin To Net: NetName=RO Pin=RIGHT-5
+Added Net: Name=RO
+Added Pin To Net: NetName=RX_B Pin=BLUETOOTH-2
+Added Net: Name=RX_B
+Added Pin To Net: NetName=SCK_3.3V Pin=LevelShifter-A5
+Added Net: Name=SCK_3.3V
+Added Pin To Net: NetName=SCK_VCC Pin=LevelShifter-B5
+Added Pin To Net: NetName=SCK_VCC Pin=PIXY-3
+Added Net: Name=SCK_VCC
+Added Pin To Net: NetName=SCL_3.3V Pin=LevelShifter-A2
+Added Net: Name=SCL_3.3V
+Added Pin To Net: NetName=SCL_VCC Pin=LevelShifter-B2
+Added Pin To Net: NetName=SCL_VCC Pin=R idc up1-2
+Added Pin To Net: NetName=SCL_VCC Pin=UP-1
+Added Net: Name=SCL_VCC
+Added Pin To Net: NetName=SDA_3.3V Pin=LevelShifter-A1
+Added Net: Name=SDA_3.3V
+Added Pin To Net: NetName=SDA_VCC Pin=LevelShifter-B1
+Added Pin To Net: NetName=SDA_VCC Pin=R idc up2-2
+Added Pin To Net: NetName=SDA_VCC Pin=UP-2
+Added Net: Name=SDA_VCC
+Added Pin To Net: NetName=SET Pin=R set-1
+Added Pin To Net: NetName=SET Pin=SET-1
+Added Net: Name=SET
+Added Pin To Net: NetName=SHOOT Pin=R shoot1-1
+Added Net: Name=SHOOT
+Added Pin To Net: NetName=TX_B Pin=BLUETOOTH-3
+Added Net: Name=TX_B
+Added Pin To Net: NetName=VCC Pin=BACK-1
+Added Pin To Net: NetName=VCC Pin=BACK-2
+Added Pin To Net: NetName=VCC Pin=Buzzer-1
+Added Pin To Net: NetName=VCC Pin=C level2-1
+Added Pin To Net: NetName=VCC Pin=C reg_b1-2
+Added Pin To Net: NetName=VCC Pin=FRONT-1
+Added Pin To Net: NetName=VCC Pin=FRONT-2
+Added Pin To Net: NetName=VCC Pin=LEFT-1
+Added Pin To Net: NetName=VCC Pin=LEFT-2
+Added Pin To Net: NetName=VCC Pin=LevelShifter-OE
+Added Pin To Net: NetName=VCC Pin=LevelShifter-vB
+Added Pin To Net: NetName=VCC Pin=PIXY-2
+Added Pin To Net: NetName=VCC Pin=P USB_B-1
+Added Pin To Net: NetName=VCC Pin=REG_BLUETOOTH-3
+Added Pin To Net: NetName=VCC Pin=R idc up1-1
+Added Pin To Net: NetName=VCC Pin=R idc up2-1
+Added Pin To Net: NetName=VCC Pin=RIGHT-2
+Added Pin To Net: NetName=VCC Pin=R VCC-1
+Added Pin To Net: NetName=VCC Pin=UP-3
+Added Pin To Net: NetName=VCC Pin=UP-4
+Added Pin To Net: NetName=VCC Pin=USB B-1
+Added Pin To Net: NetName=VCC Pin=VCC-1
+Added Pin To Net: NetName=VCC Pin=VCC-1
+Added Net: Name=VCC
+Added Pin To Net: NetName=VSS Pin=R feedback1-1
+Added Net: Name=VSS
+Added Pin To Net: NetName=VS Pin=C mlb2-2
+Added Pin To Net: NetName=VS Pin=C mlb3-1
+Added Pin To Net: NetName=VS Pin=C mlf2-2
+Added Pin To Net: NetName=VS Pin=C mlf3-1
+Added Pin To Net: NetName=VS Pin=C mrb2-2
+Added Pin To Net: NetName=VS Pin=C mrb3-1
+Added Pin To Net: NetName=VS Pin=C mrf2-2
+Added Pin To Net: NetName=VS Pin=C mrf3-1
+Added Pin To Net: NetName=VS Pin=MLB-2
+Added Pin To Net: NetName=VS Pin=MLF-2
+Added Pin To Net: NetName=VS Pin=MRB-2
+Added Pin To Net: NetName=VS Pin=MRF-2
+Added Pin To Net: NetName=VS Pin=Relay-5
+Added Pin To Net: NetName=VS Pin=R shoot2-1
+Added Pin To Net: NetName=VS Pin=R VS-1
+Added Pin To Net: NetName=VS Pin=VS-1
+Added Pin To Net: NetName=VS Pin=VS-1
+Added Net: Name=VS
+Added Class: Name=main schematic
