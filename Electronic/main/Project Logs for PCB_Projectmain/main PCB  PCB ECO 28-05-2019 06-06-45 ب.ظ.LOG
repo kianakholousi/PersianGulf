@@ -1,0 +1,6 @@
+Added Component: Designator=D spin(Diode)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=D spin-1
+Added Pin To Net: NetName=SPIN Pin=D spin-2
+Added Member To Class: ClassName=main schematic Member=Component D spin Diode
+Added Room: Name=main schematic

@@ -1,0 +1,6 @@
+Added Component: Designator=D shoot(Diode)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=D shoot-1
+Added Pin To Net: NetName=SHOOT Pin=D shoot-2
+Added Member To Class: ClassName=main schematic Member=Component D shoot Diode
+Added Room: Name=main schematic
