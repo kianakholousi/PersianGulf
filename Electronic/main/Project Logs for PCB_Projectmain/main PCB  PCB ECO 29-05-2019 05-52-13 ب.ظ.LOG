@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=RESET_BNO Pin=TEENSY-35/A16
+Removed Pin From Net: NetName=SCL_COM_VCC Pin=UP-1
+Removed Pin From Net: NetName=SCL_LAS_VCC Pin=UP-3
+Removed Pin From Net: NetName=VCC Pin=UP-6
+Removed Pin From Net: NetName=GND Pin=UP-8
+Added Pin To Net: NetName=RESET_BNO Pin=TEENSY-5
+Added Pin To Net: NetName=VCC Pin=UP-3
+Added Pin To Net: NetName=SCL_LAS_VCC Pin=UP-6
+Added Pin To Net: NetName=SCL_COM_VCC Pin=UP-8
+Added Pin To Net: NetName=GND Pin=UP-9

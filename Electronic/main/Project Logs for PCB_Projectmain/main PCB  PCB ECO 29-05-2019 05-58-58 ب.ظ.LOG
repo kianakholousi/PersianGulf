@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=SDA_COM_VCC Pin=UP-2
+Removed Pin From Net: NetName=RESET_BNO Pin=UP-10
+Added Pin To Net: NetName=RESET_BNO Pin=UP-2
+Added Pin To Net: NetName=SDA_COM_VCC Pin=UP-10
+Added Room: Name=main schematic
