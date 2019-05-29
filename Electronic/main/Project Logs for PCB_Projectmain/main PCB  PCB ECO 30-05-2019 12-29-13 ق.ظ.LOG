@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=MISO_3V3 Pin=LevelShifter-A5
+Added Pin To Net: NetName=MOSI_3V3 Pin=LevelShifter-A5
