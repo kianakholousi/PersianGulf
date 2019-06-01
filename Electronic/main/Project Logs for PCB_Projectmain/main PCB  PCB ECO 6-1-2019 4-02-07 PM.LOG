@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=SET Pin=TEENSY-2
+Added Pin To Net: NetName=SET Pin=TEENSY-21/DAC0
