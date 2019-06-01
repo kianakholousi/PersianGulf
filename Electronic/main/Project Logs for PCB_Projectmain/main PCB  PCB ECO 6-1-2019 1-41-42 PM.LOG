@@ -1,0 +1,3 @@
+Change Component Designator: OldDesignator=BLUETOOTH NewDesignator=HC05
+Change Component Designator: OldDesignator=KEY_BLUETOOTH NewDesignator=KEY_AMS
+Change Component Designator: OldDesignator=REG_BLUETOOTH NewDesignator=AMS

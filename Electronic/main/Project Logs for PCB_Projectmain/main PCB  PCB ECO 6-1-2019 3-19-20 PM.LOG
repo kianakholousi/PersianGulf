@@ -1,0 +1,6 @@
+Change Component Footprint: Designator=R reset Old Footprint=Resistor New Footprint=Resistor SMD 1206
+Change Component Footprint: Designator=R set Old Footprint=Resistor New Footprint=Resistor SMD 1206
+Change Component Footprint: Designator=R spin Old Footprint=Resistor New Footprint=Resistor SMD 1206
+Change Component Comment : Designator=R reset Old Comment=DIP New Comment=SMD
+Change Component Comment : Designator=R set Old Comment=DIP New Comment=SMD
+Change Component Comment : Designator=R spin Old Comment=DIP New Comment=SMD

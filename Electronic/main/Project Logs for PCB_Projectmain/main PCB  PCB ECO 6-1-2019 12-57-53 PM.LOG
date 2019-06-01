@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=GND Pin=C mlb2-1
+Removed Pin From Net: NetName=VS Pin=C mlb2-2
+Removed Pin From Net: NetName=GND Pin=C mlf2-1
+Removed Pin From Net: NetName=VS Pin=C mlf2-2
+Removed Pin From Net: NetName=GND Pin=C mrb2-1
+Removed Pin From Net: NetName=VS Pin=C mrb2-2
+Removed Pin From Net: NetName=GND Pin=C mrf2-1
+Removed Pin From Net: NetName=VS Pin=C mrf2-2
+Added Pin To Net: NetName=VS Pin=C mlb2-1
+Added Pin To Net: NetName=GND Pin=C mlb2-2
+Added Pin To Net: NetName=VS Pin=C mlf2-1
+Added Pin To Net: NetName=GND Pin=C mlf2-2
+Added Pin To Net: NetName=VS Pin=C mrb2-1
+Added Pin To Net: NetName=GND Pin=C mrb2-2
+Added Pin To Net: NetName=VS Pin=C mrf2-1
+Added Pin To Net: NetName=GND Pin=C mrf2-2

@@ -1,0 +1,8 @@
+Change Component Footprint: Designator=C mlb2 Old Footprint=Cap SMD New Footprint=Cap 1000uf
+Change Component Footprint: Designator=C mlf2 Old Footprint=Cap SMD New Footprint=Cap 1000uf
+Change Component Footprint: Designator=C mrb2 Old Footprint=Cap SMD New Footprint=Cap 1000uf
+Change Component Footprint: Designator=C mrf2 Old Footprint=Cap SMD New Footprint=Cap 1000uf
+Change Component Comment : Designator=C mlb2 Old Comment=smd New Comment=1000uf
+Change Component Comment : Designator=C mlf2 Old Comment=smd New Comment=1000uf
+Change Component Comment : Designator=C mrb2 Old Comment=smd New Comment=1000uf
+Change Component Comment : Designator=C mrf2 Old Comment=smd New Comment=1000uf
