@@ -1,0 +1,8 @@
+Change Component Designator: OldDesignator=P GPIO MLB NewDesignator=GPIO MLB
+Change Component Designator: OldDesignator=P GPIO MLF NewDesignator=GPIO MLF
+Change Component Designator: OldDesignator=P GPIO MRB NewDesignator=GPIO MRB
+Change Component Designator: OldDesignator=P GPIO MRF NewDesignator=GPIO MRF
+Change Component Designator: OldDesignator=P PWM MLB NewDesignator=PWM MLB
+Change Component Designator: OldDesignator=P PWM MLF NewDesignator=PWM MLF
+Change Component Designator: OldDesignator=P PWM MRB NewDesignator=PWM MRB
+Change Component Designator: OldDesignator=P PWM MRF NewDesignator=PWM MRF
