@@ -1,0 +1,15 @@
+Change Component Designator: OldDesignator=GPIO MLB NewDesignator=P2  MLB
+Change Component Designator: OldDesignator=GPIO MLF NewDesignator=P2 MLF
+Change Component Designator: OldDesignator=GPIO MRB NewDesignator=P2 MRB
+Change Component Designator: OldDesignator=GPIO MRF NewDesignator=P2  MRF
+Change Component Designator: OldDesignator=P SPIN NewDesignator=P1 SPIN
+Change Component Designator: OldDesignator=PWM MLB NewDesignator=P1 MLB
+Change Component Designator: OldDesignator=PWM MLF NewDesignator=P1 MLF
+Change Component Designator: OldDesignator=PWM MRB NewDesignator=P1  MRB
+Change Component Designator: OldDesignator=PWM MRF NewDesignator=P1 MRF
+Added Component: Designator=P2 SPIN(P SK)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=P2 SPIN-1
+Added Pin To Net: NetName=GND Pin=P2 SPIN-1
+Added Pin To Net: NetName=VS Pin=R feed1-1
+Added Member To Class: ClassName=main schematic Member=Component P2 SPIN P SK
