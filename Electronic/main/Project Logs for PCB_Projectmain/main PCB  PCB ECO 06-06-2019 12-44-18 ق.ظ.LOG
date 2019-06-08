@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=IN PWM MLB Pin=TEENSY-22/A8
+Removed Pin From Net: NetName=IN GPIO MLB Pin=TEENSY-23/A9
+Added Pin To Net: NetName=IN GPIO MLB Pin=TEENSY-22/A8
+Added Pin To Net: NetName=IN PWM MLB Pin=TEENSY-23/A9
+Added Member To Class: ClassName=main schematic Member=Component C mlf2 1000uf
+Added Member To Class: ClassName=main schematic Member=Component C reg4 100uf
+Added Member To Class: ClassName=main schematic Member=Component MRB L6203
+Added Member To Class: ClassName=main schematic Member=Component MRF L6203
+Added Member To Class: ClassName=main schematic Member=Component P1 MLF P SK
