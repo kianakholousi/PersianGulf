@@ -29,18 +29,5 @@
 # Executables
 *.exe
 *.out
-*.app 
-
-# Altium History
-*.zip
-History
-*.SchDocPreview
-*.PrjPCBStructure
-*.$$$Preview
-*.LOG
-*.drc
-*.html
-pcb light/__Previews/main schematic.SchDocPreview
-*.SchDocPreview
-*.log
-*.log
+*.app
+Electronic/main/__Previews/main schematic.SchDocPreview
