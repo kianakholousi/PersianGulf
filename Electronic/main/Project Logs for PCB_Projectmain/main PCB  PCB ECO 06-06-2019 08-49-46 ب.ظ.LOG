@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=LI Pin=TEENSY-18/A4/SDA
+Removed Pin From Net: NetName=LO Pin=TEENSY-19/A5/SCL
+Added Pin To Net: NetName=LO Pin=TEENSY-18/A4/SDA
+Added Pin To Net: NetName=LI Pin=TEENSY-19/A5/SCL
