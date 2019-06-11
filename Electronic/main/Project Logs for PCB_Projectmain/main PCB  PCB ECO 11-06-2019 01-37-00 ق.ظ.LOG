@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=DIP1 Pin=TEENSY-14/A0
+Removed Pin From Net: NetName=DIP2 Pin=TEENSY-15/A1
+Removed Pin From Net: NetName=DIP3 Pin=TEENSY-16/A2
+Removed Pin From Net: NetName=SET Pin=TEENSY-17/A3
+Removed Pin From Net: NetName=L FEEDBACK3 Pin=TEENSY-24
+Removed Pin From Net: NetName=L FEEDBACK2 Pin=TEENSY-25
+Removed Pin From Net: NetName=L FEEDBACK1 Pin=TEENSY-26
+Removed Pin From Net: NetName=L FEEDBACK4 Pin=TEENSY-31/A12
+Added Pin To Net: NetName=L FEEDBACK1 Pin=TEENSY-14/A0
+Added Pin To Net: NetName=L FEEDBACK2 Pin=TEENSY-15/A1
+Added Pin To Net: NetName=L FEEDBACK3 Pin=TEENSY-16/A2
+Added Pin To Net: NetName=L FEEDBACK4 Pin=TEENSY-17/A3
+Added Pin To Net: NetName=DIP1 Pin=TEENSY-24
+Added Pin To Net: NetName=DIP2 Pin=TEENSY-25
+Added Pin To Net: NetName=DIP3 Pin=TEENSY-26
+Added Pin To Net: NetName=FEEDBACK Pin=TEENSY-35/A16

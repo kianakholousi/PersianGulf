@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=LI Pin=TEENSY-39/A20
+Removed Pin From Net: NetName=SET Pin=TEENSY-A22/DAC1
+Added Pin To Net: NetName=SET Pin=TEENSY-17/A3
+Added Pin To Net: NetName=LI Pin=TEENSY-A22/DAC1
