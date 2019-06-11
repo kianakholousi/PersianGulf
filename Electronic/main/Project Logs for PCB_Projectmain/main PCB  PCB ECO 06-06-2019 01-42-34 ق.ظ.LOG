@@ -1,6 +1,0 @@
-Removed Pin From Net: NetName=IN GPIO MRB Pin=TEENSY-6
-Removed Pin From Net: NetName=IN PWM MRB Pin=TEENSY-9/CS
-Removed Pin From Net: NetName=IN GPIO MRF Pin=TEENSY-11/MOSI
-Added Pin To Net: NetName=IN PWM MRB Pin=TEENSY-6
-Added Pin To Net: NetName=IN GPIO MRF Pin=TEENSY-9/CS
-Added Pin To Net: NetName=IN GPIO MRB Pin=TEENSY-11/MOSI

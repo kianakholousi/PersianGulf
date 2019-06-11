@@ -1,4 +1,0 @@
-Removed Pin From Net: NetName=DIP1 Pin=TEENSY-24
-Removed Pin From Net: NetName=DIP3 Pin=TEENSY-26
-Added Pin To Net: NetName=DIP3 Pin=TEENSY-24
-Added Pin To Net: NetName=DIP1 Pin=TEENSY-26

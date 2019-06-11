@@ -1,3 +1,0 @@
-Removed Pin From Net: NetName=RESET_BNO Pin=TEENSY-5
-Added Pin To Net: NetName=RESET_BNO Pin=TEENSY-2
-Added Member To Class: ClassName=main schematic Member=Component TEENSY TEENSY_3.5/3.6

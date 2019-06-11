@@ -1,0 +1,14 @@
+Added Component: Designator=Button?(Push Button)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=Button?-2
+Added Pin To Net: NetName=Calibrate Pin=Button?-1
+Added Pin To Net: NetName=Calibrate Pin=CMP?-6
+Added Net: Name=Calibrate
+Added Member To Class: ClassName=top Member=Component Button? Push Button
+Added Member To Class: ClassName=top Member=Component Screw? Screw
+Added Member To Class: ClassName=top Member=Component Screw? Screw
+Added Member To Class: ClassName=top Member=Component Screw? Screw
+Added Member To Class: ClassName=top Member=Component Screw? Screw
+Added Member To Class: ClassName=top Member=Component Screw? Screw
+Added Member To Class: ClassName=top Member=Component Screw? Screw
+Added Member To Class: ClassName=top Member=Component Screw? Screw

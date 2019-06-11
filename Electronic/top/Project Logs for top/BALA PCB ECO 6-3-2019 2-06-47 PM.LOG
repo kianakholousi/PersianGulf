@@ -1,0 +1,49 @@
+Removed Pin From Net: NetName=SCL1 Pin=bala-1
+Removed Pin From Net: NetName=SDA1 Pin=bala-2
+Removed Pin From Net: NetName=VCC Pin=bala-4
+Removed Pin From Net: NetName=RESET Pin=bala-10
+Removed Pin From Net: NetName=SDA1 Pin=CMP03-3
+Removed Pin From Net: NetName=SDA1 Pin=GY271-2
+Removed Pin From Net: NetName=SCL1 Pin=GY271-3
+Removed Pin From Net: NetName=GND Pin=GY271-4
+Removed Pin From Net: NetName=VCC Pin=GY271-5
+Removed Pin From Net: NetName=SCL1 Pin=YADAK-1
+Removed Pin From Net: NetName=SDA1 Pin=YADAK-2
+Removed Member From Class: ClassName=BALA Member=GY271
+Change Component Comment : Designator=BACK Old Comment=BACK New Comment=LEFT
+Change Component Comment : Designator=YADAK Old Comment=BACK New Comment=LEFT
+Change Component Comment : Designator=LEFT Old Comment=RIGHT New Comment=LEFT
+Change Component Designator: OldDesignator=bala NewDesignator=UP?
+Change Component Designator: OldDesignator=BNO 055 NewDesignator=BNO ?
+Change Component Designator: OldDesignator=CMP03 NewDesignator=CMP?
+Change Component Designator: OldDesignator=PIXY NewDesignator=PIXY?
+Change Component Designator: OldDesignator=RIGHT NewDesignator=RIGHT?
+Change Component Designator: OldDesignator=Screw1 NewDesignator=Screw?
+Change Component Designator: OldDesignator=Screw2 NewDesignator=Screw?
+Change Component Designator: OldDesignator=Screw3 NewDesignator=Screw?
+Change Component Designator: OldDesignator=Screw4 NewDesignator=Screw?
+Change Component Designator: OldDesignator=Screw5 NewDesignator=Screw?
+Change Component Designator: OldDesignator=Screw6 NewDesignator=Screw?
+Change Component Designator: OldDesignator=Screw7 NewDesignator=Screw?
+Change Component Designator: OldDesignator=Screw8 NewDesignator=Screw?
+Change Component Designator: OldDesignator=USB NewDesignator=USB?
+Change Component Designator: OldDesignator=YADAK NewDesignator=LAZER
+Added Pin To Net: NetName=RESET Pin=UP?-2
+Added Pin To Net: NetName=VCC Pin=UP?-5
+Added Pin To Net: NetName=SCL1 Pin=UP?-8
+Change Net Name : Old Net Name=NetPIXY_2 New Net Name=NetPIXY?_2
+Change Net Name : Old Net Name=NetPIXY_3 New Net Name=NetPIXY?_3
+Change Net Name : Old Net Name=RESET New Net Name=RESET_BNO
+Change Net Name : Old Net Name=SCL1 New Net Name=SCL_COM_VCC
+Change Net Name : Old Net Name=SDA1 New Net Name=SDL_COM_VCC
+Added Pin To Net: NetName=SCL_LAS_VCC Pin=LAZER-1
+Added Pin To Net: NetName=SCL_LAS_VCC Pin=UP?-4
+Added Net: Name=SCL_LAS_VCC
+Added Pin To Net: NetName=SDA_COM_VCC Pin=CMP?-3
+Added Pin To Net: NetName=SDA_COM_VCC Pin=UP?-10
+Added Net: Name=SDA_COM_VCC
+Added Pin To Net: NetName=SDA_LAS_VCC Pin=UP?-6
+Added Net: Name=SDA_LAS_VCC
+Added Pin To Net: NetName=SDL_LAS_VCC Pin=LAZER-2
+Added Net: Name=SDL_LAS_VCC
+Change Class Name : Old Net Name=BALA New Net Name=top
