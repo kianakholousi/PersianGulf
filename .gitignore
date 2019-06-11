@@ -30,4 +30,7 @@
 *.exe
 *.out
 *.app
-Electronic/main/__Previews/main schematic.SchDocPreview
+*.SchDocPreview
+*.zip
+*.log
+*.LOG
