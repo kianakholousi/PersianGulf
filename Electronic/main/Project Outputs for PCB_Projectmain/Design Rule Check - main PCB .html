@@ -1,0 +1,435 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD18\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">6/13/2019</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">4:16:55 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc" class="file"><acronym title="D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc">D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">33</td></tr>
+</table>
+</td>
+</table><a name="IDHT4IMP0AQUYMM3512NKTQZTX4DEIWYJRRG0DVHL1GECDQQ3F0U1J"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCRPO5UAETEG4OET1GKEPILYGIFBSV2C5LIND1GD3S3ZPY5N3VFI">Clearance Constraint (Gap=0.5mm) (InNetClass('FTDI')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID01ZCVZ1WUWQIMQX3CC1KNITBGPLQYRBK5PJBVYF5UXPLJJXF5YZM">Clearance Constraint (Gap=0.5mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQMRHTR0ZQKC5IWMMHOPRALQ3SJ13YTSSBYJC5WO2O4AGGETI21FP">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOEUD3YERA5UJNQ0J3MQ0MSWZ2GTQ1KORTNV5QTJWHCGX0YSMFY0M">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2HPKR23LHG31IFG1N4HIGWZZSEGRZWAV2SVF4DEQPN1YLIUNWPJ">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOE45CZXQNYUPI2BAR52YSUI0AI1PAG1VNINLURDN5C3L0ZO5GJHJ">Width Constraint (Min=0.5mm) (Max=3mm) (Preferred=1mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNXD2NLE2ETM3QAP5ARDCBW5BFFGR1UHU4XKGBHZBBQOD3LDHY2J">Width Constraint (Min=0.254mm) (Max=3mm) (Preferred=0.3mm) (InNetClass('ftdi'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDERSKI1KCNG1XELICMWF3QXSINN1CABW24LZAK3GILS1ZGFEUQJPI">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCMWB2QO33Q43HESM4DAY4G0XBLPLZCZVIP0F1EIUHSTZMD2V0GMO">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">14</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDU3D5OUVPRJ1VKQFK0LGRAVITEG2V2N1NOXQUTAFA2425TN2JFDLB">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFTDUKNNWSJCZFUEDN1ZFSL3DGH4KDXOJUVW04PISWXHFB0ZMIQXL">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">16</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBFDOBKDSO1EUPKYMUW5PJADN4INRPIPQIFJ0VJDV5T3REUNU1SZP">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYJRQJYRJX1ARNVZIHRG5A332BD4RQVZDF3C5WF4V2YD0YWJ1L5B">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">33</td>
+</tr>
+</table><br><a name="IDCMWB2QO33Q43HESM4DAY4G0XBLPLZCZVIP0F1EIUHSTZMD2V0GMO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=28549.926mil|Location2.X=28675.192mil|Location1.Y=62525.596mil|Location2.Y=62650.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=28549.926mil|Location2.X=28675.192mil|Location1.Y=62525.596mil|Location2.Y=62650.861mil|Absolute=True">Hole Size Constraint: (3.15mm &gt; 2.54mm) Pad Screw1-S(31.109mm,-31.109mm) on Multi-Layer Actual Hole Size = 3.15mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26100.123mil|Location2.X=26225.389mil|Location1.Y=62525.596mil|Location2.Y=62650.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26100.123mil|Location2.X=26225.389mil|Location1.Y=62525.596mil|Location2.Y=62650.861mil|Absolute=True">Hole Size Constraint: (3.15mm &gt; 2.54mm) Pad Screw2-S(-31.116mm,-31.109mm) on Multi-Layer Actual Hole Size = 3.15mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26100.123mil|Location2.X=26225.389mil|Location1.Y=64975.399mil|Location2.Y=65100.664mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26100.123mil|Location2.X=26225.389mil|Location1.Y=64975.399mil|Location2.Y=65100.664mil|Absolute=True">Hole Size Constraint: (3.15mm &gt; 2.54mm) Pad Screw3-S(-31.116mm,31.116mm) on Multi-Layer Actual Hole Size = 3.15mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=28549.926mil|Location2.X=28675.192mil|Location1.Y=64975.399mil|Location2.Y=65100.664mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=28549.926mil|Location2.X=28675.192mil|Location1.Y=64975.399mil|Location2.Y=65100.664mil|Absolute=True">Hole Size Constraint: (3.15mm &gt; 2.54mm) Pad Screw4-S(31.109mm,31.116mm) on Multi-Layer Actual Hole Size = 3.15mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29080.911mil|Location2.X=29206.176mil|Location1.Y=62880.438mil|Location2.Y=63005.704mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29080.911mil|Location2.X=29206.176mil|Location1.Y=62880.438mil|Location2.Y=63005.704mil|Absolute=True">Hole Size Constraint: (3.15mm &gt; 2.54mm) Pad Screw5-S(44.596mm,-22.096mm) on Multi-Layer Actual Hole Size = 3.15mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29080.911mil|Location2.X=29206.176mil|Location1.Y=64620.556mil|Location2.Y=64745.822mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29080.911mil|Location2.X=29206.176mil|Location1.Y=64620.556mil|Location2.Y=64745.822mil|Absolute=True">Hole Size Constraint: (3.15mm &gt; 2.54mm) Pad Screw6-S(44.596mm,22.103mm) on Multi-Layer Actual Hole Size = 3.15mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25569.1mil|Location2.X=25694.365mil|Location1.Y=64620.556mil|Location2.Y=64745.822mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25569.1mil|Location2.X=25694.365mil|Location1.Y=64620.556mil|Location2.Y=64745.822mil|Absolute=True">Hole Size Constraint: (3.15mm &gt; 2.54mm) Pad Screw7-S(-44.604mm,22.103mm) on Multi-Layer Actual Hole Size = 3.15mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25569.1mil|Location2.X=25694.365mil|Location1.Y=62880.438mil|Location2.Y=63005.704mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25569.1mil|Location2.X=25694.365mil|Location1.Y=62880.438mil|Location2.Y=63005.704mil|Absolute=True">Hole Size Constraint: (3.15mm &gt; 2.54mm) Pad Screw8-S(-44.604mm,-22.096mm) on Multi-Layer Actual Hole Size = 3.15mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27253.312mil|Location2.X=27419.916mil|Location1.Y=61780.871mil|Location2.Y=61947.475mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27253.312mil|Location2.X=27419.916mil|Location1.Y=61780.871mil|Location2.Y=61947.475mil|Absolute=True">Hole Size Constraint: (4.2mm &gt; 2.54mm) Pad Socket1-1(-1.3mm,-49.5mm) on Multi-Layer Actual Slot Hole Width = 4.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27023.312mil|Location2.X=27189.916mil|Location1.Y=61835.871mil|Location2.Y=62002.475mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27023.312mil|Location2.X=27189.916mil|Location1.Y=61835.871mil|Location2.Y=62002.475mil|Absolute=True">Hole Size Constraint: (4.2mm &gt; 2.54mm) Pad Socket1-2(-7.142mm,-48.103mm) on Multi-Layer Actual Slot Hole Width = 4.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27833.627mil|Location2.X=28000.231mil|Location1.Y=61789.139mil|Location2.Y=61955.743mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27833.627mil|Location2.X=28000.231mil|Location1.Y=61789.139mil|Location2.Y=61955.743mil|Absolute=True">Hole Size Constraint: (4.2mm &gt; 2.54mm) Pad Socket2-1(13.44mm,-49.29mm) on Multi-Layer Actual Slot Hole Width = 4.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27603.627mil|Location2.X=27770.231mil|Location1.Y=61844.139mil|Location2.Y=62010.743mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27603.627mil|Location2.X=27770.231mil|Location1.Y=61844.139mil|Location2.Y=62010.743mil|Absolute=True">Hole Size Constraint: (4.2mm &gt; 2.54mm) Pad Socket2-2(7.598mm,-47.893mm) on Multi-Layer Actual Slot Hole Width = 4.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25857.557mil|Location2.X=25976.917mil|Location1.Y=65287.525mil|Location2.Y=65406.885mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25857.557mil|Location2.X=25976.917mil|Location1.Y=65287.525mil|Location2.Y=65406.885mil|Absolute=True">Hole Size Constraint: (3mm &gt; 2.54mm) Pad TIP41_SPIN-0(-37.352mm,38.969mm) on Multi-Layer Actual Hole Size = 3mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26377.721mil|Location2.X=26497.082mil|Location1.Y=65277.721mil|Location2.Y=65397.082mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=26377.721mil|Location2.X=26497.082mil|Location1.Y=65277.721mil|Location2.Y=65397.082mil|Absolute=True">Hole Size Constraint: (3mm &gt; 2.54mm) Pad TIP41-0(-24.14mm,38.72mm) on Multi-Layer Actual Hole Size = 3mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDFTDUKNNWSJCZFUEDN1ZFSL3DGH4KDXOJUVW04PISWXHFB0ZMIQXL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24869.627mil|Location2.X=24880.877mil|Location1.Y=64812.226mil|Location2.Y=64823.476mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24869.627mil|Location2.X=24880.877mil|Location1.Y=64812.226mil|Location2.Y=64823.476mil|Absolute=True">Silk To Silk Clearance Constraint: (0.137mm &lt; 0.254mm) Between Text "1" (-64.412mm,25.523mm) on Bottom Overlay And Track (-63.65mm,21.205mm)(-63.65mm,26.285mm) on Bottom Overlay Silk Text to Silk Clearance [0.137mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24863.328mil|Location2.X=24874.578mil|Location1.Y=64372.249mil|Location2.Y=64383.499mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24863.328mil|Location2.X=24874.578mil|Location1.Y=64372.249mil|Location2.Y=64383.499mil|Absolute=True">Silk To Silk Clearance Constraint: (0.137mm &lt; 0.254mm) Between Text "1" (-64.572mm,14.348mm) on Bottom Overlay And Track (-63.81mm,10.03mm)(-63.81mm,15.11mm) on Bottom Overlay Silk Text to Silk Clearance [0.137mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24855.454mil|Location2.X=24866.704mil|Location1.Y=63967.918mil|Location2.Y=63979.168mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24855.454mil|Location2.X=24866.704mil|Location1.Y=63967.918mil|Location2.Y=63979.168mil|Absolute=True">Silk To Silk Clearance Constraint: (0.137mm &lt; 0.254mm) Between Text "1" (-64.772mm,4.078mm) on Bottom Overlay And Track (-64.01mm,-0.24mm)(-64.01mm,4.84mm) on Bottom Overlay Silk Text to Silk Clearance [0.137mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27030.083mil|Location2.X=27041.333mil|Location1.Y=61257.029mil|Location2.Y=61268.279mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27030.083mil|Location2.X=27041.333mil|Location1.Y=61257.029mil|Location2.Y=61268.279mil|Absolute=True">Silk To Silk Clearance Constraint: (0.137mm &lt; 0.254mm) Between Text "1" (-8.943mm,-65.372mm) on Bottom Overlay And Track (-9.705mm,-64.61mm)(-4.625mm,-64.61mm) on Bottom Overlay Silk Text to Silk Clearance [0.137mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27130.083mil|Location2.X=27141.333mil|Location1.Y=61255.359mil|Location2.Y=61266.609mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27130.083mil|Location2.X=27141.333mil|Location1.Y=61255.359mil|Location2.Y=61266.609mil|Absolute=True">Silk To Silk Clearance Constraint: (0.222mm &lt; 0.254mm) Between Text "2" (-6.403mm,-65.88mm) on Bottom Overlay And Track (-9.705mm,-64.61mm)(-4.625mm,-64.61mm) on Bottom Overlay Silk Text to Silk Clearance [0.222mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24867.958mil|Location2.X=24879.208mil|Location1.Y=64712.226mil|Location2.Y=64723.476mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24867.958mil|Location2.X=24879.208mil|Location1.Y=64712.226mil|Location2.Y=64723.476mil|Absolute=True">Silk To Silk Clearance Constraint: (0.222mm &lt; 0.254mm) Between Text "2" (-64.92mm,22.983mm) on Bottom Overlay And Track (-63.65mm,21.205mm)(-63.65mm,26.285mm) on Bottom Overlay Silk Text to Silk Clearance [0.222mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24861.658mil|Location2.X=24872.908mil|Location1.Y=64272.249mil|Location2.Y=64283.499mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24861.658mil|Location2.X=24872.908mil|Location1.Y=64272.249mil|Location2.Y=64283.499mil|Absolute=True">Silk To Silk Clearance Constraint: (0.222mm &lt; 0.254mm) Between Text "2" (-65.08mm,11.808mm) on Bottom Overlay And Track (-63.81mm,10.03mm)(-63.81mm,15.11mm) on Bottom Overlay Silk Text to Silk Clearance [0.222mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24853.784mil|Location2.X=24865.034mil|Location1.Y=63867.918mil|Location2.Y=63879.168mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=24853.784mil|Location2.X=24865.034mil|Location1.Y=63867.918mil|Location2.Y=63879.168mil|Absolute=True">Silk To Silk Clearance Constraint: (0.222mm &lt; 0.254mm) Between Text "2" (-65.28mm,1.538mm) on Bottom Overlay And Track (-64.01mm,-0.24mm)(-64.01mm,4.84mm) on Bottom Overlay Silk Text to Silk Clearance [0.222mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25181.233mil|Location2.X=25192.483mil|Location1.Y=64762.242mil|Location2.Y=64773.492mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25181.233mil|Location2.X=25192.483mil|Location1.Y=64762.242mil|Location2.Y=64773.492mil|Absolute=True">Silk To Silk Clearance Constraint: (0.052mm &lt; 0.254mm) Between Text "5" (-55.776mm,25.523mm) on Bottom Overlay And Track (-56.03mm,21.205mm)(-56.03mm,26.285mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25174.934mil|Location2.X=25186.184mil|Location1.Y=64322.265mil|Location2.Y=64333.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25174.934mil|Location2.X=25186.184mil|Location1.Y=64322.265mil|Location2.Y=64333.515mil|Absolute=True">Silk To Silk Clearance Constraint: (0.052mm &lt; 0.254mm) Between Text "5" (-55.936mm,14.348mm) on Bottom Overlay And Track (-56.19mm,10.03mm)(-56.19mm,15.11mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25167.06mil|Location2.X=25178.31mil|Location1.Y=63917.935mil|Location2.Y=63929.185mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25167.06mil|Location2.X=25178.31mil|Location1.Y=63917.935mil|Location2.Y=63929.185mil|Absolute=True">Silk To Silk Clearance Constraint: (0.052mm &lt; 0.254mm) Between Text "5" (-56.136mm,4.078mm) on Bottom Overlay And Track (-56.39mm,-0.24mm)(-56.39mm,4.84mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27080.067mil|Location2.X=27091.317mil|Location1.Y=61568.635mil|Location2.Y=61579.885mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27080.067mil|Location2.X=27091.317mil|Location1.Y=61568.635mil|Location2.Y=61579.885mil|Absolute=True">Silk To Silk Clearance Constraint: (0.052mm &lt; 0.254mm) Between Text "5" (-8.943mm,-56.736mm) on Bottom Overlay And Track (-9.705mm,-56.99mm)(-4.625mm,-56.99mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25181.233mil|Location2.X=25192.483mil|Location1.Y=64687.234mil|Location2.Y=64698.484mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25181.233mil|Location2.X=25192.483mil|Location1.Y=64687.234mil|Location2.Y=64698.484mil|Absolute=True">Silk To Silk Clearance Constraint: (0.052mm &lt; 0.254mm) Between Text "6" (-55.776mm,22.983mm) on Bottom Overlay And Track (-56.03mm,21.205mm)(-56.03mm,26.285mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25174.934mil|Location2.X=25186.184mil|Location1.Y=64247.257mil|Location2.Y=64258.507mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25174.934mil|Location2.X=25186.184mil|Location1.Y=64247.257mil|Location2.Y=64258.507mil|Absolute=True">Silk To Silk Clearance Constraint: (0.052mm &lt; 0.254mm) Between Text "6" (-55.936mm,11.808mm) on Bottom Overlay And Track (-56.19mm,10.03mm)(-56.19mm,15.11mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25167.06mil|Location2.X=25178.31mil|Location1.Y=63842.927mil|Location2.Y=63854.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=25167.06mil|Location2.X=25178.31mil|Location1.Y=63842.927mil|Location2.Y=63854.177mil|Absolute=True">Silk To Silk Clearance Constraint: (0.052mm &lt; 0.254mm) Between Text "6" (-56.136mm,1.538mm) on Bottom Overlay And Track (-56.39mm,-0.24mm)(-56.39mm,4.84mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27155.075mil|Location2.X=27166.325mil|Location1.Y=61568.635mil|Location2.Y=61579.885mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=27155.075mil|Location2.X=27166.325mil|Location1.Y=61568.635mil|Location2.Y=61579.885mil|Absolute=True">Silk To Silk Clearance Constraint: (0.052mm &lt; 0.254mm) Between Text "6" (-6.403mm,-56.736mm) on Bottom Overlay And Track (-9.705mm,-56.99mm)(-4.625mm,-56.99mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDYJRQJYRJX1ARNVZIHRG5A332BD4RQVZDF3C5WF4V2YD0YWJ1L5B"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29730.527mil|Location2.X=29732.528mil|Location1.Y=64629.197mil|Location2.Y=64631.198mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29730.527mil|Location2.X=29732.528mil|Location1.Y=64629.197mil|Location2.Y=64631.198mil|Absolute=True">Height Constraint: DIP Component PIXY-IDC2x5 (59.531mm,20.757mm) on Top Layer Actual Height = 133.793mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29729.807mil|Location2.X=29731.808mil|Location1.Y=64186.125mil|Location2.Y=64188.126mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29729.807mil|Location2.X=29731.808mil|Location1.Y=64186.125mil|Location2.Y=64188.126mil|Absolute=True">Height Constraint: DIP Component UP-IDC2x5 (59.513mm,9.503mm) on Top Layer Actual Height = 133.793mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29052.149mil|Location2.X=29054.15mil|Location1.Y=65693.882mil|Location2.Y=65695.882mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29052.149mil|Location2.X=29054.15mil|Location1.Y=65693.882mil|Location2.Y=65695.882mil|Absolute=True">Height Constraint: Small Component C shoot-CapSH (42.3mm,47.8mm) on Top Layer Actual Height = 43.4mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
