@@ -71,6 +71,10 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=WLTUYUMJ
 
+[GeneratedDocument1]
+DocumentPath=Project Outputs for front\Design Rule Check - front.html
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
