@@ -1,12 +1,12 @@
 Protel Design System Design Rule Check
-PCB File : D:\school\farz1\git\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc
-Date     : 6/13/2019
-Time     : 4:16:55 PM
+PCB File : E:\OpenF1-RCJ2019\Electronic\main\main PCB .PcbDoc
+Date     : 15/06/2019
+Time     : 01:39:52 È.Ù
 
-Processing Rule : Clearance Constraint (Gap=0.5mm) (InNetClass('FTDI')),(All)
+Processing Rule : Clearance Constraint (Gap=19.685mil) (InNetClass('FTDI')),(All)
 Rule Violations :0
 
-Processing Rule : Clearance Constraint (Gap=0.5mm) (All),(All)
+Processing Rule : Clearance Constraint (Gap=19.685mil) (All),(All)
 Rule Violations :0
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
@@ -18,64 +18,64 @@ Rule Violations :0
 Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
 Rule Violations :0
 
-Processing Rule : Width Constraint (Min=0.5mm) (Max=3mm) (Preferred=1mm) (All)
+Processing Rule : Width Constraint (Min=19.685mil) (Max=118.11mil) (Preferred=39.37mil) (All)
 Rule Violations :0
 
-Processing Rule : Width Constraint (Min=0.254mm) (Max=3mm) (Preferred=0.3mm) (InNetClass('ftdi'))
+Processing Rule : Width Constraint (Min=10mil) (Max=118.11mil) (Preferred=11.811mil) (InNetClass('ftdi'))
 Rule Violations :0
 
-Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
 Rule Violations :0
 
-Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)
-   Violation between Hole Size Constraint: (3.15mm > 2.54mm) Pad Screw1-S(31.109mm,-31.109mm) on Multi-Layer Actual Hole Size = 3.15mm
-   Violation between Hole Size Constraint: (3.15mm > 2.54mm) Pad Screw2-S(-31.116mm,-31.109mm) on Multi-Layer Actual Hole Size = 3.15mm
-   Violation between Hole Size Constraint: (3.15mm > 2.54mm) Pad Screw3-S(-31.116mm,31.116mm) on Multi-Layer Actual Hole Size = 3.15mm
-   Violation between Hole Size Constraint: (3.15mm > 2.54mm) Pad Screw4-S(31.109mm,31.116mm) on Multi-Layer Actual Hole Size = 3.15mm
-   Violation between Hole Size Constraint: (3.15mm > 2.54mm) Pad Screw5-S(44.596mm,-22.096mm) on Multi-Layer Actual Hole Size = 3.15mm
-   Violation between Hole Size Constraint: (3.15mm > 2.54mm) Pad Screw6-S(44.596mm,22.103mm) on Multi-Layer Actual Hole Size = 3.15mm
-   Violation between Hole Size Constraint: (3.15mm > 2.54mm) Pad Screw7-S(-44.604mm,22.103mm) on Multi-Layer Actual Hole Size = 3.15mm
-   Violation between Hole Size Constraint: (3.15mm > 2.54mm) Pad Screw8-S(-44.604mm,-22.096mm) on Multi-Layer Actual Hole Size = 3.15mm
-   Violation between Hole Size Constraint: (4.2mm > 2.54mm) Pad Socket1-1(-1.3mm,-49.5mm) on Multi-Layer Actual Slot Hole Width = 4.2mm
-   Violation between Hole Size Constraint: (4.2mm > 2.54mm) Pad Socket1-2(-7.142mm,-48.103mm) on Multi-Layer Actual Slot Hole Width = 4.2mm
-   Violation between Hole Size Constraint: (4.2mm > 2.54mm) Pad Socket2-1(13.44mm,-49.29mm) on Multi-Layer Actual Slot Hole Width = 4.2mm
-   Violation between Hole Size Constraint: (4.2mm > 2.54mm) Pad Socket2-2(7.598mm,-47.893mm) on Multi-Layer Actual Slot Hole Width = 4.2mm
-   Violation between Hole Size Constraint: (3mm > 2.54mm) Pad TIP41_SPIN-0(-37.352mm,38.969mm) on Multi-Layer Actual Hole Size = 3mm
-   Violation between Hole Size Constraint: (3mm > 2.54mm) Pad TIP41-0(-24.14mm,38.72mm) on Multi-Layer Actual Hole Size = 3mm
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+   Violation between Hole Size Constraint: (124.016mil > 100mil) Pad Screw1-S(1224.764mil,-1224.764mil) on Multi-Layer Actual Hole Size = 124.016mil
+   Violation between Hole Size Constraint: (124.016mil > 100mil) Pad Screw2-S(-1225.039mil,-1224.764mil) on Multi-Layer Actual Hole Size = 124.016mil
+   Violation between Hole Size Constraint: (124.016mil > 100mil) Pad Screw3-S(-1225.039mil,1225.039mil) on Multi-Layer Actual Hole Size = 124.016mil
+   Violation between Hole Size Constraint: (124.016mil > 100mil) Pad Screw4-S(1224.764mil,1225.039mil) on Multi-Layer Actual Hole Size = 124.016mil
+   Violation between Hole Size Constraint: (124.016mil > 100mil) Pad Screw5-S(1755.748mil,-869.921mil) on Multi-Layer Actual Hole Size = 124.016mil
+   Violation between Hole Size Constraint: (124.016mil > 100mil) Pad Screw6-S(1755.748mil,870.197mil) on Multi-Layer Actual Hole Size = 124.016mil
+   Violation between Hole Size Constraint: (124.016mil > 100mil) Pad Screw7-S(-1756.063mil,870.197mil) on Multi-Layer Actual Hole Size = 124.016mil
+   Violation between Hole Size Constraint: (124.016mil > 100mil) Pad Screw8-S(-1756.063mil,-869.921mil) on Multi-Layer Actual Hole Size = 124.016mil
+   Violation between Hole Size Constraint: (165.354mil > 100mil) Pad Socket1-1(246.063mil,-1803.15mil) on Multi-Layer Actual Slot Hole Width = 165.354mil
+   Violation between Hole Size Constraint: (165.354mil > 100mil) Pad Socket1-2(476.063mil,-1858.15mil) on Multi-Layer Actual Slot Hole Width = 165.354mil
+   Violation between Hole Size Constraint: (165.354mil > 100mil) Pad Socket2-1(-300mil,-1787.402mil) on Multi-Layer Actual Slot Hole Width = 165.354mil
+   Violation between Hole Size Constraint: (165.354mil > 100mil) Pad Socket2-2(-70mil,-1842.402mil) on Multi-Layer Actual Slot Hole Width = 165.354mil
+   Violation between Hole Size Constraint: (118.11mil > 100mil) Pad TIP41_SPIN-0(-1451.78mil,1539.527mil) on Multi-Layer Actual Hole Size = 118.11mil
+   Violation between Hole Size Constraint: (118.11mil > 100mil) Pad TIP41-0(-932.095mil,1519.842mil) on Multi-Layer Actual Hole Size = 118.11mil
 Rule Violations :14
 
-Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
 Rule Violations :0
 
-Processing Rule : Silk to Silk (Clearance=0.254mm) (All),(All)
-   Violation between Silk To Silk Clearance Constraint: (0.137mm < 0.254mm) Between Text "1" (-64.412mm,25.523mm) on Bottom Overlay And Track (-63.65mm,21.205mm)(-63.65mm,26.285mm) on Bottom Overlay Silk Text to Silk Clearance [0.137mm]
-   Violation between Silk To Silk Clearance Constraint: (0.137mm < 0.254mm) Between Text "1" (-64.572mm,14.348mm) on Bottom Overlay And Track (-63.81mm,10.03mm)(-63.81mm,15.11mm) on Bottom Overlay Silk Text to Silk Clearance [0.137mm]
-   Violation between Silk To Silk Clearance Constraint: (0.137mm < 0.254mm) Between Text "1" (-64.772mm,4.078mm) on Bottom Overlay And Track (-64.01mm,-0.24mm)(-64.01mm,4.84mm) on Bottom Overlay Silk Text to Silk Clearance [0.137mm]
-   Violation between Silk To Silk Clearance Constraint: (0.137mm < 0.254mm) Between Text "1" (-8.943mm,-65.372mm) on Bottom Overlay And Track (-9.705mm,-64.61mm)(-4.625mm,-64.61mm) on Bottom Overlay Silk Text to Silk Clearance [0.137mm]
-   Violation between Silk To Silk Clearance Constraint: (0.222mm < 0.254mm) Between Text "2" (-6.403mm,-65.88mm) on Bottom Overlay And Track (-9.705mm,-64.61mm)(-4.625mm,-64.61mm) on Bottom Overlay Silk Text to Silk Clearance [0.222mm]
-   Violation between Silk To Silk Clearance Constraint: (0.222mm < 0.254mm) Between Text "2" (-64.92mm,22.983mm) on Bottom Overlay And Track (-63.65mm,21.205mm)(-63.65mm,26.285mm) on Bottom Overlay Silk Text to Silk Clearance [0.222mm]
-   Violation between Silk To Silk Clearance Constraint: (0.222mm < 0.254mm) Between Text "2" (-65.08mm,11.808mm) on Bottom Overlay And Track (-63.81mm,10.03mm)(-63.81mm,15.11mm) on Bottom Overlay Silk Text to Silk Clearance [0.222mm]
-   Violation between Silk To Silk Clearance Constraint: (0.222mm < 0.254mm) Between Text "2" (-65.28mm,1.538mm) on Bottom Overlay And Track (-64.01mm,-0.24mm)(-64.01mm,4.84mm) on Bottom Overlay Silk Text to Silk Clearance [0.222mm]
-   Violation between Silk To Silk Clearance Constraint: (0.052mm < 0.254mm) Between Text "5" (-55.776mm,25.523mm) on Bottom Overlay And Track (-56.03mm,21.205mm)(-56.03mm,26.285mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]
-   Violation between Silk To Silk Clearance Constraint: (0.052mm < 0.254mm) Between Text "5" (-55.936mm,14.348mm) on Bottom Overlay And Track (-56.19mm,10.03mm)(-56.19mm,15.11mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]
-   Violation between Silk To Silk Clearance Constraint: (0.052mm < 0.254mm) Between Text "5" (-56.136mm,4.078mm) on Bottom Overlay And Track (-56.39mm,-0.24mm)(-56.39mm,4.84mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]
-   Violation between Silk To Silk Clearance Constraint: (0.052mm < 0.254mm) Between Text "5" (-8.943mm,-56.736mm) on Bottom Overlay And Track (-9.705mm,-56.99mm)(-4.625mm,-56.99mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]
-   Violation between Silk To Silk Clearance Constraint: (0.052mm < 0.254mm) Between Text "6" (-55.776mm,22.983mm) on Bottom Overlay And Track (-56.03mm,21.205mm)(-56.03mm,26.285mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]
-   Violation between Silk To Silk Clearance Constraint: (0.052mm < 0.254mm) Between Text "6" (-55.936mm,11.808mm) on Bottom Overlay And Track (-56.19mm,10.03mm)(-56.19mm,15.11mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]
-   Violation between Silk To Silk Clearance Constraint: (0.052mm < 0.254mm) Between Text "6" (-56.136mm,1.538mm) on Bottom Overlay And Track (-56.39mm,-0.24mm)(-56.39mm,4.84mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]
-   Violation between Silk To Silk Clearance Constraint: (0.052mm < 0.254mm) Between Text "6" (-6.403mm,-56.736mm) on Bottom Overlay And Track (-9.705mm,-56.99mm)(-4.625mm,-56.99mm) on Bottom Overlay Silk Text to Silk Clearance [0.052mm]
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+   Violation between Silk To Silk Clearance Constraint: (5.402mil < 10mil) Between Text "1" (-2445.354mil,1004.859mil) on Bottom Overlay And Track (-2415.354mil,834.859mil)(-2415.354mil,1034.859mil) on Bottom Overlay Silk Text to Silk Clearance [5.402mil]
+   Violation between Silk To Silk Clearance Constraint: (5.402mil < 10mil) Between Text "1" (-2448.996mil,198.063mil) on Bottom Overlay And Track (-2418.996mil,28.063mil)(-2418.996mil,228.063mil) on Bottom Overlay Silk Text to Silk Clearance [5.402mil]
+   Violation between Silk To Silk Clearance Constraint: (5.402mil < 10mil) Between Text "1" (-2453.318mil,600.315mil) on Bottom Overlay And Track (-2423.318mil,430.315mil)(-2423.318mil,630.315mil) on Bottom Overlay Silk Text to Silk Clearance [5.402mil]
+   Violation between Silk To Silk Clearance Constraint: (5.402mil < 10mil) Between Text "1" (-434.961mil,-2632.517mil) on Bottom Overlay And Track (-464.961mil,-2602.517mil)(-264.961mil,-2602.517mil) on Bottom Overlay Silk Text to Silk Clearance [5.402mil]
+   Violation between Silk To Silk Clearance Constraint: (8.74mil < 10mil) Between Text "2" (-2465.354mil,904.859mil) on Bottom Overlay And Track (-2415.354mil,834.859mil)(-2415.354mil,1034.859mil) on Bottom Overlay Silk Text to Silk Clearance [8.74mil]
+   Violation between Silk To Silk Clearance Constraint: (8.74mil < 10mil) Between Text "2" (-2468.996mil,98.063mil) on Bottom Overlay And Track (-2418.996mil,28.063mil)(-2418.996mil,228.063mil) on Bottom Overlay Silk Text to Silk Clearance [8.74mil]
+   Violation between Silk To Silk Clearance Constraint: (8.74mil < 10mil) Between Text "2" (-2473.318mil,500.315mil) on Bottom Overlay And Track (-2423.318mil,430.315mil)(-2423.318mil,630.315mil) on Bottom Overlay Silk Text to Silk Clearance [8.74mil]
+   Violation between Silk To Silk Clearance Constraint: (8.74mil < 10mil) Between Text "2" (-334.961mil,-2652.517mil) on Bottom Overlay And Track (-464.961mil,-2602.517mil)(-264.961mil,-2602.517mil) on Bottom Overlay Silk Text to Silk Clearance [8.74mil]
+   Violation between Silk To Silk Clearance Constraint: (2.063mil < 10mil) Between Text "5" (-2105.354mil,1004.859mil) on Bottom Overlay And Track (-2115.354mil,834.859mil)(-2115.354mil,1034.859mil) on Bottom Overlay Silk Text to Silk Clearance [2.063mil]
+   Violation between Silk To Silk Clearance Constraint: (2.063mil < 10mil) Between Text "5" (-2108.996mil,198.063mil) on Bottom Overlay And Track (-2118.996mil,28.063mil)(-2118.996mil,228.063mil) on Bottom Overlay Silk Text to Silk Clearance [2.063mil]
+   Violation between Silk To Silk Clearance Constraint: (2.063mil < 10mil) Between Text "5" (-2113.318mil,600.315mil) on Bottom Overlay And Track (-2123.318mil,430.315mil)(-2123.318mil,630.315mil) on Bottom Overlay Silk Text to Silk Clearance [2.063mil]
+   Violation between Silk To Silk Clearance Constraint: (2.063mil < 10mil) Between Text "5" (-434.961mil,-2292.517mil) on Bottom Overlay And Track (-464.961mil,-2302.517mil)(-264.961mil,-2302.517mil) on Bottom Overlay Silk Text to Silk Clearance [2.063mil]
+   Violation between Silk To Silk Clearance Constraint: (2.063mil < 10mil) Between Text "6" (-2105.354mil,904.859mil) on Bottom Overlay And Track (-2115.354mil,834.859mil)(-2115.354mil,1034.859mil) on Bottom Overlay Silk Text to Silk Clearance [2.063mil]
+   Violation between Silk To Silk Clearance Constraint: (2.063mil < 10mil) Between Text "6" (-2108.996mil,98.063mil) on Bottom Overlay And Track (-2118.996mil,28.063mil)(-2118.996mil,228.063mil) on Bottom Overlay Silk Text to Silk Clearance [2.063mil]
+   Violation between Silk To Silk Clearance Constraint: (2.063mil < 10mil) Between Text "6" (-2113.318mil,500.315mil) on Bottom Overlay And Track (-2123.318mil,430.315mil)(-2123.318mil,630.315mil) on Bottom Overlay Silk Text to Silk Clearance [2.063mil]
+   Violation between Silk To Silk Clearance Constraint: (2.063mil < 10mil) Between Text "6" (-334.961mil,-2292.517mil) on Bottom Overlay And Track (-464.961mil,-2302.517mil)(-264.961mil,-2302.517mil) on Bottom Overlay Silk Text to Silk Clearance [2.063mil]
 Rule Violations :16
 
-Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
 Rule Violations :0
 
-Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
-   Violation between Height Constraint: DIP Component PIXY-IDC2x5 (59.531mm,20.757mm) on Top Layer Actual Height = 133.793mm
-   Violation between Height Constraint: DIP Component UP-IDC2x5 (59.513mm,9.503mm) on Top Layer Actual Height = 133.793mm
-   Violation between Height Constraint: Small Component C shoot-CapSH (42.3mm,47.8mm) on Top Layer Actual Height = 43.4mm
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+   Violation between Height Constraint: DIP Component PIXY-IDC2x5 (2347.012mil,827.571mil) on Top Layer Actual Height = 5267.438mil
+   Violation between Height Constraint: DIP Component UP-IDC2x5 (2343.012mil,374.133mil) on Top Layer Actual Height = 5267.438mil
+   Violation between Height Constraint: Small Component C shoot-CapSH (1677.008mil,1830.709mil) on Top Layer Actual Height = 1708.661mil
 Rule Violations :3
 
 
 Violations Detected : 33
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:00
