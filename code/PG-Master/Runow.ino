@@ -5,6 +5,7 @@ void MOTOR(int lf, int lb, int rf, int rb)
   if (lb > 1023)  lb = 1023;
   if (lb < -1023) lb = -1023;
   if (rb > 1023)  rb = 1023;
+
   if (rb < -1023) rb = -1023;
   if (rf > 1023)  rf = 1023;
   if (rf < -1023) rf = -1023;
@@ -116,25 +117,59 @@ void mot_ang(float ang)
   }
   MOTOR (lf + set_s, lb + set_s, rf + set_s, rb + set_s);
 }
-
-//------------shift-new--------------------------
+void MOVE(float ang)
+{
+  float division = 512 / 22.5;
+  int lf = 0;
+  int lb = 0;
+  int rb = 0;
+  int rf = 0;
+  if (0 <= ang && ang < 90) {
+    lf = 1023;
+    lb = 1024 - (ang * division);
+    rb = -1023;
+    rf = -1024 + (ang * division);
+  }
+  else if (90 <= ang && ang < 180) {
+    ang = ang - 90;
+    lf = 1024 - (ang * division);
+    lb = -1024;
+    rb = -1024 + (ang * division);
+    rf = 1024;
+  }
+  else if (180 <= ang && ang < 270)
+  {
+    ang = ang - 180;
+    lf = -1023;
+    lb = -1024 + (ang * division);
+    rb = 1023;
+    rf = 1024 - (ang * division);
+  }
+  else if (270 <= ang && ang <= 360) {
+    ang = ang - 270;
+    lf = -1024 + (ang * division);
+    lb = 1023;
+    rb = 1024 - (ang * division);
+    rf = -1023;
+  }
+  MOTOR (lf , lb , rf , rb );
+}
 void shift()
 {
   col_ang();
-  if (Ba < 120) ba = (atan2(ByCenter, BxCenter - 40) * 180 / PI);
-  if (Ba > 240) ba = (atan2(ByCenter, BxCenter - 40) * 180 / PI);
-  else if (Ba > 120 && Ba < 180) ba = (atan2(ByCenter - 30, BxCenter) * 180 / PI) + (DShift / 10);
-  else if (Ba > 180 && Ba < 240) ba = (atan2(ByCenter + 40, BxCenter) * 180 / PI) + (DShift / 10);
-
-  if (ba < 0) ba = ba + 360;
-
-  if (Ba > 345 || Ba < 15) mot_ang(0);
-  else mot_ang(ba);
+  if (Ba > 345 || Ba <= 15) shif = 0;
+  else if (Ba <= 120) shif = (atan2(By, -Bx - 25) * 180 / PI)  + (DShift / 10);
+  else if (Ba >= 240) shif = (atan2(By , -Bx - 25) * 180 / PI) - (DShift / 10);
+  else if (Ba > 120 && Ba <= 180) shif = (atan2(By - 40, -Bx) * 180 / PI) + (DShift / 10);
+  else if (Ba > 180 && Ba < 240) shif = (atan2(By + 40, -Bx) * 180 / PI) - (DShift / 10);
+  if (shif < 0) shif = shif + 360;
+  mot_ang(shif);
 }
 
 //------------STOP------------
 void STOP()
-{ reduction = 1;
+{
+  reduction = 1;
   MOTOR (0 + set_s, 0 + set_s , 0 + set_s , 0 + set_s);
 }
 

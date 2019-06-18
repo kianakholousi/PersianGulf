@@ -10,7 +10,6 @@
 //#include <utility/imumaths.h>
 Pixy pcam;
 IntervalTimer myTimer;
-
 #define Buzzer 21
 #define Shoot 10
 #define PWMlf 38
@@ -26,16 +25,15 @@ IntervalTimer myTimer;
 //adafruit_bno055_offsets_t calibrationData;
 //sensors_event_t event;
 //adafruit_bno055_offsets_t newCalib;
-float Ba, GYa, GBa, reduction = 0, mamadagha;
-int DShift, BA, BC, Bx, By, BxCenter, ByCenter, DistanceB, GYx, GYy, DistanceGY, GBx, GBy, DistanceGB, Gy;
+float GYa, GBa, reduction = 0, mamadagha;
+int FO, FI, RO, RI, BO, BI, LO, LI, NFO, NFI, NRO, NRI, NBO, NBI, NLO, NLI;
+int Ba, DShift, BA, BC, Bx, By, DistanceB, GYx, GYy, DistanceGY, GBx, GBy, DistanceGB, Gy;
 int OS[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0}, OSP[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-int Compass = 0, Cmp = 0, setcmp = 0, set_s = 0, refresher = 0;
-int Other_distance , Other_Ba, l1, l2, r1, r2, i = 0, setbno, distance, Shootflag = 0, bnox, eeAddress = 25, Calibrate_BNO = 0, SHC = 0, BCount = 0,yell;
-char buff[9];
+int Compass = 0, Compass2, Cmp = 0, setcmp = 0, set_s = 0, refresher = 0;
+int  i = 0, setbno, dis_back, Shootflag = 0, bnox, eeAddress = 25, Calibrate_BNO = 0, SHC = 0, yell;
 bool fa = 0, fb = 0, ra = 0, rb = 0, ba = 0, bb = 0, la = 0, lb = 0, goalieTeach, Ball;
-bool flag = false;
-int  BAxcenter, BayCenter, k;
-int Bit = 49;
+bool flag = true, south = false;
+int  BAxcenter, BayCenter, k, shif;
 void setup() {
   //------------VL53L0X_d----------------
   //  lox.begin();
@@ -47,15 +45,13 @@ void setup() {
   Wire2.begin();
   set_pins();
   eeprom_read();
-  //------------bBNO055-----------------
-  //  bno.begin();
-  //  EEPROM.get(eeAddress, calibrationData);
-  //  bno.setSensorOffsets(calibrationData);
-  //  bno.setExtCrystalUse(true);
-  //    bno.getSensorOffsets(newCalib);
 }
 
 void loop() {
-  reduction = 0.6;
-  mot_ang(0);
+  SET();
+  OC();
+  col_ang();
+  if (Ball) fallout();
+  else STOP();
+  //chop();
 }

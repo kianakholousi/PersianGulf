@@ -7,7 +7,7 @@ void fallout()
   col_ang();
   if (flag == 0)
   {
-    kaj = Cmp;
+    kaj = Compass2;
   }
   if (flag == 1) {
     kaj = yell;
@@ -16,12 +16,12 @@ void fallout()
   if (ra == 1 || rb == 1)
   {
     mot_ang(270);
-    /////////
-    if (kaj <= 10 && kaj > -350)
+    ///////////
+    if (kaj <= 10 && kaj > -90)
     {
       if (abs(kaj) <= 10)
       {
-        bigball = 180;   smallball = 0;
+        bigball = 215;   smallball = 60;
       }
       else
       {
@@ -42,14 +42,18 @@ void fallout()
 
         if (fa || fb)
         {
+//          south = true;
           mot_ang(210);
+//          south = false;
           if (fb == 1)
           {
             while (fa == 0)
             {
               col_ang();
               OC();
-              mot_ang(200);
+//              south = true;
+              MOVE(200);
+//              south = false;
             }
           }
         }
@@ -62,7 +66,9 @@ void fallout()
             {
               col_ang();
               OC();
-              mot_ang(315);
+//              south = true;
+              MOVE(315);
+//              south = false;
             }
           }
         }
@@ -72,17 +78,21 @@ void fallout()
           {
             col_ang();
             OC();
+//            south = true;
             mot_ang(270);
+//            south = false;
           }
         }
         else if (ra)
-          mot_ang(270);
+//          south = true;
+        mot_ang(270);
+//        south = false;
         else
           STOP();
       }
     }
     ////////oonvar kaj/////////
-    else if (kaj > 10 && kaj <= 350)
+    else if (kaj > 10 && kaj <= 90)
     {
       smallball = 180;      bigball = 270;
       while ((Ba < smallball || Ba > bigball) && i < 5)
@@ -95,27 +105,35 @@ void fallout()
         }
         if (fa || fb)
         {
+//          south = true;
           mot_ang(210);
+//          south = false;
           if (fb == 1)
           {
             while (fa == 0)
             {
               col_ang();
               OC();
-              mot_ang(200);
+//              south = true;
+              MOVE(200);
+//              south = false;
             }
           }
         }
         else if (ba || bb)
         {
+//          south = true;
           mot_ang(320);
+//          south = false;
           if (bb == 1 )
           {
             while (ba == 0)
             {
               col_ang();
               OC();
-              mot_ang(315);
+//              south = true;
+              MOVE(315);
+//              south = false;
             }
           }
         }
@@ -124,11 +142,15 @@ void fallout()
           while (!ra)
           { col_ang();
             OC();
+//            south = true;
             mot_ang(270);
+//            south = false;
           }
         }
         else if (ra)
-          mot_ang(270);
+//          south = true;
+        mot_ang(270);
+//        south = false;
         else
           STOP();
       }
@@ -138,7 +160,7 @@ void fallout()
   else if (la == 1 || lb == 1)
   {
     mot_ang(90);
-    if (kaj >= -10 && kaj < 350)
+    if (kaj >= -10 && kaj < 90)
     {
       if (abs (kaj) <= 10)
       {
@@ -168,7 +190,7 @@ void fallout()
             while (fa == 0)
             {
               OC();
-              mot_ang(135);
+              MOVE(135);
             }
           }
         }
@@ -180,7 +202,7 @@ void fallout()
             while (ba == 0)
             { col_ang();
               OC();
-              mot_ang(45);
+              MOVE(45);
             }
           }
         }
@@ -199,7 +221,7 @@ void fallout()
           STOP();
       }
     }
-    else if (kaj < -10 && kaj > -350)
+    else if (kaj < -10 && kaj > -90)
     {
       smallball = 90;    bigball = 180;
       while ((Ba < smallball || Ba > bigball) && i < 5)
@@ -218,7 +240,7 @@ void fallout()
             while (fa == 0)
             { col_ang();
               OC();
-              mot_ang(135);
+              MOVE(135);
             }
           }
         }
@@ -231,7 +253,7 @@ void fallout()
             {
               col_ang();
               OC();
-              mot_ang(45);
+              MOVE(45);
             }
           }
         }
@@ -282,7 +304,7 @@ void fallout()
           {
             col_ang();
             OC();
-            mot_ang(135);
+            MOVE(135);
           }
         }
       }
@@ -295,7 +317,7 @@ void fallout()
           {
             col_ang();
             OC();
-            mot_ang(225);
+            MOVE(225);
           }
         }
       }
@@ -342,7 +364,7 @@ void fallout()
           while (la == 0)
           { col_ang();
             OC();
-            mot_ang(45);
+            MOVE(45);
           }
         }
       }
@@ -355,7 +377,7 @@ void fallout()
           {
             col_ang();
             OC();
-            mot_ang(300);
+            MOVE(300);
           }
         }
       }

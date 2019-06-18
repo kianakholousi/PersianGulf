@@ -13,7 +13,7 @@ void set_pins()
   analogWriteResolution(10);
   analogWriteFrequency(38, 29296.875);
   //------------out sensors---------------
-  pinMode(Bit, INPUT);//49
+  pinMode(49, INPUT);//49
   pinMode(32, INPUT);
   pinMode(18, INPUT);
   pinMode(19, INPUT);
@@ -36,11 +36,7 @@ void set_pins()
   //------------Buzzer--------------------
   pinMode(21, OUTPUT);
   digitalWrite(21, HIGH);
-  delay(50);
-  digitalWrite(21, LOW);
-  delay(30);
-  digitalWrite(21, HIGH);
-  delay(50);
+  delay(35);
   digitalWrite(21, LOW);
   pinMode(29, INPUT);
 }
