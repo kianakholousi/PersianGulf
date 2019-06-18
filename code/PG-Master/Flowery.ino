@@ -2,6 +2,7 @@ int LBa = 0, RBa = 0;
 //------------backtogoal with yellow------------
 void Backtogoal()
 {
+  VL_Reader();
   reduction = 0.6;
   if (DistanceGY > 30 && DistanceGY < 45 && GYa > 145 && GYa < 210 ) STOP();
   else if ((DistanceGY < 30 || DistanceGY > 45) || (GYa > 220 || GYa < 135) )
@@ -23,6 +24,20 @@ void Backtogoal()
       mot_ang(270);
     }
   }
+}
+///////////////////////////back to goal kiana////////////////////////
+void backtogoal() {
+  VL_Reader();
+  if (dis_back > 1000)
+  {
+    mot_ang(180);
+  }
+  else if (dis_back < 200)
+  {
+    mot_ang(0);
+  }
+  else
+    STOP();
 }
 //------------move in width with yellow------------
 void MoveWidth()
