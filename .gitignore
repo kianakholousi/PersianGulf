@@ -34,4 +34,5 @@
 *.zip
 *.log
 *.LOG
-Electronic/main/__Previews/main schematic.SchDocPreview
+*.SchDocPreview
+*.html
