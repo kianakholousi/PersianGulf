@@ -4,7 +4,7 @@
 #include <SPI.h>
 #include <math.h>
 #include <EEPROM.h>
-#include "Adafruit_VL53L0X.h"
+//#include "Adafruit_VL53L0X.h"
 //#include <Adafruit_Sensor.h>
 //#include <Adafruit_BNO055.h>
 //#include <utility/imumaths.h>
@@ -20,7 +20,7 @@ IntervalTimer myTimer;
 #define digitalPINrf 8
 #define PWMrb  7
 #define digitalPINrb  6
-Adafruit_VL53L0X lox = Adafruit_VL53L0X();
+//Adafruit_VL53L0X lox = Adafruit_VL53L0X();
 //Adafruit_BNO055 bno = Adafruit_BNO055(55);
 //adafruit_bno055_offsets_t calibrationData;
 //sensors_event_t event;
@@ -36,7 +36,7 @@ bool flag = true, south = false;
 int  BAxcenter, BayCenter, k, shif;
 void setup() {
   //------------VL53L0X_d----------------
-  lox.begin();
+  //  lox.begin();
   //------------start_robot--------------
   myTimer.begin(Counter, 100000);
   Serial.begin(9600);
@@ -46,15 +46,25 @@ void setup() {
   set_pins();
   eeprom_read();
 }
+//------------INTER_UP_T---------------------
+void Counter()
+{
+  reduction = 0.9;
+  BC++;
+ 
+//    set_s = spin_speed(1, 30, 10);
+    flag = 1;
+    set_s = spin_speed(1, 30, 40);
+
+  if (BC > 2) Ball = false;
+  else Ball = true;
+}
 
 void loop() {
   SET();
   OC();
   col_ang();
-  if (Ball)  shift();
+  if (Ball) fallout();
   else STOP();
-  //  backtogoal();
-  //    if (Ball) fallout();
-  //    else STOP();
   //chop();
 }
