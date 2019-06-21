@@ -26,7 +26,7 @@ void fallout()
       }
       else
       {
-        bigball = 315;   smallball = 45;
+        bigball = 250;   smallball = 15;
       }
       while (Ba >= smallball && Ba <= bigball && Ball)
       {
@@ -34,36 +34,36 @@ void fallout()
         col_ang();
         if (abs(kaj) <= 15)
         {
-          bigball = 225;   smallball = 15;
+          bigball = 210;   smallball = 15;
         }
         else
         {
-          bigball = 315;  smallball = 45;
+          bigball = 250;  smallball = 15;
         }
 
         if (fa || fb)
         {
-          mot_ang(210);
-          if (fb == 1)
+          mot_ang(225);
+          if (fb)
           {
-            while (fa == 0)
+            while (!fa)
             {
               col_ang();
               OC();
-              MOVE(200);
+              MOVE(225);
             }
           }
         }
         else if (ba || bb)
         {
-          mot_ang(320);
-          if (bb == 1 )
+          mot_ang(330);
+          if (bb)
           {
-            while (ba == 0)
+            while (!ba)
             {
               col_ang();
               OC();
-              MOVE(315);
+              MOVE(330);
             }
           }
         }
@@ -83,10 +83,10 @@ void fallout()
       }
     }
     ////////oonvar kaj/////////
-    else if (kaj > 15 && kaj <= 135)
+    else if (kaj > 15 && kaj <= 90)
     {
-      smallball = 225;      bigball = 315;
-      while ((Ba < smallball || Ba > bigball) && i < 5)
+      if   smallball = 225;      bigball = 315;
+      while ((Ba < smallball || Ba > bigball) && Ball)
       {
         OC();
         col_ang();
