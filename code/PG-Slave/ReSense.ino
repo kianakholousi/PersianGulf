@@ -66,14 +66,14 @@ void SRF_Reader()
 //------reading out sensors----
 void OS_Reader()
 {
-  FO = analogRead(49);
-  FI = analogRead(32);
-  RO = analogRead(23);
-  RI = analogRead(22);
-  LO = analogRead(18);
-  LI = analogRead(19);
-  BO = analogRead(16);
-  BI = analogRead(17);
+  FO = analogRead(36);
+  FI = analogRead(37);
+  RO = analogRead(34);
+  RI = analogRead(33);
+  LO = analogRead(A21);
+  LI = analogRead(A22);
+  BO = analogRead(18);
+  BI = analogRead(19);
 }
 
 ////////////////////outsensors///////////////////

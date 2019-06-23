@@ -1,18 +1,18 @@
 void SET() {
-  if (digitalRead(29) == LOW)
+  if (digitalRead(35) == LOW)
   {
-    while (digitalRead(29) == LOW)
+    while (digitalRead(35) == LOW)
     {
-      digitalWrite(21, HIGH);
+      digitalWrite(11, HIGH);
       //------------set out sensors on green
-      FO = analogRead(49); //F1
-      FI = analogRead(32); //F2
-      RO = analogRead(23); //R1
-      RI = analogRead(22); //R2
-      LO = analogRead(18); //L1
-      LI = analogRead(19); //L2
-      BO = analogRead(16); //B1
-      BI = analogRead(17); //B2
+      FO = analogRead(36);
+      FI = analogRead(37);
+      RO = analogRead(34);
+      RI = analogRead(33);
+      LO = analogRead(A21);
+      LI = analogRead(A22);
+      BO = analogRead(18);
+      BI = analogRead(19);
       Read_Cmp();
       //      Read_bno();
     }
@@ -27,7 +27,7 @@ void SET() {
     NBO = BO + 40;
     NBI = BI + 50;
     eeprom_write();
-    digitalWrite(21, LOW);
+    digitalWrite(11, LOW);
   }
 }
 
