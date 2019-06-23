@@ -10,16 +10,16 @@
 //#include <utility/imumaths.h>
 Pixy pcam;
 IntervalTimer myTimer;
-#define Buzzer 21
-#define Shoot 10
-#define PWMlf 38
-#define digitalPINlf 39
-#define PWMlb  14
-#define digitalPINlb  37
-#define PWMrf  2
-#define digitalPINrf 8
-#define PWMrb  7
-#define digitalPINrb  6
+#define Buzzer 11
+#define Shoot 30
+#define PWMlf 21
+#define digitalPINlf 20
+#define PWMlb  23
+#define digitalPINlb  22
+#define PWMrf  10
+#define digitalPINrf 9
+#define PWMrb  6
+#define digitalPINrb  
 Adafruit_VL53L0X lox = Adafruit_VL53L0X();
 //Adafruit_BNO055 bno = Adafruit_BNO055(55);
 //adafruit_bno055_offsets_t calibrationData;
