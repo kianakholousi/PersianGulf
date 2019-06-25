@@ -12,8 +12,8 @@ void col_ang()
       if (pcam.blocks[j].signature == 1)
       {
         BC = 0;
-        Bx = pcam.blocks[j].x - 164 + (pcam.blocks[j].width / 2);
-        By = pcam.blocks[j].y - 95 + (pcam.blocks[j].height / 2);
+        Bx = pcam.blocks[j].x - 168 + (pcam.blocks[j].width / 2);
+        By = pcam.blocks[j].y - 86 + (pcam.blocks[j].height / 2);
         Ba = atan2(By , -Bx) * 180 / PI;
         if (Ba < 0) Ba = 360 + Ba;
         DistanceB = sqrt((Bx * Bx) + (By * By));
@@ -22,10 +22,10 @@ void col_ang()
 
       else if (pcam.blocks[j].signature == 3)////G Yellow
       {
-        GYx = pcam.blocks[j].x - 164;
+        GYx = pcam.blocks[j].x - 186;
         if (GYx < 0) GYx = GYx - pcam.blocks[j].width / 2;
         else GYx = GYx + pcam.blocks[j].width / 2;
-        GYy = pcam.blocks[j].y - 95 ;
+        GYy = pcam.blocks[j].y - 86 ;
         if (GYy < 0) GYy = GYy - pcam.blocks[j].height / 2;
         else GYy = GYy + pcam.blocks[j].height / 2;
         DistanceGY = sqrt((GYx * GYx) + (GYy * GYy)) - 40;

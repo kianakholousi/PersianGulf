@@ -1,3 +1,4 @@
+
 void MOTOR(int lf, int lb, int rf, int rb)
 {
   if (lf > 1023)  lf = 1023;
@@ -10,10 +11,10 @@ void MOTOR(int lf, int lb, int rf, int rb)
   if (rf > 1023)  rf = 1023;
   if (rf < -1023) rf = -1023;
 
-  lf = lf * reduction  * 1;
-  rf = rf * reduction  * 1;
-  lb = lb * reduction  * -1;
-  rb = rb * reduction  * 1;
+  lf = lf * reduction  * -1;
+  lb = lb * reduction  * 1;
+  rf = rf * reduction  * -1;
+  rb = rb * reduction  * -1;
   ////////LF
   if (lf < 0)
   {
@@ -82,38 +83,38 @@ void MOTOR(int lf, int lb, int rf, int rb)
 
 void mot_ang(float ang)
 {
-  float division = 512 / 22.5;
-  int lf = 0;
-  int lb = 0;
-  int rb = 0;
-  int rf = 0;
+  float division = 1023 / 45;
+  int lf;
+  int lb;
+  int rb;
+  int rf;
   if (0 <= ang && ang < 90) {
-    lf = 1023;
-    lb = 1024 - (ang * division);
-    rb = -1023;
-    rf = -1024 + (ang * division);
+    lf = -1023;
+    lb = -1023 + (ang * division);
+    rf = 1023 - (ang * division);
+    rb = 1023;
   }
   else if (90 <= ang && ang < 180) {
     ang = ang - 90;
-    lf = 1024 - (ang * division);
-    lb = -1024;
-    rb = -1024 + (ang * division);
-    rf = 1024;
+    lf = -1023 + (ang * division);
+    lb = 1023;
+    rf = -1023;
+    rb = 1024 - (ang * division);
   }
   else if (180 <= ang && ang < 270)
   {
     ang = ang - 180;
-    lf = -1023;
-    lb = -1024 + (ang * division);
-    rb = 1023;
-    rf = 1024 - (ang * division);
+    lf = 1023;
+    lb = 1023 - (ang * division);
+    rf = -1023 + (ang * division);
+    rb = -1023;
   }
   else if (270 <= ang && ang <= 360) {
     ang = ang - 270;
-    lf = -1024 + (ang * division);
-    lb = 1023;
-    rb = 1024 - (ang * division);
-    rf = -1023;
+    lf = 1023 - (ang * division);
+    lb = -1023;
+    rf = 1023;
+    rb = -1024 + (ang * division);
   }
   MOTOR (lf + set_s, lb + set_s, rf + set_s, rb + set_s);
 }
@@ -181,5 +182,12 @@ void Shut()
     delay(15);
     digitalWrite(Shoot, LOW);
     SHC = 0;
+  }
+}
+void harekat_vazi_mah() {
+  for (int i = 0; i <= 360; i++)
+  {
+    mot_ang(i);
+    delay(5);
   }
 }

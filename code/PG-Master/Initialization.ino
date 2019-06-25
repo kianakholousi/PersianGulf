@@ -31,22 +31,7 @@ void SET() {
   }
 }
 
-//------------INTER_UP_T---------------------
-void Counter()
-{
-  reduction = 0.9;
-  BC++;
-  if (south) {
-    flag = 0;
-    set_s = spin_speed(1, 30, 10);
-  }
-  else {
-    flag = 1;
-    set_s = spin_speed(1, 30, 40);
-  }
-  if (BC > 2) Ball = false;
-  else Ball = true;
-}
+
 
 //------------spin speed------------
 signed int spin_speed(int divided_value, int added_value, int zero_degree)

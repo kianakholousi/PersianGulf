@@ -54,31 +54,17 @@ void setup() {
 //------------INTER_UP_T---------------------
 void Counter()
 {
-  reduction = 0.9;
+  reduction = 0.6;
   flag = 1;
   //      set_s = spin_speed(1, 30, 10);
-  set_s = spin_speed(1, 10, 40);
+  set_s = -spin_speed(1, 80, 50);
   BC++;
   if (BC > 2) Ball = false;
   else Ball = true;
 }
 
 void loop() {
-  //    SET();
-  //  OC();
-  //  reduction = 0.6;
-    col_ang();
-  //  if (Ba1,GYy = GYy - pcam.blocks[j].height / 2;ll) shift();
-  //  else
-  //    STOP();
-    Serial.println(Ba);
-
-  /*//harekat vazi mah
-    for(int i=0; i<=360;i++)
-    {
-    mot_ang(i);
-    delay(5);
-    }
-  */
-
+  col_ang();
+  if (Ball)  shift();
+  else STOP();
 }
