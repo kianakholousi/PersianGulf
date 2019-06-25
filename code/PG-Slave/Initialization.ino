@@ -3,7 +3,7 @@ void SET() {
   {
     while (digitalRead(35) == LOW)
     {
-      digitalWrite(11, HIGH);
+      digitalWrite(11, LOW);
       //------------set out sensors on green
       FO = analogRead(36);
       FI = analogRead(37);

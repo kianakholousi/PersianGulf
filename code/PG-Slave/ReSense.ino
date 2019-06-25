@@ -50,18 +50,18 @@ void SRF_Reader()
   }
 }
 //------------VL53L0X_d----------------
-//void VL_Reader()
-//{
-//  VL53L0X_RangingMeasurementData_t measure;
-//  lox.rangingTest(&measure, false);
-//  if (measure.RangeStatus != 4)
-//  {
-//    dis_back = measure.RangeMilliMeter / 10;
+void VL_Reader()
+{
+  VL53L0X_RangingMeasurementData_t measure;
+  lox.rangingTest(&measure, false);
+  if (measure.RangeStatus != 4)
+  {
+    dis_back = measure.RangeMilliMeter ;
 //    Serial.println(dis_back);
 //    delay(50);
-//  }
-//  else dis_back = 150;
-//}
+  }
+  else dis_back = 150;
+}
 
 //------reading out sensors----
 void OS_Reader()
@@ -98,20 +98,6 @@ void OC()
   else bb = 0;
 }
 
-///////////////////////////////////////////////////
-//------------VL53L0X_d----------------
-//void VL_Reader()
-//{
-//  VL53L0X_RangingMeasurementData_t measure;
-//  lox.rangingTest(&measure, false);
-//  if (measure.RangeStatus != 4)
-//  {
-//    dis_back = measure.RangeMilliMeter / 10;
-//    //         Serial.println(dis_back);
-//    //         delay(50);
-//  }
-//  else dis_back = 150;
-//}
 ///////////////////////////////
 
 void Calibration()

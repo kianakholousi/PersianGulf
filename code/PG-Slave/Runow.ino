@@ -10,14 +10,14 @@ void MOTOR(int lf, int lb, int rf, int rb)
   if (rf > 1023)  rf = 1023;
   if (rf < -1023) rf = -1023;
 
-  lf = lf * reduction  * -1;
-  rf = rf * reduction  * -1;
+  lf = lf * reduction  * 1;
+  rf = rf * reduction  * 1;
   lb = lb * reduction  * -1;
-  rb = rb * reduction  * -1;
+  rb = rb * reduction  * 1;
   ////////LF
   if (lf < 0)
   {
-    analogWrite( PWMlf, 1023 + lf * 0.98 );
+    analogWrite( PWMlf, 1023 + lf  );
     digitalWrite(digitalPINlf, HIGH);
   }
   else if (lf > 0)
@@ -33,7 +33,7 @@ void MOTOR(int lf, int lb, int rf, int rb)
   //////lb
   if (lb < 0)
   {
-    analogWrite( PWMlb, 1023 + lb * 0.98);
+    analogWrite( PWMlb, 1023 + lb );
     digitalWrite(digitalPINlb, HIGH);
   }
   else if (lb > 0)
@@ -50,7 +50,7 @@ void MOTOR(int lf, int lb, int rf, int rb)
   ///////rb
   if (rb < 0)
   {
-    analogWrite( PWMrb, rb * 0.98 + 1023 );
+    analogWrite( PWMrb, rb + 1023 );
     digitalWrite(digitalPINrb, HIGH);
   }
   else if (rb > 0)
@@ -66,7 +66,7 @@ void MOTOR(int lf, int lb, int rf, int rb)
   ///////rf
   if (rf < 0)
   {
-    analogWrite( PWMrf, (rf * 0.98 + 1023));
+    analogWrite( PWMrf, (rf  + 1023));
     digitalWrite(digitalPINrf, HIGH);
   }
   else if (rf > 0)
@@ -160,8 +160,8 @@ void shift()
   if (Ba > 345 || Ba <= 15) shif = 0;
   else if (Ba <= 120) shif = (atan2(By, -Bx - 25) * 180 / PI)  + (DShift / 10);
   else if (Ba >= 240) shif = (atan2(By , -Bx - 25) * 180 / PI) - (DShift / 10);
-  else if (Ba > 120 && Ba <= 180) shif = (atan2(By - 40, -Bx) * 180 / PI) + (DShift / 10);
-  else if (Ba > 180 && Ba < 240) shif = (atan2(By + 40, -Bx) * 180 / PI) - (DShift / 10);
+  else if (Ba > 120 && Ba <= 180) shif = (atan2(By - 40, -Bx) * 180 / PI) - (DShift / 12);
+  else if (Ba > 180 && Ba < 240) shif = (atan2(By + 40, -Bx) * 180 / PI) + (DShift / 12);
   if (shif < 0) shif = shif + 360;
   mot_ang(shif);
 }
