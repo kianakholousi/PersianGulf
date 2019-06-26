@@ -35,29 +35,28 @@ bool fa = 0, fb = 0, ra = 0, rb = 0, ba = 0, bb = 0, la = 0, lb = 0, goalieTeach
 bool flag = true;
 int  BAxcenter, BayCenter, k, shif;
 void setup() {
-
   SPI.setMOSI(28);
   SPI.setSCK(27);
-
-
   //------------VL53L0X_d----------------
   //    lox.begin();
+
   //------------start_robot--------------
   myTimer.begin(Counter, 100000);
   Serial.begin(9600);
-  //  Serial5.begin(9600);
   pcam.init();
-  //    Wire2.begin();
   set_pins();
+  //  Serial5.begin(9600);
+  //    Wire2.begin();
   //  eeprom_read();}
 }
+
 //------------INTER_UP_T---------------------
 void Counter()
 {
-  reduction = 0.6;
-  flag = 1;
+  reduction = 0.9;
   //      set_s = spin_speed(1, 30, 10);
-  set_s = -spin_speed(1, 80, 50);
+  flag = 1;
+  set_s = -spin_speed(1, 100, 80);
   BC++;
   if (BC > 2) Ball = false;
   else Ball = true;

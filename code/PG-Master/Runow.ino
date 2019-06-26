@@ -11,7 +11,7 @@ void MOTOR(int lf, int lb, int rf, int rb)
   if (rf < -1023) rf = -1023;
 
   lf = lf * reduction  * 1;
-    lb = lb * reduction  * 1;
+  lb = lb * reduction  * 1;
   rf = rf * reduction  * 1;
   rb = rb * reduction  * 1;
   ////////LF
@@ -157,11 +157,11 @@ void MOVE(float ang)
 void shift()
 {
   col_ang();
-  if (Ba > 345 || Ba <= 15) shif = 0;
-  else if (Ba <= 120) shif = (atan2(By, -Bx - 25) * 180 / PI)  + (DShift / 10);
-  else if (Ba >= 240) shif = (atan2(By , -Bx - 25) * 180 / PI) - (DShift / 10);
-  else if (Ba > 120 && Ba <= 180) shif = (atan2(By - 40, -Bx) * 180 / PI) + (DShift / 10);
-  else if (Ba > 180 && Ba < 240) shif = (atan2(By + 40, -Bx) * 180 / PI) - (DShift / 10);
+  if (Ba > 340 || Ba <= 17) shif = 0;
+  else if (Ba <= 120) shif = (atan2(By, -Bx - 32) * 180 / PI)  + (DShift / 13);
+  else if (Ba >= 240) shif = (atan2(By , -Bx - 32) * 180 / PI) - (DShift / 13);/* */
+  else if (Ba > 120 && Ba <= 180) shif = (atan2(By - 32, -Bx) * 180 / PI) + (DShift / 13); /* ~ */
+  else if (Ba > 180 && Ba < 240) shif = (atan2(By + 32, -Bx) * 180 / PI) - (DShift / 13;
   if (shif < 0) shif = shif + 360;
   mot_ang(shif);
 }

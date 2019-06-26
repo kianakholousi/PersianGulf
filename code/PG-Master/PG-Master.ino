@@ -54,16 +54,16 @@ void Counter()
 {
   reduction = 0.9;
   BC++;
-  set_s = -spin_speed(1, 30, 40);
-if (BC > 3) Ball = false;
-else Ball = true;
+  set_s = -spin_speed(1, 100, 60);
+  if (BC > 3) Ball = false;
+  else Ball = true;
 }
 
 void loop() {
   //SET();
   //OC();
   col_ang();
-  STOP();
-  //  if (BC < 5)  shift();
-  //  else STOP();
+  Serial.println(Ba);
+  if (Ball)  shift();
+  else STOP();
 }
