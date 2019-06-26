@@ -37,16 +37,18 @@ int  BAxcenter, BayCenter, k, shif;
 void setup() {
   SPI.setMOSI(28);
   SPI.setSCK(27);
+  Wire.setSCL(8);
+  Wire.setSDA(7);
   //------------VL53L0X_d----------------
   //    lox.begin();
 
-  //------------start_robot--------------
   myTimer.begin(Counter, 100000);
   Serial.begin(9600);
   pcam.init();
   set_pins();
   //  Serial5.begin(9600);
-  //    Wire2.begin();
+  Wire.begin();
+  Wire2.begin();
   //  eeprom_read();}
 }
 
@@ -62,8 +64,16 @@ void Counter()
   else Ball = true;
 }
 
-void loop() {
+void loop() 
+{
   col_ang();
   if (Ball)  shift();
-  else STOP();
+  else
+    STOP();
+  //  Serial.print(GYx);
+  //  Serial.print(" | ");
+  //  Serial.print(GYy);
+  //  Serial.print(" | ");
+  //  Serial.println(GYa);
+  //  delay(100);
 }

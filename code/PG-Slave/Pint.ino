@@ -24,7 +24,7 @@ void set_pins()
   //------------shoot---------------------
   pinMode(Shoot, OUTPUT);
   //------------battery feedback----------
-  pinMode(32, INPUT);//
+  pinMode(32, INPUT);
   pinMode(14, OUTPUT);//LED
   pinMode(15, OUTPUT);//LED
   pinMode(16, OUTPUT);//LED
@@ -37,5 +37,5 @@ void set_pins()
   digitalWrite(11, HIGH);
   delay(35);
   digitalWrite(11, LOW);
-  pinMode(29, INPUT);
+  pinMode(29, OUTPUT);
 }
