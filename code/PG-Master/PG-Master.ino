@@ -39,12 +39,14 @@ void setup() {
   //  lox.begin();
   SPI.setMOSI(28);
   SPI.setSCK(27);
+  Wire.setSCL(7);
+  Wire.setSDA(8);
   //------------start_robot--------------
   myTimer.begin(Counter, 100000);
   Serial.begin(9600);
   //  Serial5.begin(9600);
   pcam.init();
-  //  Wire2.begin();
+  Wire.begin();
   set_pins();
   eeprom_read();
 }
@@ -60,10 +62,12 @@ void Counter()
 }
 
 void loop() {
-  //SET();
-  //OC();
-  col_ang();
-  Serial.println(Ba);
-  if (Ball)  shift();
-  else STOP();
+
+  SET();
+    OC(); 
+    col_ang();
+    if (Ball)  fallout();
+    else STOP();
+    chop();
+
 }

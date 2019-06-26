@@ -279,7 +279,7 @@ void fallout()
         mot_ang(120);
         if (lb)
         {
-          while (la)
+          while (!la)
           {
             col_ang();
             OC();
@@ -292,7 +292,7 @@ void fallout()
         mot_ang(225);
         if (rb)
         {
-          while (ra)
+          while (!ra)
           {
             col_ang();
             OC();
@@ -340,7 +340,7 @@ void fallout()
         mot_ang(45);
         if (lb )
         {
-          while (la)
+          while (!la)
           { col_ang();
             OC();
             MOVE(45);
@@ -352,7 +352,7 @@ void fallout()
         mot_ang(330);
         if (rb)
         {
-          while (ra)
+          while (!ra)
           {
             col_ang();
             OC();
