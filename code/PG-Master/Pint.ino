@@ -37,5 +37,9 @@ void set_pins()
   digitalWrite(11, HIGH);
   delay(35);
   digitalWrite(11, LOW);
-  pinMode(29, INPUT);
+  
+  //-------------spin-------------------
+  //  pinMode(29, OUTPUT);
+  //------------SET--------------------
+  pinMode(35, INPUT_PULLUP);
 }
