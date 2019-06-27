@@ -58,22 +58,24 @@ void Counter()
   reduction = 0.9;
   //      set_s = spin_speed(1, 30, 10);
   flag = 1;
-  set_s = -spin_speed(1, 100, 80);
+  set_s = -spin_speed(1, 10, 100);
   BC++;
   if (BC > 2) Ball = false;
   else Ball = true;
 }
 
-void loop() 
+void loop()
 {
-  col_ang();
-  if (Ball)  shift();
-  else
-    STOP();
-  //  Serial.print(GYx);
-  //  Serial.print(" | ");
-  //  Serial.print(GYy);
-  //  Serial.print(" | ");
-  //  Serial.println(GYa);
-  //  delay(100);
+  // col_ang();
+    if (Ball) shift();
+    else
+  STOP();
+  //    Serial.print(GYx);
+  //    Serial.print(" | ");
+  //    Serial.print(GYy);
+  //    Serial.print(" | ");
+  //    Serial.print(GYa);
+  //    Serial.print(" | ");
+  //    Serial.println(set_s);
+  //    delay(100);
 }
