@@ -59,6 +59,7 @@ void Counter()
   set_s = -spin_speed(1, 100, 60);
   if (BC > 3) Ball = false;
   else Ball = true;
+  flag= true;
 }
 
 void loop() {
@@ -68,6 +69,6 @@ void loop() {
     col_ang();
     if (Ball)  fallout();
     else STOP();
-    chop();
+    
 
 }
