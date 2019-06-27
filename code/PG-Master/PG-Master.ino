@@ -56,7 +56,7 @@ void Counter()
 {
   reduction = 0.9;
   BC++;
-  set_s = -spin_speed(1, 100, 60);
+  set_s = -spin_speed(1, 10, 100);
   if (BC > 3) Ball = false;
   else Ball = true;
   flag= true;
