@@ -22,11 +22,11 @@ void fallout()
     {
       if (abs(kaj) <= 15)
       {
-        bigball = 210;   smallball = 15;
+        bigball = 195;   smallball = 15;
       }
       else
       {
-        bigball = 250;   smallball = 15;
+        bigball = 230;   smallball = 15;
       }
       while (Ba >= smallball && Ba <= bigball && Ball)
       {
@@ -34,11 +34,11 @@ void fallout()
         col_ang();
         if (abs(kaj) <= 15)
         {
-          bigball = 210;   smallball = 15;
+          bigball = 195;   smallball = 15;
         }
         else
         {
-          bigball = 250;  smallball = 15;
+          bigball = 230;  smallball = 15;
         }
 
         if (fa || fb)
@@ -85,8 +85,8 @@ void fallout()
     ////////oonvar kaj/////////
     else if (kaj > 15 && kaj <= 90)
     {
-       smallball = 150;      bigball = 315;
-    while ((Ba < smallball || Ba > bigball) && Ball)
+      smallball = 150;      bigball = 315;
+      while ((Ba < smallball || Ba > bigball) && Ball)
       {
         OC();
         col_ang();
@@ -135,7 +135,7 @@ void fallout()
       }
     }
   }
-  ///////////end of right out
+  /////////end of right out
   else if (la || lb)
   {
     mot_ang(90);
@@ -143,7 +143,7 @@ void fallout()
     {
       if (abs (kaj) <= 15)
       {
-        bigball = 350; smallball = 170;
+        bigball = 345; smallball = 165;
       }
       else if (kaj > 15 && kaj < 90)
       {
@@ -155,11 +155,11 @@ void fallout()
         col_ang();
         if (abs (kaj) <= 15)
         {
-          bigball = 350; smallball = 170;
+          bigball = 345; smallball = 165;
         }
         else if (kaj > 15 && kaj < 90)
         {
-          bigball = 280; smallball =45;
+          bigball = 280; smallball = 45;
         }
         if (fa || fb)
         {
@@ -207,10 +207,10 @@ void fallout()
       {
         OC();
         col_ang();
-//        if (abs(kaj) <= 15)
-//        {
-//          bigball = 180;    smallball = 0;
-//        }
+        //        if (abs(kaj) <= 15)
+        //        {
+        //          bigball = 180;    smallball = 0;
+        //        }
         if (fa || fb)
         {
           mot_ang(150);
@@ -254,17 +254,17 @@ void fallout()
     }
     //if (Ba < smallball || Ba > bigball) shift();
   }
-  /////////end of left out
+  ///////end of left out
   else if (fa || fb)
   {
     mot_ang(180);
     if (abs(kaj) <= 15)
     {
-      bigball = 230;   smallball = 45;
+      bigball = 315;   smallball = 45;
     }
     else if (kaj > 15 && kaj < 90)
     {
-      bigball = 340; smallball = 110;
+      bigball = 310; smallball = 120;
     }
     else if (kaj < -15 && kaj > -90)
     {
@@ -274,6 +274,18 @@ void fallout()
     {
       OC();
       col_ang();
+      if (abs(kaj) <= 15)
+      {
+        bigball = 315;   smallball = 45;
+      }
+      else if (kaj > 15 && kaj < 90)
+      {
+        bigball = 310; smallball = 120;
+      }
+      else if (kaj < -15 && kaj > -90)
+      {
+        bigball = 250; smallball = 50;
+      }
       if (la || lb)
       {
         mot_ang(120);
@@ -285,6 +297,7 @@ void fallout()
             OC();
             MOVE(120);
           }
+
         }
       }
       else if (ra || rb)
@@ -321,7 +334,7 @@ void fallout()
     mot_ang(0);
     if (abs (kaj) <= 15)
     {
-      bigball = 290;  smallball = 160;
+      bigball = 260;  smallball = 160;
     }
     else if (kaj < -15 && kaj > -90)
     {
@@ -335,6 +348,18 @@ void fallout()
     {
       OC();
       col_ang();
+      if (abs (kaj) <= 15)
+      {
+        bigball = 260;  smallball = 160;
+      }
+      else if (kaj < -15 && kaj > -90)
+      {
+        bigball = 260;  smallball = 100;
+      }
+      else if (kaj > 15 && kaj < 90)
+      {
+        bigball = 260;  smallball = 100;
+      }
       if (la || lb)
       {
         mot_ang(45);

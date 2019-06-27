@@ -64,10 +64,9 @@ void Counter()
 
 void loop() {
 
-  //  SET();
-  //    OC();
+  SET();
+  OC();
   col_ang();
-  if (Ball)  shift();
-  else
-    STOP();
+  if (Ball)  fallout();
+  else   STOP();
 }
