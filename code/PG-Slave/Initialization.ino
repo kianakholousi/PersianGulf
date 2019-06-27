@@ -3,7 +3,7 @@ void SET() {
   {
     while (digitalRead(35) == LOW)
     {
-      digitalWrite(11, LOW);
+      digitalWrite(11, HIGH);
       //------------set out sensors on green
       FO = analogRead(36);
       FI = analogRead(37);
@@ -39,6 +39,7 @@ void Bazi() {
 //------------spin speed------------
 signed int spin_speed(int divided_value, int added_value, int zero_degree)
 {
+  flag = 0;
   int compass_input = 0, compass_output = 0;
   if (flag == 0) {
     Read_Cmp();
