@@ -33,10 +33,10 @@ void col_ang()
         DistanceGY = sqrt((GYx * GYx) + (GYy * GYy)) - 40;
         GYa = atan2(GYy, GYx) * 1800 / PI;
         yell = GYa / 10;
-//        if (GYa < 0) GYa = 3600 + GYa;
+        //        if (GYa < 0) GYa = 3600 + GYa;
         if (yell < 0) yell = 360 + yell;
         GYa = map(GYa, 0, 3600, 0, 1023);
-//        if (GYa > 512) GYa = GYa - 1024;
+        //        if (GYa > 512) GYa = GYa - 1024;
       }
       /* else if (pcam.blocks[j].signature == 2)////G Blue
         {
