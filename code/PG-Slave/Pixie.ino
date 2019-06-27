@@ -13,8 +13,9 @@ void col_ang()
       {
         BC = 0;
         Bx = pcam.blocks[j].x - 156 + (pcam.blocks[j].height / 2);
+        Bx = -Bx;
         By = pcam.blocks[j].y - 94 + (pcam.blocks[j].width / 2);
-        Ba = atan2(By , -Bx) * 180 / PI;
+        Ba = atan2(By , Bx) * 180 / PI;
         if (Ba < 0) Ba = 360 + Ba;
         DistanceB = sqrt((Bx * Bx) + (By * By));
         DShift = 120 - DistanceB;
