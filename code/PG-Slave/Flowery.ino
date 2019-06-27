@@ -60,29 +60,31 @@ void MoveWidth()
   }
   else STOP();
 }
-//------------Backtosinaei with VL53L0X------------
-void Backtosinaei_d()
+//------------Backtogoal with VL53L0X------------
+void Backtogoal_vl()
 {
-  reduction = 0.5;
-  if (abs(Cmp) <= 50)
+  VL_Reader();
+  Read_Cmp();
+  reduction = 0.7;
+  if (abs(Cmp) <= 30)
   {
-    if (dis_back > 250 && dis_back < 400 && (GYa < 15 || GYa > 345)) STOP();
-    else if ((dis_back < 250 || dis_back > 400) || (GYa > 15 && GYa < 345) )
+    if (dis_back > 250 && dis_back < 400 /*&  (GYa < 15 || GYa > 345)*/) STOP();
+    else if ((dis_back < 250 || dis_back > 400) /*|| (GYa > 15 && GYa < 345)*/ )
     {
 
-      if (GYa > 15 && GYa < 180)
-      {
-        mot_ang(90);
-      }
-      else if (GYa < 345 && GYa > 180)
-      {
-        mot_ang(270);
-      }
-      if (dis_back > 400)
+//      if (GYa > 15 && GYa < 180)
+//      {
+//        mot_ang(90);
+//      }
+//      else if (GYa < 345 && GYa > 180)
+//      {
+//        mot_ang(270);
+//      }
+      if (dis_back > 500)
       {
         mot_ang(180);
       }
-      else if (dis_back < 250)
+      else if (dis_back < 300)
       {
         mot_ang(0);
       }
@@ -94,7 +96,8 @@ void Backtosinaei_d()
 //------------move in width with VL53L0X------------
 void MoveWidth_d()
 {
-  reduction = 0.5;
+  VL_Reader();
+  reduction = 0.7;
   if (abs(Cmp) <= 50)
   {
     if (dis_back > 25 && dis_back < 40 && (GYa > 350 || GYa < 15 ))
@@ -122,7 +125,7 @@ void MoveWidth_d()
     }
     else if ((dis_back < 25 || dis_back > 40) && (GYa > 25 || GYa < 355) )
     {
-      Backtosinaei_d();
+      Backtogoal_vl();
     }
   }
   else STOP();

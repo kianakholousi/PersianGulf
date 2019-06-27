@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////
-void chop(){
+void chop() {
   OC();
   //  Serial.print(FO);
   //  Serial.print(" | ");
@@ -62,4 +62,11 @@ void chop(){
   //  Serial.print(BxCenter - 40);
   //  Serial.print(" | ");
   //  Serial.println(Ba);
+  //----------------compas
+  // Serial.print(Compass2);
+  // Serial.print("|");
+  // Serial.print(Compass);
+  // Serial.print("|");
+  // Serial.println(Cmp);
+  // delay(10);
 }

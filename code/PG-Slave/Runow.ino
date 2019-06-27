@@ -157,10 +157,10 @@ void MOVE(float ang)
 }
 void shift()
 {
-//  Bx = -Bx;
+  //  Bx = -Bx;
   col_ang();
   if (Ba > 345 || Ba <= 15) shif = 0;
-  else if (Ba <= 120) shif = (atan2(By, Bx - 25) * 180 / PI)  + (DShift / 10);
+  else if (Ba <= 120) shif = (atan2(By, Bx - 25) * 180 / PI)  + (DShift / 12);
   else if (Ba >= 240) shif = (atan2(By , Bx - 25) * 180 / PI) - (DShift / 10);
   else if (Ba > 120 && Ba <= 180) shif = (atan2(By - 40, Bx) * 180 / PI) - (DShift / 12);
   else if (Ba > 180 && Ba < 240) shif = (atan2(By + 40, Bx) * 180 / PI) + (DShift / 12);
@@ -172,7 +172,7 @@ void shift()
 void STOP()
 {
   reduction = 1;
-  MOTOR (0 + set_s, 0 + set_s , 0 + set_s , 0 + set_s);
+  MOTOR (set_s , set_s , set_s , set_s);
 }
 
 void Shut()

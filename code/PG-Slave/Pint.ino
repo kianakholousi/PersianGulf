@@ -32,6 +32,8 @@ void set_pins()
   //------------DIP switch-----------------
   pinMode(38, INPUT);
   pinMode(39, INPUT);
+  //------------set-----------------------
+   pinMode(35, INPUT);
   //------------Buzzer--------------------
   pinMode(11, OUTPUT);
   digitalWrite(11, HIGH);
