@@ -55,20 +55,19 @@ void setup() {
 void Counter()
 {
   reduction = 0.9;
+  flag = true;
   BC++;
-  set_s = -spin_speed(1, 10, 100);
+  set_s = -spin_speed(1, 100, 100);
   if (BC > 3) Ball = false;
   else Ball = true;
-  flag= true;
 }
 
 void loop() {
 
-  SET();
-    OC(); 
-    col_ang();
-    if (Ball)  fallout();
-    else STOP();
-    
-
+  //  SET();
+  //    OC();
+  col_ang();
+  if (Ball)  shift();
+  else
+    STOP();
 }

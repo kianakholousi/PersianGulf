@@ -159,9 +159,9 @@ void shift()
   col_ang();
   if (Ba > 340 || Ba <= 17) shif = 0;
   else if (Ba <= 120) shif = (atan2(By, Bx - 32) * 180 / PI)  + (DShift / 12);
-  else if (Ba >= 240) shif = (atan2(By , Bx - 32) * 180 / PI) - (DShift / 12);/* */
-  else if (Ba > 120 && Ba <= 180) shif = (atan2(By - 32, Bx) * 180 / PI) + (DShift / 12); /* ~ */
-  else if (Ba > 180 && Ba < 240) shif = (atan2(By + 32, Bx) * 180 / PI) - (DShift / 12);
+  else if (Ba >= 240) shif = (atan2(By , Bx - 32) * 180 / PI) - (DShift / 10);/* */
+  else if (Ba > 120 && Ba <= 180) shif = (atan2(By - 32, Bx) * 180 / PI) + (DShift / 13); /* ~ */
+  else if (Ba > 180 && Ba < 240) shif = (atan2(By + 32, Bx) * 180 / PI) - (DShift / 13);
   if (shif < 0) shif = shif + 360;
   mot_ang(shif);
 }
