@@ -66,7 +66,9 @@ void loop() {
 
   SET();
   OC();
-  col_ang();
-  if (Ball)  fallout();
-  else   STOP();
+    col_ang();
+    if (Ball)  fallout();
+    else   STOP();
+    Bazi();
+    Serial.println(yell);
 }

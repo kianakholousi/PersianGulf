@@ -26,7 +26,7 @@ void SET() {
     NLO = LO + 75;
     NLI = LI + 50;
     NBO = BO + 200;
-    NBI = BI + 200;
+    NBI = BI + 80;
     eeprom_write();
   }
   digitalWrite(11, LOW);
