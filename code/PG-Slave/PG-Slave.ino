@@ -73,18 +73,22 @@ void Counter()
 
 void loop()
 {
-  // col_ang();
+   col_ang();
   //    if (Ball) shift();
   //    else STOP();
-   Read_Cmp();
-   Serial.print(Compass2);
-   Serial.print("|");
-   Serial.print(Compass);
-   Serial.print("|");
-   Serial.println(Cmp);
-   delay(10);
-  SET();
-  STOP();
-  //  VL_Reader();
-  //  Backtogoal_vl();
+//   Read_Cmp();
+//   Serial.print(Compass2);
+//   Serial.print("|");
+//   Serial.print(Compass);
+//   Serial.print("|");
+//   Serial.println(Cmp);
+
+   Serial.print(GYa);
+   Serial.print(" | ");
+   Serial.println(yell);
+      delay(50);
+//  SET();
+//  STOP();
+    VL_Reader();
+    Backtogoal_vl();
 }

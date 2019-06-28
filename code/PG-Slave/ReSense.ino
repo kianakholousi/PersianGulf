@@ -4,7 +4,7 @@ void Read_Cmp()
   Wire.write(2);                    /////sends the register we wish to read
   Wire.endTransmission();
   Wire.requestFrom(address, 2);     /////requests high byte
-  while(Wire.available() > 2);
+  while(Wire.available() < 2);
   Compass2 = Wire.read() << 8 | Wire.read();
   Wire.endTransmission();
   Compass = map(Compass2, 0, 3600, 0, 1023);
@@ -58,8 +58,8 @@ void VL_Reader()
   if (measure.RangeStatus != 4)
   {
     dis_back = measure.RangeMilliMeter ;
-//    Serial.println(dis_back);
-//    delay(50);
+    Serial.println(dis_back);
+    delay(50);
   }
   else dis_back = 150;
 }
