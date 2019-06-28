@@ -57,8 +57,8 @@ void VL_Reader()
   if (measure.RangeStatus != 4)
   {
     dis_back = measure.RangeMilliMeter ;
-//    Serial.println(dis_back);
-//    delay(50);
+    //    Serial.println(dis_back);
+    //    delay(50);
   }
   else dis_back = 150;
 }
@@ -96,15 +96,16 @@ void OC()
   else ba = 0;
   if (BI > NBI)  bb = 1;
   else bb = 0;
-  
-  if (fa || fb) digitalWrite(14,HIGH);
-  else digitalWrite(14,LOW);
-  if (ra || rb) digitalWrite(15,HIGH);
-  else digitalWrite(15,LOW);
-  if (ba || bb) digitalWrite(16,HIGH);
-  else digitalWrite(16,LOW);
-  if (la || lb) digitalWrite(17,HIGH);
-  else digitalWrite(17,LOW);
+
+  if (fa || fb) digitalWrite(14, HIGH);
+  else digitalWrite(14, LOW);
+  if (ra || rb) digitalWrite(15, HIGH);
+  else digitalWrite(15, LOW);
+  if (ba || bb) digitalWrite(16, HIGH);
+  else digitalWrite(16, LOW);
+  if (la || lb) digitalWrite(17, HIGH);
+  else digitalWrite(17, LOW);
+
 }
 
 ///////////////////////////////////////////////////
