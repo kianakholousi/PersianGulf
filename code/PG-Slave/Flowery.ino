@@ -64,23 +64,24 @@ void MoveWidth()
 void Backtogoal_vl()
 {
   VL_Reader();
-  Read_Cmp();
+  col_ang();
+  //  Read_Cmp();
   reduction = 0.7;
-  if (abs(Cmp) <= 30)
+  if (abs(yell) >= 340)
   {
     if (dis_back > 250 && dis_back < 400 /*&  (GYa < 15 || GYa > 345)*/) STOP();
     else if ((dis_back < 250 || dis_back > 400) /*|| (GYa > 15 && GYa < 345)*/ )
     {
 
-//      if (GYa > 15 && GYa < 180)
-//      {
-//        mot_ang(90);
-//      }
-//      else if (GYa < 345 && GYa > 180)
-//      {
-//        mot_ang(270);
-//      }
-      if (dis_back > 500)
+      //      if (GYa > 15 && GYa < 180)
+      //      {
+      //        mot_ang(90);
+      //      }
+      //      else if (GYa < 345 && GYa > 180)
+      //      {
+      //        mot_ang(270);
+      //      }
+      if (dis_back > 400)
       {
         mot_ang(180);
       }
