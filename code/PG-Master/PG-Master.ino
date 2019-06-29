@@ -10,6 +10,7 @@
 //#include <utility/imumaths.h>
 Pixy pcam;
 IntervalTimer myTimer;
+IntervalTimer Receiver;
 #define address 0x60
 #define Buzzer 11
 #define Shoot 30
@@ -33,8 +34,10 @@ int OS[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0}, OSP[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 int Compass = 0, Compass2, Cmp = 0, setcmp = 0, set_s = 0, refresher = 0;
 int  i = 0, setbno, dis_back, Shootflag = 0, bnox, eeAddress = 25, Calibrate_BNO = 0, SHC = 0, yell;
 bool fa = 0, fb = 0, ra = 0, rb = 0, ba = 0, bb = 0, la = 0, lb = 0, goalieTeach, Ball;
-bool flag = true, south = false;
-int  BAxcenter, BayCenter, k, shif;
+bool flag = true, DisB, Disbl, stringComplete = false ;
+String  Ang = "", dis = "";
+int  BAxcenter, BayCenter, k, shif, Angle, Distancebl;
+char joda = 55, sit;
 void setup() {
   //------------VL53L0X_d----------------
   lox.begin();
@@ -46,8 +49,9 @@ void setup() {
   Wire2.setSDA(4);
   //------------start_robot--------------
   myTimer.begin(Counter, 100000);
+  Receiver.begin(BTReceiver, 100000);
   Serial.begin(9600);
-  //  Serial5.begin(9600);
+  Serial5.begin(9600);
   pcam.init();
   Wire.begin();
   set_pins();
@@ -58,7 +62,7 @@ void setup() {
 //------------INTER_UP_T---------------------
 void Counter()
 {
-//  reduction = 0.9;
+  //  reduction = 0.9;
   flag = 0;
   Read_Cmp();
   BC++;
@@ -71,7 +75,7 @@ void Counter()
   //  Serial.print("|");
   //  Serial.print(Compass);
   //  Serial.print("|");
-  //    Serial.println(Cmp);
+  //      Serial.println(Cmp);
 }
 
 void loop() {
@@ -79,14 +83,23 @@ void loop() {
   col_ang();
   SET();
   VL_Reader();
-  //  Backtogoal_vl();
-  //  OC();
-  //  col_ang();
-      if (Ball) MoveWidth_vl();
-      else     Backtogoal_vl();
-  Serial.println(Gy);
-//  Serial.print("|");
-//  Serial.println(Ba);
-delay(100);
+  //   OC();
+  if (dis_back > 600)
+  {
+    mot_ang(Gy360);
+  }
+  else
+  {
+
+    if (Ball && DistanceB < 120 ) fallout();
+    else STOP();
+  }
+
+  //  Backtogoal();
+
+  //  Serial.print(Ba);
+  //    Serial.print(" | ");
+  //    Serial.println(Gy360);
+  //    delay(50);
 
 }

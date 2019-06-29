@@ -10,6 +10,7 @@
 //#include <utility/imumaths.h>
 Pixy pcam;
 IntervalTimer myTimer;
+IntervalTimer Sender;
 #define address 0x60
 #define Buzzer 11
 #define Shoot 30
@@ -33,7 +34,7 @@ int OS[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0}, OSP[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 int Compass = 0, Compass2, Cmp = 0, setcmp = 0, set_s = 0, refresher = 0;
 int  i = 0, setbno, dis_back, Shootflag = 0, bnox, eeAddress = 25, Calibrate_BNO = 0, SHC = 0, yell;
 bool fa = 0, fb = 0, ra = 0, rb = 0, ba = 0, bb = 0, la = 0, lb = 0, goalieTeach, Ball;
-bool flag = false;
+bool flag = false,RSit;
 int  BAxcenter, BayCenter, k, shif;
 void setup() {
   SPI.setMOSI(28);
@@ -44,8 +45,9 @@ void setup() {
   Wire.setSDA(8);
   //------------VL53L0X_d----------------
   lox.begin();
-//----------------------------------
+  //----------------------------------
   myTimer.begin(Counter, 100000);
+  Sender.begin(BTSender,100000);
   Serial.begin(9600);
   pcam.init();
   set_pins();
@@ -53,18 +55,18 @@ void setup() {
   Wire.begin();
   Wire2.begin();
   //  eeprom_read();}
-//  Calibration();
+  //  Calibration();
 }
 
 //------------INTER_UP_T---------------------
 void Counter()
 {
-  
+
   reduction = 0.9;
   flag = 0;
 
-//  //  if (flag) set_s = -spin_speed(1, 10, 100);
-//  //  else
+  //  //  if (flag) set_s = -spin_speed(1, 10, 100);
+  //  //  else
   set_s =  spin_speed(1, 30, 10);
   BC++;
   if (BC > 2) Ball = false;
@@ -73,22 +75,14 @@ void Counter()
 
 void loop()
 {
-   col_ang();
-  //    if (Ball) shift();
-  //    else STOP();
-//   Read_Cmp();
-//   Serial.print(Compass2);
-//   Serial.print("|");
-//   Serial.print(Compass);
-//   Serial.print("|");
-//   Serial.println(Cmp);
-
-   Serial.print(GYa);
-   Serial.print(" | ");
-   Serial.println(yell);
-      delay(50);
-//  SET();
-//  STOP();
-    VL_Reader();
-    Backtogoal_vl();
+  col_ang();
+if(Ball) {
+  if(RSit) fallout();
+  else STOP();
+}
+else STOP();
+//  //  SET();
+//  //  STOP();
+//  VL_Reader();
+//  Backtogoal_vl();
 }

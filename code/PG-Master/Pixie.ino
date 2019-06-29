@@ -31,10 +31,11 @@ void col_ang()
         if (GYy < 0) GYy = GYy - pcam.blocks[j].width / 2;
         else GYy = GYy + pcam.blocks[j].width / 2;
         DistanceGY = sqrt((GYx * GYx) + (GYy * GYy)) - 40;
-        GYa = atan2(GYy, GYx) * 1800 / PI;
-//        Gy360 = atan(GYy / -GYx) * 180 / PI;
+        GYa   = atan2(GYy, GYx) * 1800 / PI;
+        Gy360 = atan2(GYy , GYx) * 180 / PI;
         yell = GYa / 10;
         //        if (GYa < 0) GYa = 3600 + GYa;
+        if (Gy360 < 0) Gy360 = 360 + Gy360;
         if (yell < 0) yell = 360 + yell;
         GYa = map(GYa, 0, 3600, 0, 1023);
         //        if (GYa > 512) GYa = GYa - 1024;

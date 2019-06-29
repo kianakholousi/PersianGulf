@@ -2,28 +2,20 @@ int LBa = 0, RBa = 0;
 //------------backtogoal with yellow------------
 void Backtogoal()
 {
-  VL_Reader();
+  digitalWrite(15, HIGH);
+  digitalWrite(14, LOW);
   reduction = 0.6;
-  if (DistanceGY > 30 && DistanceGY < 45 && GYa > 145 && GYa < 210 ) STOP();
-  else if ((DistanceGY < 30 || DistanceGY > 45) || (GYa > 220 || GYa < 135) )
+  VL_Reader();
+  col_ang();
+  if (abs(Cmp) <= 20)
   {
-    if (DistanceGY < 30)
-    {
-      mot_ang(180);
-    }
-    else if (DistanceGY > 45)
-    {
+    if (dis_back < 250)
       mot_ang(0);
-    }
-    if (GYa < 145)
-    {
-      mot_ang(90);
-    }
-    else if (GYa > 210)
-    {
-      mot_ang(270);
-    }
+    else if (dis_back > 500 || Gy360 > 200 || Gy360 < 160)
+      mot_ang(Gy360);
+    else MoveWidth_vl();
   }
+  else STOP();
 }
 
 //------------move in width with yellow------------
@@ -65,7 +57,6 @@ void MoveWidth()
 //------------backtogoal with VL53L0X------------
 void Backtogoal_vl()
 {
-   digitalWrite(15, HIGH);
   VL_Reader();
   col_ang();
   reduction = 0.7;
@@ -74,7 +65,6 @@ void Backtogoal_vl()
     if (dis_back > 250 && dis_back < 400 /*&  (GYa < 15 || GYa > 345)*/) STOP();
     else if ((dis_back < 250 || dis_back > 400) /*|| (GYa > 15 && GYa < 345)*/ )
     {
-
       if (GYa > 0)
       {
         while (GYa > 390 && GYa < 480)
@@ -107,37 +97,56 @@ void Backtogoal_vl()
 //------------move in width with VL53L0X------------
 void MoveWidth_vl()
 {
+  reduction = 0.5;
   digitalWrite(14, HIGH);
+  digitalWrite(15, LOW);
+  if (Gy360 > 150 && Gy360 < 200)
+  {
+    if (Ba < 90 && Ba > 10) mot_ang(90);
+    else if (Ba > 270 && Ba < 350) mot_ang(270);
+    else if (Ba < 270 && Ba > 90) shift();
+    else STOP();
+  }
+  else Backtogoal();
+}
+/*
+  void MoveWidth_vl()
+  {
+  digitalWrite(14, HIGH);
+  digitalWrite(15, LOW);
+
   reduction = 0.5;
   if (abs(Cmp) <= 20)
   {
-    if (dis_back > 250 && dis_back < 400 /*&& (GYa > 350 || GYa < 15 )*/)
+    if (dis_back > 250 && dis_back < 400)
     {
-      if (DistanceB > 100)
+      if (DistanceB > 50)
       {
         if (Ba < 90 && Ba > 10 && DistanceGY < 80 )
         {
-          while (Ba < 90 && Ba > 10 && DistanceGY < 80)
-          {
-            col_ang();
-            mot_ang(90);
-          }
+          digitalWrite(16, HIGH);
+          digitalWrite(17, LOW);
+          mot_ang(90);
         }
         else if (Ba > 270 && Ba < 350 && DistanceGY < 80 )
         {
-          while (Ba > 270 && Ba < 350 && DistanceGY < 80)
-          {
-            col_ang();
-            mot_ang(270);
-          }
+          digitalWrite(17, HIGH);
+          digitalWrite(16, LOW);
+          mot_ang(270);
+        }
+        else {
+          digitalWrite(16, LOW);
+          digitalWrite(17, LOW);
+          shift();
         }
       }
       else shift();
     }
-    else if ((dis_back < 250 || dis_back > 500) /*&& (GYa > 25 || GYa < 355)*/ )
+    else if ((dis_back < 250 || dis_back > 500) )
     {
-      Backtogoal_vl();
+      Backtogoal();
     }
   }
   else STOP();
-}
+  }
+*/
