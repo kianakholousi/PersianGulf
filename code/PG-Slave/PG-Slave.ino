@@ -34,7 +34,7 @@ int OS[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0}, OSP[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 int Compass = 0, Compass2, Cmp = 0, setcmp = 0, set_s = 0, refresher = 0;
 int  i = 0, setbno, dis_back, Shootflag = 0, bnox, eeAddress = 25, Calibrate_BNO = 0, SHC = 0, yell;
 bool fa = 0, fb = 0, ra = 0, rb = 0, ba = 0, bb = 0, la = 0, lb = 0, goalieTeach, Ball;
-bool flag = false,RSit;
+bool flag = false, RSit;
 int  BAxcenter, BayCenter, k, shif;
 void setup() {
   SPI.setMOSI(28);
@@ -47,14 +47,14 @@ void setup() {
   lox.begin();
   //----------------------------------
   myTimer.begin(Counter, 100000);
-  Sender.begin(BTSender,100000);
+  Sender.begin(BTSender, 100000);
   Serial.begin(9600);
   pcam.init();
   set_pins();
   //  Serial5.begin(9600);
   Wire.begin();
   Wire2.begin();
-  //  eeprom_read();}
+  eeprom_read();
   //  Calibration();
 }
 
@@ -66,24 +66,22 @@ void Counter()
   flag = 1;
 
   //if (flag==1) set_s = -spin_speed(1, 10, 100);
- // else  set_s =  spin_speed(1, 30, 10);
-  set_s =  spin_speed(1, 10, 100);
+  // else  set_s =  spin_speed(1, 30, 10);
+  set_s =  -spin_speed(1, 10, 100);
   BC++;
-  if (BC > 2) Ball = false;
+  if (BC > 5) Ball = false;
   else Ball = true;
-    SHC++;
+  SHC++;
 }
 
 void loop()
 {
+  SET();
   col_ang();
-//if(Ball) {
-//  if(RSit) fallout();
-//  else STOP();
-//}
-//else STOP();
-//  //  SET();
-//  //  STOP();
-//  VL_Reader();
-//  Backtogoal_vl();
+  if (Ball) fallout();
+  else STOP();
+  //Serial.println(Ba);
+  //  STOP();
+  //  VL_Reader();
+  //  Backtogoal_vl();
 }

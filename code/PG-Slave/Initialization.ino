@@ -39,18 +39,17 @@ void Bazi() {
 //------------spin speed------------
 signed int spin_speed(int divided_value, int added_value, int zero_degree)
 {
-  flag = 1;
   int compass_input = 0, compass_output = 0;
   if (flag == 0) {
     Read_Cmp();
-    compass_input = Cmp ;
+    compass_input = Cmp;
   }
   if (flag == 1) {
     col_ang();
     compass_input = GYa;
   }
   if ( compass_input >= zero_degree )
-    compass_output = (compass_input / divided_value) + (added_value * 1.5);
+    compass_output = (compass_input / divided_value) + (added_value);
   else if (compass_input <= (-zero_degree) )
     compass_output = (compass_input) / divided_value - added_value;
   else
