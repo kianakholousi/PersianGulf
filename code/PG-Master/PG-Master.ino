@@ -10,6 +10,7 @@
 //#include <utility/imumaths.h>
 Pixy pcam;
 IntervalTimer myTimer;
+#define address 0x60
 #define Buzzer 11
 #define Shoot 30
 #define PWMlf 21
@@ -27,7 +28,7 @@ Adafruit_VL53L0X lox = Adafruit_VL53L0X();
 //adafruit_bno055_offsets_t newCalib;
 float GYa, GBa, reduction = 0, mamadagha;
 int FO, FI, RO, RI, BO, BI, LO, LI, NFO, NFI, NRO, NRI, NBO, NBI, NLO, NLI;
-int Ba, DShift, BA, BC, Bx, By, DistanceB, GYx, GYy, DistanceGY, GBx, GBy, DistanceGB, Gy;
+int Ba, DShift, BA, BC, Bx, By, DistanceB, GYx, GYy, DistanceGY, GBx, GBy, DistanceGB, Gy, Gy360;
 int OS[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0}, OSP[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 int Compass = 0, Compass2, Cmp = 0, setcmp = 0, set_s = 0, refresher = 0;
 int  i = 0, setbno, dis_back, Shootflag = 0, bnox, eeAddress = 25, Calibrate_BNO = 0, SHC = 0, yell;
@@ -36,11 +37,13 @@ bool flag = true, south = false;
 int  BAxcenter, BayCenter, k, shif;
 void setup() {
   //------------VL53L0X_d----------------
-  //  lox.begin();
+  lox.begin();
   SPI.setMOSI(28);
   SPI.setSCK(27);
   Wire.setSCL(7);
   Wire.setSDA(8);
+  Wire2.setSCL(3);
+  Wire2.setSDA(4);
   //------------start_robot--------------
   myTimer.begin(Counter, 100000);
   Serial.begin(9600);
@@ -49,26 +52,41 @@ void setup() {
   Wire.begin();
   set_pins();
   eeprom_read();
+  //    Calibration();
 }
 
 //------------INTER_UP_T---------------------
 void Counter()
 {
-  reduction = 0.9;
-  flag = true;
+//  reduction = 0.9;
+  flag = 0;
+  Read_Cmp();
   BC++;
-  set_s = -spin_speed(1, 100, 100);
+  //  set_s = -spin_speed(1, 100, 100); // yellow
+  set_s = -spin_speed(1, 30, 20); // cmps03
   if (BC > 3) Ball = false;
   else Ball = true;
+
+  //  Serial.print(Compass2);
+  //  Serial.print("|");
+  //  Serial.print(Compass);
+  //  Serial.print("|");
+  //    Serial.println(Cmp);
 }
 
 void loop() {
 
+  col_ang();
   SET();
-  OC();
-    col_ang();
-    if (Ball)  fallout();
-    else   STOP();
-    Bazi();
-    Serial.println(yell);
+  VL_Reader();
+  //  Backtogoal_vl();
+  //  OC();
+  //  col_ang();
+      if (Ball) MoveWidth_vl();
+      else     Backtogoal_vl();
+  Serial.println(Gy);
+//  Serial.print("|");
+//  Serial.println(Ba);
+delay(100);
+
 }

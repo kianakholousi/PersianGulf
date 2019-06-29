@@ -1,9 +1,10 @@
 void Read_Cmp()
 {
-  Wire.beginTransmission(96);  ////starts communication with cmp03
+  Wire.beginTransmission(address);  ////starts communication with cmp03
   Wire.write(2);                    /////sends the register we wish to read
   Wire.endTransmission();
-  Wire.requestFrom(96, 2);     /////requests high byte
+  Wire.requestFrom(address, 2);
+//  while(Wire.available() < 2);
   Compass2 = Wire.read() << 8 | Wire.read();
   Wire.endTransmission();
   Compass = map(Compass2, 0, 3600, 0, 1023);
@@ -57,10 +58,10 @@ void VL_Reader()
   if (measure.RangeStatus != 4)
   {
     dis_back = measure.RangeMilliMeter ;
-    //    Serial.println(dis_back);
-    //    delay(50);
+//        Serial.println(dis_back);
+//        delay(50);
   }
-  else dis_back = 150;
+  else dis_back = 1500;
 }
 
 //------reading out sensors----
@@ -109,20 +110,6 @@ void OC()
 }
 
 ///////////////////////////////////////////////////
-//------------VL53L0X_d----------------
-//void VL_Reader()
-//{
-//  VL53L0X_RangingMeasurementData_t measure;
-//  lox.rangingTest(&measure, false);
-//  if (measure.RangeStatus != 4)
-//  {
-//    dis_back = measure.RangeMilliMeter / 10;
-//    //         Serial.println(dis_back);
-//    //         delay(50);
-//  }
-//  else dis_back = 150;
-//}
-///////////////////////////////
 
 void Calibration()
 {
@@ -130,35 +117,35 @@ void Calibration()
   byte lowByte;
   Serial.println("north");
   delay(5000);
-  Wire2.beginTransmission(96);//starts communication with cmps03
-  Wire2.write(15); //Sends the register we wish to read
-  Wire2.write(byte(0xFF));
-  Wire2.endTransmission();
+  Wire.beginTransmission(address);//starts communication with cmps03
+  Wire.write(15); //Sends the register we wish to read
+  Wire.write(byte(0xFF));
+  Wire.endTransmission();
   Serial.println("east");
   delay(5000);
-  Wire2.beginTransmission(96);
-  Wire2.write(15);
-  Wire2.write(byte(0xFF)); //Sends the register we wish to read
-  Wire2.endTransmission();
+  Wire.beginTransmission(address);
+  Wire.write(15);
+  Wire.write(byte(0xFF)); //Sends the register we wish to read
+  Wire.endTransmission();
   Serial.println("south");
   delay(5000);
-  Wire2.beginTransmission(96);
-  Wire2.write(15);
-  Wire2.write(byte(0xFF)); //Sends the register we wish to read
-  Wire2.endTransmission();
+  Wire.beginTransmission(address);
+  Wire.write(15);
+  Wire.write(byte(0xFF)); //Sends the register we wish to read
+  Wire.endTransmission();
   Serial.println("west");
   delay(5000);
-  Wire2.beginTransmission(96);
-  Wire2.write(15);
-  Wire2.write(byte(0xFF)); //Sends the register we wish to read
-  Wire2.endTransmission();
+  Wire.beginTransmission(address);
+  Wire.write(15);
+  Wire.write(byte(0xFF)); //Sends the register we wish to read
+  Wire.endTransmission();
   while (1)
   {
-    Wire2.beginTransmission(96);
-    Wire2.write(1);
-    Wire2.endTransmission();
-    Wire2.requestFrom(96, 2);        //requests high byte
-    highByte = Wire2.read();           //reads the byte as an integer
+    Wire.beginTransmission(address);
+    Wire.write(1);
+    Wire.endTransmission();
+    Wire.requestFrom(address, 2);        //requests high byte
+    highByte = Wire.read();           //reads the byte as an integer
     int bearing = highByte;
     Serial.println(bearing);
     delay(100);
