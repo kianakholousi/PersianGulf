@@ -64,10 +64,12 @@ void Counter()
 {
   //  reduction = 0.9;
   flag = 0;
+  //  if (flag==1) set_s = -spin_speed(1, 100, 100); // yellow
+  // else if(flag==0) set_s = -spin_speed(1, 30, 20); // cmps03
+  set_s = -spin_speed(1, 30, 20); // cmps03
   Read_Cmp();
   BC++;
-  //  set_s = -spin_speed(1, 100, 100); // yellow
-  set_s = -spin_speed(1, 30, 20); // cmps03
+
   if (BC > 3) Ball = false;
   else Ball = true;
 
@@ -81,25 +83,26 @@ void Counter()
 void loop() {
 
   col_ang();
-  SET();
   VL_Reader();
-  //   OC();
+  OC();
+  SET();
+//  chop();
+
+  if (dis_back < 250)
+  {
+    mot_ang(0);
+  }
   if (dis_back > 600)
   {
     mot_ang(Gy360);
   }
   else
   {
-
     if (Ball && DistanceB < 120 ) fallout();
     else STOP();
   }
 
   //  Backtogoal();
 
-  //  Serial.print(Ba);
-  //    Serial.print(" | ");
-  //    Serial.println(Gy360);
-  //    delay(50);
 
 }

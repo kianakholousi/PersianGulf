@@ -76,6 +76,11 @@ void chop() {
   //  Serial.print(" | ");
   //  Serial.print(BxCenter - 40);
   //  Serial.print(" | ");
-  //  Serial.println(Ba);
+  //  Serial.print(Ba);
+  //  Serial.print(" | ");
+  //    Serial.println(Gy360);
   delay(50);
+
+
+
 }
