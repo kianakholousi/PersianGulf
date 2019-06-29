@@ -63,24 +63,25 @@ void Counter()
 {
 
   reduction = 0.9;
-  flag = 0;
+  flag = 1;
 
-  //  //  if (flag) set_s = -spin_speed(1, 10, 100);
-  //  //  else
-  set_s =  spin_speed(1, 30, 10);
+  //if (flag==1) set_s = -spin_speed(1, 10, 100);
+ // else  set_s =  spin_speed(1, 30, 10);
+  set_s =  spin_speed(1, 10, 100);
   BC++;
   if (BC > 2) Ball = false;
   else Ball = true;
+    SHC++;
 }
 
 void loop()
 {
   col_ang();
-if(Ball) {
-  if(RSit) fallout();
-  else STOP();
-}
-else STOP();
+//if(Ball) {
+//  if(RSit) fallout();
+//  else STOP();
+//}
+//else STOP();
 //  //  SET();
 //  //  STOP();
 //  VL_Reader();

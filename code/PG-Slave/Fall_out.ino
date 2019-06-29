@@ -136,7 +136,7 @@ void fallout()
     }
   }
   /////////end of right out
- else +if (la || lb)
+ else if (la || lb)
   {
     mot_ang(90);
     if (kaj >= -20 && kaj < 90)

@@ -79,8 +79,12 @@ void chop() {
   //  Serial.print(Ba);
   //  Serial.print(" | ");
   //    Serial.println(Gy360);
+  //--------------------cmps03
+  //  Serial.print(Compass2);
+  //  Serial.print("|");
+  //  Serial.print(Compass);
+  //  Serial.print("|");
+  //      Serial.println(Cmp);
   delay(50);
-
-
 
 }

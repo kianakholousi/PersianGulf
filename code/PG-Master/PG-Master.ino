@@ -72,12 +72,7 @@ void Counter()
 
   if (BC > 3) Ball = false;
   else Ball = true;
-
-  //  Serial.print(Compass2);
-  //  Serial.print("|");
-  //  Serial.print(Compass);
-  //  Serial.print("|");
-  //      Serial.println(Cmp);
+  SHC++;
 }
 
 void loop() {
@@ -86,19 +81,24 @@ void loop() {
   VL_Reader();
   OC();
   SET();
-//  chop();
-
-  if (dis_back < 250)
+  //  chop();
+  reduction = 0.6;
+  if (dis_back < 300)
   {
     mot_ang(0);
   }
-  if (dis_back > 600)
+  if ((Ba < 270 && Ba > 90) || (DistanceB < 80 && dis_back < 650)) fallout();
+  else if (dis_back > 500)
   {
     mot_ang(Gy360);
   }
   else
   {
-    if (Ball && DistanceB < 120 ) fallout();
+    if (Ball && DistanceB < 120 )
+    {
+      MoveWidth_vl();
+      //      fallout();
+    }
     else STOP();
   }
 

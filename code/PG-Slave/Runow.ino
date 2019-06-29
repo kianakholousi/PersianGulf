@@ -177,12 +177,13 @@ void STOP()
 
 void Shut()
 {
-  if ((Ba <= 8 || Ba >= 355) && (DistanceB <= 9) && Ball == 1 && Shootflag == 1)
+  if (SHC > 3 && (Ba <= 18 || Ba >= 350) && (DistanceB <= 39) && Ball )
   {
-    digitalWrite(Shoot, HIGH);
-    delay(15);
-    digitalWrite(Shoot, LOW);
     SHC = 0;
+    digitalWrite(30, HIGH);
+    delay(15);
+    digitalWrite(30, LOW);
+    delay(15);
   }
 }
 void harekat_vazi_mah() {

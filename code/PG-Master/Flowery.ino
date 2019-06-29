@@ -4,14 +4,14 @@ void Backtogoal()
 {
   digitalWrite(15, HIGH);
   digitalWrite(14, LOW);
-  reduction = 0.6;
+  reduction = 0.5;
   VL_Reader();
   col_ang();
   if (abs(Cmp) <= 20)
   {
     if (dis_back < 250)
       mot_ang(0);
-    else if (dis_back > 500 || Gy360 > 200 || Gy360 < 160)
+    else if (dis_back > 500 || Gy360 > 190 || Gy360 < 130)
       mot_ang(Gy360);
     else MoveWidth_vl();
   }
@@ -100,11 +100,10 @@ void MoveWidth_vl()
   reduction = 0.5;
   digitalWrite(14, HIGH);
   digitalWrite(15, LOW);
-  if (Gy360 > 150 && Gy360 < 200)
+  if (Gy360 > 160 && Gy360 < 220)
   {
     if (Ba < 90 && Ba > 10) mot_ang(90);
     else if (Ba > 270 && Ba < 350) mot_ang(270);
-    else if (Ba < 270 && Ba > 90) shift();
     else STOP();
   }
   else Backtogoal();
