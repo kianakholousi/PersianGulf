@@ -4,7 +4,7 @@ void Read_Cmp()
   Wire.write(2);                    /////sends the register we wish to read
   Wire.endTransmission();
   Wire.requestFrom(address, 2);     /////requests high byte
-  while(Wire.available() < 2);
+  while (Wire.available() < 2);
   Compass2 = Wire.read() << 8 | Wire.read();
   Wire.endTransmission();
   Compass = map(Compass2, 0, 3600, 0, 1023);
@@ -97,6 +97,17 @@ void OC()
   else ba = 0;
   if (BI > NBI)  bb = 1;
   else bb = 0;
+
+  if (fa || fb) digitalWrite(14, HIGH);
+  else digitalWrite(14, LOW);
+  if (ra || rb) digitalWrite(15, HIGH);
+  else digitalWrite(15, LOW);
+  if (ba || bb) digitalWrite(16, HIGH);
+  else digitalWrite(16, LOW);
+  if (la || lb) digitalWrite(17, HIGH);
+  else digitalWrite(17, LOW);
+
+  
 }
 
 ///////////////////////////////
