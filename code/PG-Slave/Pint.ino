@@ -33,7 +33,7 @@ void set_pins()
   pinMode(38, INPUT);
   pinMode(39, INPUT);
   //------------set-----------------------
-   pinMode(35, INPUT);
+  pinMode(35, INPUT);
   //------------Buzzer--------------------
   pinMode(11, OUTPUT);
   digitalWrite(11, HIGH);

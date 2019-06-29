@@ -44,7 +44,7 @@ void setup() {
   Wire.setSDA(8);
   //------------VL53L0X_d----------------
   lox.begin();
-//----------------------------------
+  //----------------------------------
   myTimer.begin(Counter, 100000);
   Serial.begin(9600);
   pcam.init();
@@ -52,20 +52,20 @@ void setup() {
   //  Serial5.begin(9600);
   Wire.begin();
   Wire2.begin();
-  //  eeprom_read();}
-//  Calibration();
+  eeprom_read();
+  //  Calibration();
 }
 
 //------------INTER_UP_T---------------------
 void Counter()
 {
-  
-  reduction = 0.9;
-  flag = 0;
 
-//  //  if (flag) set_s = -spin_speed(1, 10, 100);
-//  //  else
-  set_s =  spin_speed(1, 30, 10);
+  reduction = 0.9;
+  flag = 1;
+  col_ang();
+  set_s = -spin_speed(1, 100, 100);
+
+  //  set_s =  spin_speed(1, 30, 10);
   BC++;
   if (BC > 2) Ball = false;
   else Ball = true;
@@ -73,22 +73,9 @@ void Counter()
 
 void loop()
 {
-   col_ang();
-  //    if (Ball) shift();
-  //    else STOP();
-//   Read_Cmp();
-//   Serial.print(Compass2);
-//   Serial.print("|");
-//   Serial.print(Compass);
-//   Serial.print("|");
-//   Serial.println(Cmp);
-
-   Serial.print(GYa);
-   Serial.print(" | ");
-   Serial.println(yell);
-      delay(50);
-//  SET();
-//  STOP();
-    VL_Reader();
-    Backtogoal_vl();
+  SET();
+  col_ang();
+  OC();
+  if (Ball)  fallout();
+  else STOP();
 }

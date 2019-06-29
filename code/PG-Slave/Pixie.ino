@@ -12,7 +12,7 @@ void col_ang()
       if (pcam.blocks[j].signature == 1)
       {
         BC = 0;
-        Bx = pcam.blocks[j].x - 156 + (pcam.blocks[j].height / 2);
+        Bx = pcam.blocks[j].x - 151 + (pcam.blocks[j].height / 2);
         Bx = -Bx;
         By = pcam.blocks[j].y - 94 + (pcam.blocks[j].width / 2);
         Ba = atan2(By , Bx) * 180 / PI;
@@ -23,7 +23,7 @@ void col_ang()
 
       else if (pcam.blocks[j].signature == 2)////G Yellow
       {
-        GYx = pcam.blocks[j].x - 150;
+        GYx = pcam.blocks[j].x - 151;
         GYx = -GYx;
         //        GYx = GYx - pcam.blocks[j].width / 2;
         if (GYx < 0) GYx = GYx - pcam.blocks[j].width / 2;
@@ -42,8 +42,8 @@ void col_ang()
       }
       /* else if (pcam.blocks[j].signature == 2)////G Blue
         {
-         GBx = pcam.blocks[j].x - 153;
-         GBy = pcam.blocks[j].y - 98;
+         GBx = pcam.blocks[j].x - 151;
+         GBy = pcam.blocks[j].y - 94;
          GBxCenter = abs (GBx) + (pcam.blocks[j].width / 2);
          GByCenter = abs (GBy) + (pcam.blocks[j].height / 2);
          GBx = -GBx;

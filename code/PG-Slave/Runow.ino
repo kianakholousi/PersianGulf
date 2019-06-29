@@ -172,7 +172,7 @@ void shift()
 void STOP()
 {
   reduction = 1;
-  MOTOR (set_s , set_s , set_s , set_s);
+  MOTOR (0 + set_s , 0 + set_s , 0 + set_s , 0 + set_s);
 }
 
 void Shut()

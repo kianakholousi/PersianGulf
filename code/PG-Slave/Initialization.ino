@@ -18,14 +18,14 @@ void SET() {
     }
     //      setcmp = bnox;
     setcmp = Compass;
-    NFO = FO + 45;
-    NFI = FI + 50;
+    NFO = FO + 50;
+    NFI = FI + 70;
     NRO = RO + 35;
-    NRI = RI + 45;
-    NLO = LO + 35;
-    NLI = LI + 45;
-    NBO = BO + 40;
-    NBI = BI + 50;
+    NRI = RI + 80;
+    NLO = LO + 100;
+    NLI = LI + 100;
+    NBO = BO + 50;
+    NBI = BI + 70;
     eeprom_write();
     digitalWrite(11, LOW);
   }
@@ -39,7 +39,7 @@ void Bazi() {
 //------------spin speed------------
 signed int spin_speed(int divided_value, int added_value, int zero_degree)
 {
-  flag = 0;
+  flag = 1;
   int compass_input = 0, compass_output = 0;
   if (flag == 0) {
     Read_Cmp();

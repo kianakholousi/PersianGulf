@@ -1,37 +1,53 @@
 ///////////////////////////////////////////////////
 void chop() {
   OC();
-  //  Serial.print(FO);
-  //  Serial.print(" | ");
-  //  Serial.print(FI);
-  //  Serial.print(" | ");
-  //  Serial.print(RO);
-  //  Serial.print(" | ");
-  //  Serial.print(RI);
-  //  Serial.print(" | ");
-  //  Serial.print(LO);
-  //  Serial.print(" | ");
-  //  Serial.print(LI);
-  //  Serial.print(" | ");
-  //  Serial.print(BO);
-  //  Serial.print(" | ");
-  //  Serial.println(BI);
-
-  Serial.print(fa);
+  Serial.print("FO=");
+  Serial.print(FO);
   Serial.print(" | ");
-  Serial.print(fb);
+  Serial.print("FI=");
+  Serial.print(FI);
   Serial.print(" | ");
-  Serial.print(ra);
+  Serial.print("RO=");
+  Serial.print(RO);
   Serial.print(" | ");
-  Serial.print(rb);
+  Serial.print("RI=");
+  Serial.print(RI);
   Serial.print(" | ");
-  Serial.print(la);
+  Serial.print("LO=");
+  Serial.print(LO);
   Serial.print(" | ");
-  Serial.print(lb);
+  Serial.print("LI=");
+  Serial.print(LI);
   Serial.print(" | ");
-  Serial.print(ba);
+  Serial.print("BO=");
+  Serial.print(BO);
   Serial.print(" | ");
-  Serial.println(bb);
+  Serial.print("BI=");
+  Serial.println(BI);
+//
+//    Serial.print("fa=");
+//    Serial.print(fa);
+//    Serial.print(" | ");
+//    Serial.print("fb=");
+//    Serial.print(fb);
+//    Serial.print(" | ");
+//    Serial.print("ra=");
+//    Serial.print(ra);
+//    Serial.print(" | ");
+//    Serial.print("rb=");
+//    Serial.print(rb);
+//    Serial.print(" | ");
+//    Serial.print("la=");
+//    Serial.print(la);
+//    Serial.print(" | ");
+//    Serial.print("lb=");
+//    Serial.print(lb);
+//    Serial.print(" | ");
+//    Serial.print("ba=");
+//    Serial.print(ba);
+//    Serial.print(" | ");
+//    Serial.print("bb=");
+//    Serial.println(bb);
 
   //  Serial.print("Ba= ");
   //  Serial.print(Ba);
@@ -68,5 +84,5 @@ void chop() {
   // Serial.print(Compass);
   // Serial.print("|");
   // Serial.println(Cmp);
-  // delay(10);
+   delay(50);
 }
