@@ -37,10 +37,10 @@ void col_ang()
         //        if (GYa < 0) GYa = 3600 + GYa;
         if (Gy360 < 0) Gy360 = 360 + Gy360;
         if (yell < 0) yell = 360 + yell;
-        GYa = map(GYa, 0, 3600, 0, 1023);
+        GYa = map(GYa, -1550, 1550, -1023, 1023);
         //        if (GYa > 512) GYa = GYa - 1024;
       }
-      /* else if (pcam.blocks[j].signature == 2)////G Blue
+      /* else if (pcam.blocks[j].signature == 3)////G Blue
         {
          GBx = pcam.blocks[j].x - 160;
          GBy = pcam.blocks[j].y - 97;
