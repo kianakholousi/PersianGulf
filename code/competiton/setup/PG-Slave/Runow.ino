@@ -157,6 +157,7 @@ void MOVE(float ang)
 }
 void shift()
 {
+   Shut();
   //  Bx = -Bx;
   col_ang();
   if (Ba > 345 || Ba <= 15) shif = 0;
@@ -177,7 +178,7 @@ void STOP()
 
 void Shut()
 {
-  if (SHC > 3 && (Ba <= 18 || Ba >= 350) && (DistanceB <= 39) && Ball )
+  if (SHC > 3 && (Ba <= 18 || Ba >= 350) && (arz < 18) && (DistanceB >= 47 && DistanceB <= 53 ) && Ball )
   {
     SHC = 0;
     digitalWrite(30, HIGH);

@@ -19,6 +19,8 @@ void col_ang()
         if (Ba < 0) Ba = 360 + Ba;
         DistanceB = sqrt((Bx * Bx) + (By * By));
         DShift = 120 - DistanceB;
+        arz = pcam.blocks[j].width;
+        tool = pcam.blocks[j].height;
       }
 
       else if (pcam.blocks[j].signature == 2)////G Yellow
