@@ -63,12 +63,8 @@ void Counter()
 {
 
   reduction = 0.9;
-  flag = 1;
-
-  //if (flag==1) set_s = -spin_speed(1, 10, 100);
-  // else
-  //  set_s =  spin_speed(1, 30, 10);
-  set_s =  -spin_speed(1, 10, 100);
+  if (flag == 1) set_s =  -spin_speed(1, 10, 100); //yellow
+  else  set_s =  spin_speed(1, 30, 10);//cmps03
   BC++;
   if (BC > 5) Ball = false;
   else Ball = true;
@@ -80,15 +76,12 @@ void loop()
   SET();
   OC();
   col_ang();
-  if (Ball) fallout();
-  else  STOP();
-//  Serial.print( "DistanceB" );
-//  Serial.print( DistanceB );
-//  Serial.print( "|");
-//  Serial.print( "arz" );
-//  Serial.println( arz );
-
-
-  //  VL_Reader();
-  //  Backtogoal_vl();
+  if (flag == 1) {
+    if (Ball) fallout();
+    else  STOP();
+  }
+  else {
+    if (Ball) fout();
+    else  STOP();
+  }
 }

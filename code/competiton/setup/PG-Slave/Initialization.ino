@@ -33,8 +33,8 @@ void Bazi() {
 signed int spin_speed(int divided_value, int added_value, int zero_degree)
 {
   int compass_input = 0, compass_output = 0;
-//  
-
+if(abs(Cmp)<200) flag=true;  
+else flag= false;
   if (flag == 0) {
     Read_Cmp();
     compass_input = Cmp;
