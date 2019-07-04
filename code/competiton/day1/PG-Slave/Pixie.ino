@@ -27,21 +27,25 @@ void col_ang()
       {
         GYx = pcam.blocks[j].x - 161;
         GYx = -GYx;
-//      GYx = GYx - pcam.blocks[j].width / 2;
+        //      GYx = GYx - pcam.blocks[j].width / 2;
         if (GYx < 0) GYx = GYx - pcam.blocks[j].width / 2;
         else GYx = GYx + pcam.blocks[j].width / 2;
         GYy = pcam.blocks[j].y - 108 ;
-//      GYy = GYy - pcam.blocks[j].height / 2;
+        //      GYy = GYy - pcam.blocks[j].height / 2;
         if (GYy < 0) GYy = GYy - pcam.blocks[j].height / 2;
         else GYy = GYy + pcam.blocks[j].height  / 2;
         DistanceGY = sqrt((GYx * GYx) + (GYy * GYy)) - 40;
 
-        GYa_360 = atan2(GYy, GYx) * 1800 / PI;
-        yell = GYa_360 / 10;
-//      if (GYa < 0) GYa = 3600 + GYa;
+        GYa = atan2(GYy, GYx) * 1800 / PI;
+        Gy360 = atan2(GYy , GYx) * 180 / PI;
+        //      if (GYa < 0) GYa = 3600 + GYa;
         if (yell < 0) yell = 360 + yell;
-        GYa = map(GYa_360, -1800, 1800, -1023, 1023);
-//      if (GYa > 512) GYa = GYa - 1024;
+        if (Gy360 < 0) Gy360 = 360 + Gy360;
+        yell = GY360;
+        GYa = map(GYa, -1800, 1800, -1023, 1023);
+
+        //      if (GYa > 512) GYa = GYa - 1024;
+
       }
       /* else if (pcam.blocks[j].signature == 3)////G Blue
         {
