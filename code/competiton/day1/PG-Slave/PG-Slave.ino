@@ -29,7 +29,7 @@ Adafruit_VL53L0X lox = Adafruit_VL53L0X();
 //adafruit_bno055_offsets_t newCalib;
 float GYa, GBa, reduction = 0, mamadagha;
 int FO, FI, RO, RI, BO, BI, LO, LI, NFO, NFI, NRO, NRI, NBO, NBI, NLO, NLI;
-int Ba, DShift, BA, BC, Bx, By, DistanceB, GYx, GYy, DistanceGY, GBx, GBy, DistanceGB, Gy , arz , tool;
+int Ba, DShift, BA, BC, Bx, By, DistanceB, GYx, GYy, DistanceGY, GBx, GBy, DistanceGB, Gy , arz , tool , GYa_360;
 int OS[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0}, OSP[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 int Compass = 0, Compass2, Cmp = 0, setcmp = 0, set_s = 0, refresher = 0;
 int  i = 0, setbno, dis_back, Shootflag = 0, bnox, eeAddress = 25, Calibrate_BNO = 0, SHC = 0, yell;
@@ -55,16 +55,19 @@ void setup() {
   Wire.begin();
   Wire2.begin();
   eeprom_read();
-  //  Calibration();
+  //    Calibration();
 }
 
 //------------INTER_UP_T---------------------
 void Counter()
 {
-
+  //if(abs(Cmp)<200) flag=true;
+  //else flag= false;
+  flag = 1;
   reduction = 0.9;
-  if (flag == 1) set_s =  -spin_speed(1, 10, 100); //yellow
-  else  set_s =  spin_speed(1, 30, 10);//cmps03
+  Read_Cmp();
+  set_s =  -spin_speed(1, 10, 100); //yellow
+//     set_s =  -spin_speed(1, 30, 20);//cmps03
   BC++;
   if (BC > 5) Ball = false;
   else Ball = true;
@@ -76,13 +79,18 @@ void loop()
   SET();
   OC();
   col_ang();
+  //  if (Ball) {
+  //    if (flag == 1)  fallout();
+  //    else  fout();
+  //  }
+  //  else  STOP();
+Serial.print(Ba);
+Serial.print("|||");
+Serial.print(GYa);
+Serial.print("|||");
+Serial.println(yell);
 
-//  if (Ball) {
-//    if (flag == 1)  fallout();
-//    else  fout();
-//  }
-//  else  STOP();
- if (Ball)  fallout();
-   else  STOP();
 
+  if (Ball) fallout();
+  else STOP();
 }

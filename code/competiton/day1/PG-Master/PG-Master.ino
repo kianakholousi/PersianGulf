@@ -10,7 +10,7 @@
 //#include <utility/imumaths.h>
 Pixy pcam;
 IntervalTimer myTimer;
-IntervalTimer Sender;
+IntervalTimer Receiver;
 #define address 0x60
 #define Buzzer 11
 #define Shoot 30
@@ -21,7 +21,7 @@ IntervalTimer Sender;
 #define PWMrf  10
 #define digitalPINrf 9
 #define PWMrb  6
-#define digitalPINrb  5
+#define digitalPINrb 5
 Adafruit_VL53L0X lox = Adafruit_VL53L0X();
 //Adafruit_BNO055 bno = Adafruit_BNO055(55);
 //adafruit_bno055_offsets_t calibrationData;
@@ -29,60 +29,91 @@ Adafruit_VL53L0X lox = Adafruit_VL53L0X();
 //adafruit_bno055_offsets_t newCalib;
 float GYa, GBa, reduction = 0, mamadagha;
 int FO, FI, RO, RI, BO, BI, LO, LI, NFO, NFI, NRO, NRI, NBO, NBI, NLO, NLI;
-int Ba, DShift, BA, BC, Bx, By, DistanceB, GYx, GYy, DistanceGY, GBx, GBy, DistanceGB, Gy , arz , tool;
+int Ba, DShift, BA, BC, Bx, By, DistanceB, GYx, GYy, DistanceGY, GBx, GBy, DistanceGB, Gy, Gy360;
 int OS[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0}, OSP[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 int Compass = 0, Compass2, Cmp = 0, setcmp = 0, set_s = 0, refresher = 0;
 int  i = 0, setbno, dis_back, Shootflag = 0, bnox, eeAddress = 25, Calibrate_BNO = 0, SHC = 0, yell;
 bool fa = 0, fb = 0, ra = 0, rb = 0, ba = 0, bb = 0, la = 0, lb = 0, goalieTeach, Ball;
-bool flag = false, RSit;
-int  BAxcenter, BayCenter, k, shif;
+bool flag = true, DisB, Disbl, stringComplete = false ;
+String  Ang = "", dis = "";
+int  BAxcenter, BayCenter, k, shif, Angle, Distancebl;
+char joda = 55, sit;
 void setup() {
-  SPI.setMOSI(28);
-  SPI.setSCK(27);
-  Wire2.setSCL(3);
-  Wire2.setSDA(4);
-  Wire.setSCL(7);
-  Wire.setSDA(8);
   //------------VL53L0X_d----------------
   lox.begin();
-  //----------------------------------
+  SPI.setMOSI(28);
+  SPI.setSCK(27);
+  Wire.setSCL(7);
+  Wire.setSDA(8);
+  Wire2.setSCL(3);
+  Wire2.setSDA(4);
+  //------------start_robot--------------
   myTimer.begin(Counter, 100000);
-  Sender.begin(BTSender, 100000);
+  Receiver.begin(BTReceiver, 100000);
   Serial.begin(9600);
+  Serial5.begin(9600);
   pcam.init();
-  set_pins();
-  //  Serial5.begin(9600);
   Wire.begin();
-  Wire2.begin();
+  set_pins();
   eeprom_read();
-  //  Calibration();
+  //    Calibration();
 }
 
 //------------INTER_UP_T---------------------
 void Counter()
 {
-
   reduction = 0.9;
-  if (flag == 1) set_s =  -spin_speed(1, 10, 100); //yellow
-  else  set_s =  spin_speed(1, 30, 10);//cmps03
+  flag = 1;
+  //  if (flag==1) set_s = -spin_speed(1, 100, 100); // yellow
+  // else if(flag==0) set_s = -spin_speed(1, 30, 20); // cmps03
+    set_s = -spin_speed(1, 30, 20); // cmps03
+//  set_s = -spin_speed(1, 15, 100); // yellow
+  Read_Cmp();
   BC++;
-  if (BC > 5) Ball = false;
+
+  if (BC > 3) Ball = false;
   else Ball = true;
   SHC++;
 }
 
-void loop()
-{
-  SET();
-  OC();
-  col_ang();
+void loop() {
 
-//  if (Ball) {
-//    if (flag == 1)  fallout();
-//    else  fout();
-//  }
-//  else  STOP();
- if (Ball)  fallout();
-   else  STOP();
+  col_ang();
+//  VL_Reader();
+  OC();
+  SET();
+  if(Ball)  fallout();
+ else STOP();
+
+ 
+//  Serial.println(DistanceB);
+  //  if (Ball) shift();
+  //  else
+  //    STOP();
+/*
+ 
+   reduction = 0.6;
+    if (dis_back < 400)
+    {
+     mot_ang(0);
+    }
+    if ((Ba < 270 && Ba > 90) || (DistanceB < 80 && dis_back < 650)) fallout();
+    else if (dis_back > 500)
+    {
+     mot_ang(Gy360);
+    }
+    else
+    {
+     if (Ball && DistanceB < 120 )
+     {
+       MoveWidth_vl();
+       //      fallout();
+     }
+     else STOP();
+    }
+
+    //  Backtogoal();
+ 
+*/
 
 }
