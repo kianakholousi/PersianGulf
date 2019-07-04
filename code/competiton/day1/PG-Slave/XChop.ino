@@ -1,6 +1,7 @@
 ///////////////////////////////////////////////////
 void chop() {
   OC();
+<<<<<<< HEAD
 //  Serial.print("FO=");
 //  Serial.print(FO);
 //  Serial.print(" | ");
@@ -24,6 +25,31 @@ void chop() {
 //  Serial.print(" | ");
 //  Serial.print("BI=");
 //  Serial.println(BI);
+=======
+  Serial.print("FO=");
+  Serial.print(FO);
+  Serial.print(" | ");
+  Serial.print("FI=");
+  Serial.print(FI);
+  Serial.print(" | ");
+  Serial.print("RO=");
+  Serial.print(RO);
+  Serial.print(" | ");
+  Serial.print("RI=");
+  Serial.print(RI);
+  Serial.print(" | ");
+  Serial.print("LO=");
+  Serial.print(LO);
+  Serial.print(" | ");
+  Serial.print("LI=");
+  Serial.print(LI);
+  Serial.print(" | ");
+  Serial.print("BO=");
+  Serial.print(BO);
+  Serial.print(" | ");
+  Serial.print("BI=");
+  Serial.println(BI);
+>>>>>>> 4ee63fefac41ef71876d47e100f2660e9287e27a
 //
 //    Serial.print("fa=");
 //    Serial.print(fa);

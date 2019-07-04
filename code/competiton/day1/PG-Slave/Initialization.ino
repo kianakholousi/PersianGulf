@@ -19,6 +19,7 @@ void SET() {
     }
     //  setcmp = bnox;+++
     setcmp = Compass;
+<<<<<<< HEAD
     NFO = FO + 60;
     NFI = FI + 70;
     NRO = RO + 65;
@@ -27,6 +28,16 @@ void SET() {
     NLI = LI + 85;
     NBO = BO + 50;
     NBI = BI + 50;
+=======
+    NFO = FO + 70;
+    NFI = FI + 100;
+    NRO = RO + 80;
+    NRI = RI + 40;
+    NLO = LO + 90;
+    NLI = LI + 90;
+    NBO = BO + 40;
+    NBI = BI + 55;
+>>>>>>> 4ee63fefac41ef71876d47e100f2660e9287e27a
     eeprom_write();
     digitalWrite(11, LOW);
   

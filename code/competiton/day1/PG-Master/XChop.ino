@@ -85,12 +85,15 @@ void chop() {
   //  Serial.print(Compass);
   //  Serial.print("|");
   //      Serial.println(Cmp);
+<<<<<<< HEAD
   //----------------------
   //    Serial.print(Bx);
   //    Serial.print(" | ");
   //    Serial.print(By);
   //    Serial.print(" | ");
   //    Serial.println(Ba);
+=======
+>>>>>>> 4ee63fefac41ef71876d47e100f2660e9287e27a
   delay(50);
 
 }

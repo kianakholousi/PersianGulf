@@ -62,12 +62,21 @@ void setup() {
 //------------INTER_UP_T---------------------
 void Counter()
 {
+<<<<<<< HEAD
   //  reduction = 0.9;
   flag = 0;
   //  if (flag==1) set_s = -spin_speed(1, 100, 100); // yellow
   // else if(flag==0) set_s = -spin_speed(1, 30, 20); // cmps03
   set_s = -spin_speed(1, 30, 20); // cmps03
   //  set_s = -spin_speed(1, 15, 100); // yellow
+=======
+  reduction = 0.9;
+  flag = 1;
+  //  if (flag==1) set_s = -spin_speed(1, 100, 100); // yellow
+  // else if(flag==0) set_s = -spin_speed(1, 30, 20); // cmps03
+    set_s = -spin_speed(1, 30, 20); // cmps03
+//  set_s = -spin_speed(1, 15, 100); // yellow
+>>>>>>> 4ee63fefac41ef71876d47e100f2660e9287e27a
   Read_Cmp();
   BC++;
 
@@ -79,6 +88,7 @@ void Counter()
 void loop() {
 
   col_ang();
+<<<<<<< HEAD
   VL_Reader();
   OC();
   SET();
@@ -113,5 +123,43 @@ void loop() {
   }
 
   //  Backtogoal();
+=======
+//  VL_Reader();
+  OC();
+  SET();
+  if(Ball)  fallout();
+ else STOP();
+
+ 
+//  Serial.println(DistanceB);
+  //  if (Ball) shift();
+  //  else
+  //    STOP();
+/*
+ 
+   reduction = 0.6;
+    if (dis_back < 400)
+    {
+     mot_ang(0);
+    }
+    if ((Ba < 270 && Ba > 90) || (DistanceB < 80 && dis_back < 650)) fallout();
+    else if (dis_back > 500)
+    {
+     mot_ang(Gy360);
+    }
+    else
+    {
+     if (Ball && DistanceB < 120 )
+     {
+       MoveWidth_vl();
+       //      fallout();
+     }
+     else STOP();
+    }
+
+    //  Backtogoal();
+ 
+*/
+>>>>>>> 4ee63fefac41ef71876d47e100f2660e9287e27a
 
 }
