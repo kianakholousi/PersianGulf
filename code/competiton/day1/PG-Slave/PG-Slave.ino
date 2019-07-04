@@ -55,16 +55,19 @@ void setup() {
   Wire.begin();
   Wire2.begin();
   eeprom_read();
-  //  Calibration();
+  //    Calibration();
 }
 
 //------------INTER_UP_T---------------------
 void Counter()
 {
-
+  //if(abs(Cmp)<200) flag=true;
+  //else flag= false;
+  flag = 0;
   reduction = 0.9;
-  if (flag == 1) set_s =  -spin_speed(1, 10, 100); //yellow
-  else  set_s =  spin_speed(1, 30, 10);//cmps03
+  Read_Cmp();
+//  set_s =  -spin_speed(1, 10, 100); //yellow
+     set_s =  -spin_speed(1, 30, 20);//cmps03
   BC++;
   if (BC > 5) Ball = false;
   else Ball = true;
@@ -77,12 +80,12 @@ void loop()
   OC();
   col_ang();
 
-//  if (Ball) {
-//    if (flag == 1)  fallout();
-//    else  fout();
-//  }
-//  else  STOP();
- if (Ball)  fallout();
-   else  STOP();
+  //  if (Ball) {
+  //    if (flag == 1)  fallout();
+  //    else  fout();
+  //  }
+  //  else  STOP();
 
+  if (Ball) fallout();
+  else STOP();
 }

@@ -178,7 +178,7 @@ void STOP()
 
 void Shut()
 {
-  if (SHC > 3 && (Ba <= 18 || Ba >= 350) && (arz < 18) && (DistanceB >= 47 && DistanceB <= 53 ) && Ball )
+  if (SHC > 3 && (Ba <= 18 || Ba >= 350) && (arz < 20) && (DistanceB >= 36 && DistanceB <= 41 ) && Ball )
   {
     SHC = 0;
     digitalWrite(30, HIGH);

@@ -6,24 +6,32 @@ void SET() {
     {
       digitalWrite(11, HIGH);
       ////------------set out sensors on green
+    FO = analogRead(36);
+    FI = analogRead(37);
+    RO = analogRead(34);
+    RI = analogRead(33);
+    LO = analogRead(A21);
+    LI = analogRead(A22);
+    BO = analogRead(18);
+    BI = analogRead(19);
       Read_Cmp();
       ////    Read_bno();
     }
-    //  setcmp = bnox;
+    //  setcmp = bnox;+++
     setcmp = Compass;
-    NFO = FO + 90;
-    NFI = FI + 100;
-    NRO = RO + 60;
-    NRI = RI + 90;
-    NLO = LO + 130;
-    NLI = LI + 130;
-    NBO = BO + 80;
-    NBI = BI + 100;
+    NFO = FO + 60;
+    NFI = FI + 70;
+    NRO = RO + 65;
+    NRI = RI + 65;
+    NLO = LO + 85;
+    NLI = LI + 85;
+    NBO = BO + 50;
+    NBI = BI + 50;
     eeprom_write();
     digitalWrite(11, LOW);
-  }
+  
 }
-
+}
 void Bazi() {
   Compass2 = Compass2 / 10;
   if (yell > 180) yell = yell - 360;
@@ -33,8 +41,7 @@ void Bazi() {
 signed int spin_speed(int divided_value, int added_value, int zero_degree)
 {
   int compass_input = 0, compass_output = 0;
-if(abs(Cmp)<200) flag=true;  
-else flag= false;
+
   if (flag == 0) {
     Read_Cmp();
     compass_input = Cmp;

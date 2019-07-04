@@ -1,4 +1,4 @@
-void fallout()
+void fout()
 {
   int kaj;
   int bigball;
@@ -6,9 +6,8 @@ void fallout()
   OC();
   col_ang();
   Bazi();
-
-  kaj = yell;
-
+ 
+ kaj = Compass2;
   /////////// Right OUT////////////
   if (ra || rb)
   {
@@ -18,11 +17,11 @@ void fallout()
     {
       if (abs(kaj) <= 20)
       {
-        bigball = 175;   smallball = 15;
+        bigball = 180;   smallball = 0;
       }
       else
       {
-        bigball = 230;   smallball = 15;
+        bigball = 270;   smallball = 0;
       }
       while (Ba >= smallball && Ba <= bigball && Ball)
       {
@@ -30,36 +29,36 @@ void fallout()
         col_ang();
         if (abs(kaj) <= 20)
         {
-          bigball = 175;   smallball = 15;
+          bigball = 180;   smallball = 0;
         }
         else
         {
-          bigball = 230;  smallball = 15;
+          bigball = 270;  smallball = 0;
         }
 
         if (fa || fb)
         {
-          mot_ang(225);
+          mot_ang(210);
           if (fb)
           {
             while (!fa)
             {
               col_ang();
               OC();
-              MOVE(225);
+              MOVE(210);
             }
           }
         }
         else if (ba || bb)
         {
-          mot_ang(330);
+          mot_ang(320);
           if (bb)
           {
             while (!ba)
             {
               col_ang();
               OC();
-              MOVE(330);
+              MOVE(320);
             }
           }
         }
@@ -81,7 +80,7 @@ void fallout()
     ////////oonvar kaj/////////
     else if (kaj > 20 && kaj <= 90)
     {
-      smallball = 150;      bigball = 315;
+      smallball = 180;      bigball = 270;
       while ((Ba < smallball || Ba > bigball) && Ball)
       {
         OC();
@@ -92,14 +91,14 @@ void fallout()
         //                }
         if (fa || fb)
         {
-          mot_ang(200);
+          mot_ang(210);
           if (fb)
           {
             while (!fa)
             {
               col_ang();
               OC();
-              MOVE(200);
+              MOVE(210);
             }
           }
         }
@@ -139,11 +138,11 @@ void fallout()
     {
       if (abs (kaj) <= 20)
       {
-        bigball = 345; smallball = 165;
+        bigball = 360; smallball = 180;
       }
       else if (kaj > 20 && kaj < 90)
       {
-        bigball = 280; smallball = 45;
+        bigball = 360; smallball = 90;
       }
       while (Ba > smallball && Ba < bigball && Ball)
       {
@@ -151,33 +150,33 @@ void fallout()
         col_ang();
         if (abs (kaj) <= 20)
         {
-          bigball = 345; smallball = 165;
+          bigball = 360; smallball = 180;
         }
         else if (kaj > 20 && kaj < 90)
         {
-          bigball = 280; smallball = 45;
+          bigball = 360; smallball = 90;
         }
         if (fa || fb)
         {
-          mot_ang(120);
+          mot_ang(140);
           if (fb)
           {
             while (!fa)
             {
               OC();
-              MOVE(120);
+              MOVE(140);
             }
           }
         }
         else if (ba || bb)
         {
-          mot_ang(45);
+          mot_ang(50);
           if (bb)
           {
             while (!ba)
             { col_ang();
               OC();
-              MOVE(45);
+              MOVE(50);
             }
           }
         }
@@ -198,7 +197,7 @@ void fallout()
     }
     else if (kaj < -20 && kaj > -90)
     {
-      smallball = 45;    bigball = 225;
+      smallball = 90;    bigball = 180;
       while ((Ba < smallball || Ba > bigball) && Ball)
       {
         OC();
@@ -209,26 +208,26 @@ void fallout()
         //        }
         if (fa || fb)
         {
-          mot_ang(150);
+          mot_ang(140);
           if (fb)
           {
             while (!fa)
             { col_ang();
               OC();
-              MOVE(150);
+              MOVE(140);
             }
           }
         }
         else if (ba || bb)
         {
-          mot_ang(60);
+          mot_ang(50);
           if (bb)
           {
             while (!ba)
             {
               col_ang();
               OC();
-              MOVE(60);
+              MOVE(50);
             }
           }
         }
@@ -256,15 +255,15 @@ void fallout()
     mot_ang(180);
     if (abs(kaj) <= 15)
     {
-      bigball = 315;   smallball = 45;
+      bigball = 250;   smallball = 110;
     }
     else if (kaj > 20 && kaj < 90)
     {
-      bigball = 310; smallball = 120;
+      bigball = 180; smallball = 90;
     }
     else if (kaj < -20 && kaj > -90)
     {
-      bigball = 250; smallball = 50;
+      bigball = 270; smallball = 150;
     }
     while ((Ba < smallball) || (Ba > bigball) && Ball)
     {
@@ -272,40 +271,40 @@ void fallout()
       col_ang();
       if (abs(kaj) <= 20)
       {
-        bigball = 315;   smallball = 45;
+        bigball = 250;   smallball = 110;
       }
       else if (kaj > 20 && kaj < 90)
       {
-        bigball = 310; smallball = 120;
+        bigball = 180; smallball = 90;
       }
       else if (kaj < -20 && kaj > -90)
       {
-        bigball = 250; smallball = 50;
+        bigball = 270; smallball = 150;
       }
       if (la || lb)
       {
-        mot_ang(120);
+        mot_ang(140);
         if (lb)
         {
           while (!la)
           {
             col_ang();
             OC();
-            MOVE(120);
+            MOVE(140);
           }
 
         }
       }
       else if (ra || rb)
       {
-        mot_ang(225);
+        mot_ang(210);
         if (rb)
         {
           while (!ra)
           {
             col_ang();
             OC();
-            MOVE(225);
+            MOVE(210);
           }
         }
       }
@@ -330,15 +329,15 @@ void fallout()
     mot_ang(0);
     if (abs (kaj) <= 20)
     {
-      bigball = 220; smallball = 160;
+      bigball = 310; smallball = 50;
     }
     else if (kaj < -20 && kaj > -90)
     {
-      bigball = 260;  smallball = 100;
+      bigball = 340;  smallball = 70;
     }
     else if (kaj > 20 && kaj < 90)
     {
-      bigball = 260;  smallball = 100;
+      bigball = 310;  smallball = 40;
     }
     while ((Ba > smallball) && (Ba < bigball) && Ball)
     {
@@ -346,38 +345,38 @@ void fallout()
       col_ang();
       if (abs (kaj) <= 20)
       {
-        bigball = 220;  smallball = 160;
+        bigball = 310; smallball = 50;
       }
       else if (kaj < -20 && kaj > -90)
       {
-        bigball = 260;  smallball = 100;
+        bigball = 340;  smallball = 70;
       }
       else if (kaj > 20 && kaj < 90)
       {
-        bigball = 260;  smallball = 100;
+        bigball = 310;  smallball = 40;
       }
       if (la || lb)
       {
-        mot_ang(45);
+        mot_ang(50);
         if (lb )
         {
           while (!la)
           { col_ang();
             OC();
-            MOVE(45);
+            MOVE(50);
           }
         }
       }
       else if (ra || rb)
       {
-        mot_ang(330);
+        mot_ang(320);
         if (rb)
         {
           while (!ra)
           {
             col_ang();
             OC();
-            MOVE(330);
+            MOVE(320);
           }
         }
       }

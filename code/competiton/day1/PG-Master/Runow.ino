@@ -1,4 +1,3 @@
-
 void MOTOR(int lf, int lb, int rf, int rb)
 {
   if (lf > 1023)  lf = 1023;
@@ -11,10 +10,10 @@ void MOTOR(int lf, int lb, int rf, int rb)
   if (rf > 1023)  rf = 1023;
   if (rf < -1023) rf = -1023;
 
-  lf = lf * reduction  * -1;
+  lf = lf * reduction  * 1;
   lb = lb * reduction  * 1;
-  rf = rf * reduction  * -1;
-  rb = rb * reduction  * -1;
+  rf = rf * reduction  * 1;
+  rb = rb * reduction  * 1;
   ////////LF
   if (lf < 0)
   {
@@ -157,14 +156,12 @@ void MOVE(float ang)
 }
 void shift()
 {
-   Shut();
-  //  Bx = -Bx;
   col_ang();
-  if (Ba > 345 || Ba <= 15) shif = 0;
-  else if (Ba <= 120) shif = (atan2(By, Bx - 45) * 180 / PI)  + (DShift / 12);
-  else if (Ba >= 240) shif = (atan2(By , Bx - 45) * 180 / PI) - (DShift / 12);
-  else if (Ba > 120 && Ba <= 180) shif = (atan2(By - 40, Bx) * 180 / PI) - (DShift / 12);
-  else if (Ba > 180 && Ba < 240) shif = (atan2(By + 40, Bx) * 180 / PI) + (DShift / 12);
+  if (Ba > 340 || Ba <= 17) shif = 0;
+  else if (Ba <= 120) shif = (atan2(By, Bx - 32) * 180 / PI)  + (DShift / 12);
+  else if (Ba >= 240) shif = (atan2(By , Bx - 32) * 180 / PI) - (DShift / 10);/* */
+  else if (Ba > 120 && Ba <= 180) shif = (atan2(By - 32, Bx) * 180 / PI) + (DShift / 13); /* ~ */
+  else if (Ba > 180 && Ba < 240) shif = (atan2(By + 32, Bx) * 180 / PI) - (DShift / 13);
   if (shif < 0) shif = shif + 360;
   mot_ang(shif);
 }
@@ -173,24 +170,17 @@ void shift()
 void STOP()
 {
   reduction = 1;
-  MOTOR (0 + set_s , 0 + set_s , 0 + set_s , 0 + set_s);
+  MOTOR (0 + set_s, 0 + set_s , 0 + set_s , 0 + set_s);
 }
 
 void Shut()
 {
-  if (SHC > 3 && (Ba <= 18 || Ba >= 350) && (arz < 18) && (DistanceB >= 47 && DistanceB <= 53 ) && Ball )
+  if (SHC > 3 && (Ba <= 18 || Ba >= 350) && (DistanceB <= 39) && Ball )
   {
     SHC = 0;
     digitalWrite(30, HIGH);
     delay(15);
     digitalWrite(30, LOW);
     delay(15);
-  }
-}
-void harekat_vazi_mah() {
-  for (int i = 0; i <= 360; i++)
-  {
-    mot_ang(i);
-    delay(5);
   }
 }

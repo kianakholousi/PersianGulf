@@ -6,9 +6,13 @@ void fallout()
   OC();
   col_ang();
   Bazi();
-
-  kaj = yell;
-
+  if (!flag)
+  {
+    kaj = Compass2;
+  }
+  if (flag) {
+    kaj = yell;
+  }
   /////////// Right OUT////////////
   if (ra || rb)
   {
@@ -86,10 +90,10 @@ void fallout()
       {
         OC();
         col_ang();
-        //                if (abs(kaj) <= 20)
-        //                {
-        //                  bigball = 359;    smallball = 180;
-        //                }
+//                if (abs(kaj) <= 20)
+//                {
+//                  bigball = 359;    smallball = 180;
+//                }
         if (fa || fb)
         {
           mot_ang(200);
