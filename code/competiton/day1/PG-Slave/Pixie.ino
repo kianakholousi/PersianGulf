@@ -35,19 +35,12 @@ void col_ang()
         if (GYy < 0) GYy = GYy - pcam.blocks[j].height / 2;
         else GYy = GYy + pcam.blocks[j].height  / 2;
         DistanceGY = sqrt((GYx * GYx) + (GYy * GYy)) - 40;
-<<<<<<< HEAD
-        GYa = atan2(GYy, GYx) * 1800 / PI;
-        yell = GYa / 10;
-//      if (GYa < 0) GYa = 3600 + GYa;
-        if (yell < 0) yell = 360 + yell;
-        GYa = map(GYa, -1550, 1550, -1023, 1023);
-=======
+
         GYa_360 = atan2(GYy, GYx) * 1800 / PI;
         yell = GYa_360 / 10;
 //      if (GYa < 0) GYa = 3600 + GYa;
         if (yell < 0) yell = 360 + yell;
         GYa = map(GYa_360, -1800, 1800, -1023, 1023);
->>>>>>> 4ee63fefac41ef71876d47e100f2660e9287e27a
 //      if (GYa > 512) GYa = GYa - 1024;
       }
       /* else if (pcam.blocks[j].signature == 3)////G Blue

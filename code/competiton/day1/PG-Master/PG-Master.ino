@@ -62,22 +62,14 @@ void setup() {
 //------------INTER_UP_T---------------------
 void Counter()
 {
-<<<<<<< HEAD
+
   //  reduction = 0.9;
   flag = 0;
   //  if (flag==1) set_s = -spin_speed(1, 100, 100); // yellow
   // else if(flag==0) set_s = -spin_speed(1, 30, 20); // cmps03
   set_s = -spin_speed(1, 30, 20); // cmps03
   //  set_s = -spin_speed(1, 15, 100); // yellow
-=======
-  reduction = 0.9;
-  flag = 1;
-  //  if (flag==1) set_s = -spin_speed(1, 100, 100); // yellow
-  // else if(flag==0) set_s = -spin_speed(1, 30, 20); // cmps03
-    set_s = -spin_speed(1, 30, 20); // cmps03
-//  set_s = -spin_speed(1, 15, 100); // yellow
->>>>>>> 4ee63fefac41ef71876d47e100f2660e9287e27a
-  Read_Cmp();
+  
   BC++;
 
   if (BC > 3) Ball = false;
@@ -88,18 +80,12 @@ void Counter()
 void loop() {
 
   col_ang();
-<<<<<<< HEAD
   VL_Reader();
   OC();
   SET();
   //----------forward
   //  if(Ball)  fallout();
   // else STOP();
-
-
-  //  if (Ball) shift();
-  //  else
-  //    STOP();
 
   //----------goalkeeper
   reduction = 0.6;
@@ -123,7 +109,6 @@ void loop() {
   }
 
   //  Backtogoal();
-=======
 //  VL_Reader();
   OC();
   SET();
@@ -160,6 +145,5 @@ void loop() {
     //  Backtogoal();
  
 */
->>>>>>> 4ee63fefac41ef71876d47e100f2660e9287e27a
 
 }

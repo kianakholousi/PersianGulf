@@ -9,11 +9,9 @@ void Backtogoal()
   col_ang();
   if (abs(Cmp) <= 20)
   {
-<<<<<<< HEAD
-    if (dis_back < 300)
-=======
+//    if (dis_back < 300)
+
     if (dis_back < 250)
->>>>>>> 4ee63fefac41ef71876d47e100f2660e9287e27a
       mot_ang(0);
     else if (dis_back > 500 || Gy360 > 190 || Gy360 < 130)
       mot_ang(Gy360);
