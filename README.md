@@ -5,4 +5,4 @@ we hope this documentation helps with starting up or maybe participating in the 
 
 **This documentation contains electronic & mechanic designs day to day changes to the code**
 ### team members:
-Sara Vaezi, Hasti Hadian, Sabab Sajasi, Kiana Kholousi
+Sara Vaezi, Hasti Hadian, Saba Sajasi, Kiana Kholousi
